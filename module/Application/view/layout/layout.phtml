@@ -1,0 +1,292 @@
+<?php echo $this->doctype(); ?>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <?php echo $this->headMeta()
+        ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+        ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+    ?>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400'
+          rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900'
+          rel='stylesheet' type='text/css'>
+
+    <!-- Le styles -->
+    <?php echo $this->headLink(
+        array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon',
+            'href' => $this->basePath()
+                . '/public/img/logo.jpg')
+    )->prependStylesheet(
+        $this->basePath()
+        . '/public/bower_components/bootstrap/dist/css/bootstrap.min.css'
+    )
+        ->prependStylesheet(
+            $this->basePath()
+            . '/public/bower_components/fontawesome/css/font-awesome.min.css'
+        )
+        ->prependStylesheet(
+            $this->basePath()
+            . '/public/bower_components/sweetalert/dist/sweetalert2.css'
+        )
+        ->prependStylesheet(
+            $this->basePath()
+            . '/public/bower_components/animate.css/animate.min.css'
+        )
+        ->prependStylesheet(
+            $this->basePath()
+            . '/public/bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css'
+        )
+        ->prependStylesheet(
+            $this->basePath()
+            . '/public/bower_components/checkbox3/dist/checkbox3.min.css'
+        )
+        ->prependStylesheet(
+            $this->basePath()
+            . '/public/bower_components/datatables/media/css/jquery.dataTables.min.css'
+        )
+        ->prependStylesheet(
+            $this->basePath()
+            . '/public/bower_components/datatables/media/css/dataTables.bootstrap.css'
+        )
+        ->prependStylesheet(
+            $this->basePath()
+            . '/public/bower_components/select2/dist/css/select2.min.css'
+        )
+        ->prependStylesheet(
+            $this->basePath()
+            . '/public/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css'
+        )
+        ->prependStylesheet(
+            $this->basePath() . '/public/template/css/style.css'
+        )
+        ->prependStylesheet(
+            $this->basePath() . '/public/template/css/themes/flat-blue.css'
+        ) ?>
+
+    <!-- Scripts -->
+    <?php echo $this->headScript()->prependFile(
+        $this->basePath()
+        . '/public/template/js/app.js'
+    )->prependFile(
+        $this->basePath()
+        . '/public/js/basic.js'
+    )->prependFile(
+        $this->basePath()
+        . '/public/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js'
+    )->prependFile(
+        $this->basePath()
+        . '/public/bower_components/ace-builds/src/theme-github.js'
+    )->prependFile(
+        $this->basePath()
+        . '/public/bower_components/ace-builds/src/mode-html.js'
+    )->prependFile(
+        $this->basePath()
+        . '/public/bower_components/ace-builds/src/ace.js'
+    )->prependFile(
+        $this->basePath()
+        . '/public/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js'
+    )->prependFile(
+        $this->basePath()
+        . '/public/bower_components/select2/dist/js/select2.full.min.js'
+    )->prependFile(
+        $this->basePath()
+        . '/public/bower_components/moment/min/moment-with-locales.min.js'
+    )->prependFile(
+        $this->basePath()
+        . '/public/bower_components/datatables/media/js/dataTables.bootstrap.min.js'
+    )->prependFile(
+        $this->basePath()
+        . '/public/bower_components/sweetalert/dist/sweetalert2.js'
+    )->prependFile(
+        $this->basePath()
+        . '/public/bower_components/datatables/media/js/jquery.dataTables.min.js'
+    )->prependFile(
+        $this->basePath()
+        . '/public/bower_components/matchHeight/jquery.matchHeight-min.js'
+    )->prependFile(
+        $this->basePath()
+        . '/public/bower_components/bootstrap-switch/dist/js/bootstrap-switch.min.js'
+    )->prependFile(
+        $this->basePath()
+        . '/public/bower_components/bootstrap/dist/js/bootstrap.min.js'
+    )
+        ->prependFile(
+            $this->basePath()
+            . '/public/bower_components/jquery/dist/jquery.min.js'
+        );
+    ?>
+
+    <meta name="description" content="Sistema Reserva TaxiPlus">
+    <meta name="author" content="Didepti">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]
+    <script
+        src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script
+        src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="flat-blue">
+<div class="app-container" >
+    <div class="row content-container">
+        <nav class="sinmarcos navbar navbar-default navbar-fixed-top navbar-top" style="height: 60px;">
+            <div class="container-fluid" id="cabecera" style="height: 60px;">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-expand-toggle">
+                        <i class="fa fa-bars icon"></i>
+                    </button>
+                    <ol class="breadcrumb navbar-breadcrumb">
+                        <li id="titlePage" class="active">Dispatcher</li>
+                    </ol>
+                    <button type="button"
+                            class="navbar-right-expand-toggle pull-right visible-xs">
+                        <i class="fa fa-th icon"></i>
+                    </button>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <button type="button"
+                            class="navbar-right-expand-toggle pull-right visible-xs">
+                        <i class="fa fa-times icon"></i>
+                    </button>
+
+                    <li class="dropdown profile">
+                        <a href="#" class="dropdown-toggle"
+                           data-toggle="dropdown" role="button"
+                           aria-expanded="false">Usuario <span
+                                class="caret"></span></a>
+                        <ul class="dropdown-menu animated fadeInDown">
+                            <li class="profile-img">
+                                <img
+                                    src="<?= $this->basePath(); ?>/public/template/img/profile/picjumbo.com_HNCK4153_resize.jpg"
+                                    class="profile-img">
+                            </li>
+                            <li>
+                                <div class="profile-info">
+                                    <h4 class="username">Usuario registrado</h4>
+                                    <p>contacto@alvicom.pe</p>
+                                    <div class="btn-group margin-bottom-2x"
+                                         role="group">
+                                        <button type="button"
+                                                class="btn btn-default"><i
+                                                class="fa fa-user"></i> Perfil
+                                        </button>
+
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+        <div class="sinmarcos side-menu sidebar-inverse">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="side-menu-container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="<?php echo $this->url('home') ?>">
+                            <div class="icon fa fa-home"></div>
+                            <div class="title">Inicio</div>
+                        </a>
+                        <button type="button"
+                                class="navbar-expand-toggle pull-right visible-xs">
+                            <i class="fa fa-times icon"></i>
+                        </button>
+                    </div>
+                    <ul class="nav navbar-nav" >
+
+                        <!--
+                        <li class="panel panel-default dropdown">
+                            <a data-toggle="collapse" href="#dropdown-tablepage1">
+
+                                <i class=""></i>
+                                <span class="icon fa fa-lock fa-fw"></span>
+                                <span class="title">Seguridad</span>
+                            </a>
+                            <div id="dropdown-tablepage1" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <ul class="nav navbar-nav">
+                                        <li>
+                                            <a href="/transporte/administrador">
+                                                <span class="icon fa fa-users fa-fw"></span>
+                                                <span class="title">Usuarios</span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="/transporte/administrador/roles">
+                                                <span class="icon fa fa-key fa-fw"></span>
+                                                <span class="title">Roles y Políticas</span>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        -->
+
+                        <li>
+                            <a href="<?=$this->basePath()?>/unidad/index">
+                                <span class="icon fa  fa-map-marker fa-fw"></span>
+                                <span class="title">Monitoreo</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?=$this->basePath()?>/unidad/unidad">
+                                <span class="icon  fa fa-truck fa-fw"></span>
+                                <span class="title">Unidades</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?=$this->basePath()?>/lugar">
+                                <span class="icon  fa fa-globe fa-fw"></span>
+                                <span class="title">Lugares</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?=$this->basePath()?>/rrhh/operador">
+                                <span class="icon  fa fa-user fa-fw"></span>
+                                <span class="title">Colaboradores</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?=$this->basePath()?>/reporte/index">
+                                <span class="icon  fa fa-pie-chart fa-fw"></span>
+                                <span class="title">Reportes</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- /.navbar-collapse -->
+            </nav>
+        </div>
+        <!-- Main Content -->
+        <div class="container-fluid">
+            <div class="side-body padding-top">
+                <?php echo $this->content; ?>
+            </div>
+            <footer class="app-footer" style="display: none">
+                <div class="wrapper">
+            <span class="pull-right">Crafted with <i
+                    class="fa fa-heart text-danger"></i> by Grupo Alvicom Trading SRL </span>
+                    ©
+                    2017 Copyright.
+                </div>
+            </footer>
+        </div>
+    </div>
+    <div>
+        <div>
+            <?php echo $this->inlineScript() ?>
+        </div>
+        <input type="hidden" id="baseUrl" value="<?php echo $this->basePath() ?>">
+</body>
+</html>

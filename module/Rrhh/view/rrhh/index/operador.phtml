@@ -1,0 +1,576 @@
+<!--
+* Created by Henry Bravo cel 973772738.
+-->
+<style>
+    .imagencolaborador:hover    {
+        background: #45abd4;
+    }
+</style>
+<link rel="stylesheet" href="<?= $this->basePath().'/public/files/css/jquery.fileupload.css'?>">
+<link rel="stylesheet" href="<?= $this->basePath().'/public/files/css/jquery.fileupload-ui.css'?>">
+<?php
+
+$this->inlineScript()->appendFile(
+    $this->basePath() . '/public/js/rrhh/operadores.js'
+)
+
+?>
+
+<script src="<?= $this->basePath().'/public/files/js/vendor/jquery.ui.widget.js'?>"></script>
+<script src="//blueimp.github.io/JavaScript-Templates/js/tmpl.min.js"></script>
+<script src="//blueimp.github.io/JavaScript-Load-Image/js/load-image.all.min.js"></script>
+<script src="//blueimp.github.io/JavaScript-Canvas-to-Blob/js/canvas-to-blob.min.js"></script>
+<script src="<?= $this->basePath().'/public/files/js/jquery.iframe-transport.js'?>"></script>
+<script src="<?= $this->basePath().'/public/files/js/jquery.fileupload.js'?>"></script>
+<script>
+    /* global window, $ */
+    window.testBasicWidget = $.blueimp.fileupload;
+</script>
+<script src="<?= $this->basePath().'/public/files/js/jquery.fileupload-process.js'?>"></script>
+<script src="<?= $this->basePath().'/public/files/js/jquery.fileupload-image.js'?>"></script>
+<script src="<?= $this->basePath().'/public/files/js/jquery.fileupload-audio.js'?>"></script>
+<script src="<?= $this->basePath().'/public/files/js/jquery.fileupload-video.js'?>"></script>
+<script src="<?= $this->basePath().'/public/files/js/jquery.fileupload-validate.js'?>"></script>
+<script src="<?= $this->basePath().'/public/files/js/jquery.fileupload-ui.js'?>"></script>
+
+<body class="" >
+
+<div class="panel-heading">
+    <h3>LISTA DE OPERADORES</h3>
+    <a class="btn btn-info btn-xs" id="addOperador"><i class="fa fa-plus" aria-hidden="true"></i>Operador</a>
+   <!-- <a class="btn btn-success btn-xs" id="addUnidad"><i class="fa fa-plus" aria-hidden="true"></i>Unidad</a>-->
+</div>
+<br>
+<div class="row inputtext">
+    <div class="col-lg-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                LISTA DE OPERADORES
+            </div>
+            <div class="table-responsive">
+                <table  id="table-operadores" class="table table-striped table-bordered table-hover dataTable no-footer dtr-inline tableeeeee" role="grid" aria-describedby="dataTables-example_info" style="width: 98%;">
+                    <thead>
+                    <tr role="row">
+                        <td>Nombre</td>
+                        <td>Dirección</td>
+                        <td>Teléfono</td>
+                        <td>Estado</td>
+                        <td>Opción</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+                    foreach ($this->operadores as $value)
+                    {
+                        $estado="No estado";
+                        switch ($value['estadocolaborador'])
+                        {
+                            case 1:
+                                $estado="Activo";
+                                break;
+                            case 2:
+                                $estado="No Activo";
+                                break;
+                        }
+                        $urlimagPreview="";
+                        $urlimagFull="";
+                        $urlConsulta="";
+                        if($value['foto']){
+                            $urlimagPreview=$this->basePath()."/public/files/server/php/files/thumbnail/".$value['foto'];
+                            $urlimagFull=$this->basePath()."/public/files/server/php/files/".$value['foto'];
+                            $urlConsulta=$this->basePath()."/public/files/server/php/index.php?file=".$value['foto'];
+                        }
+                        else{
+                            $urlimagPreview=$this->basePath()."/public/files/server/php/files/thumbnail/sinimagen.jpg";
+                            $urlimagFull=$urlimagPreview;
+                        }
+
+                        echo "
+                                <tr>
+                                    <td><a id='popover".$value['idcolaborador']."' class='btn imagencolaborador' rel='popover' data-img='$urlimagFull'><img id='imagecircle".$value['idcolaborador']."' src='$urlimagPreview' class='img-circle' alt='Img C.' style='border: 4px solid #caccd1;' width='50' height='50'> </a>".$value['nombre']." ".$value['ap']." ".$value['am']." </td>
+                                    <td>".$value['direccion']."</td>
+                                    <td>".$value['telefono']."</td>
+                                    <td>".$estado."</td>
+                                    <td>
+                                        <a href='#' class='btn btn-xs btn-primary opera'nom='".$value['nombre']." ".$value['ap']." ".$value['am']."' idc='".$value['idoperador']."' ><i class='fa fa-eye'></i> Maneja</a>
+                                        <a href='#' class='btn btn-xs btn-info editar' idc='".$value['idoperador']."'><i class='fa fa-pencil'></i> Datos</a>
+                                        <a href='#' class='btn btn-xs btn-success foto'  idc='".$value['idoperador']."' ni='".$value['foto']."' src='$urlConsulta' ><i class='fa fa-plus'></i> Foto</a>                
+                                    </td>
+                                </tr>    
+                                ";
+                    }
+                    ?>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Modal's -->
+<div id="modalHistorial" class="modal fade" role="dialog">
+    <div class="modal-dialog  modal-lg">
+
+<div class="modal-content">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 id="modaltitle"></h4>
+    </div>
+    <div class=" row modal-body">
+        <div class="card-panel col-md-12">
+            <a id="addAsignar" style="margin-bottom: 1em;" class="btn btn-success btn-xs col-md-12"><i class="fa fa-plus"></i> Asignar</a>
+            <div class="form-group col-md-12">
+                <label class="form_label col-md-12">Volquetes: </label>
+
+                <div id="volquetes" class="col-md-12">
+
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table  id="table-historial" class="table table-striped table-bordered table-hover dataTable no-footer dtr-inline tableeeeee" role="grid" aria-describedby="dataTables-example_info" style="width: 98%;">
+                                <thead>
+                                    <tr role="row">
+                                        <td>Placa</td>
+                                        <td>Fecha Inicio</td>
+                                        <td>fecha Fin</td>
+                                        <td>Opción</td>
+                                    </tr>
+                                </thead>
+                                <tbody id="tablehistorial">
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+                <h5 id="novolquetes" style="text-align: center; color: #6f6565;">
+                    No hay registros de volquetes que mostrar
+                </h5>
+                <label class="form_label col-md-12">Palas: </label>
+                <div id="palas" class="col-md-12">
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table  id="table-historial-palas" class="table table-striped table-bordered table-hover dataTable no-footer dtr-inline tableeeeee" role="grid" aria-describedby="dataTables-example_info" style="width: 98%;">
+                                <thead>
+                                <tr role="row">
+                                    <td>Placa</td>
+                                    <td>Fecha Inicio</td>
+                                    <td>fecha Fin</td>
+                                    <td>Opción</td>
+                                </tr>
+                                </thead>
+                                <tbody id="tablehistorialpalas">
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+                <h5 id="nopalas" style="text-align: center; color: #6f6565;">
+                    No hay registros de palas que mostrar
+                </h5>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+    </div>
+</div>
+</div>
+</div>
+<div id="modalAsignar" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 >Asginar nuevo Chofer</h4>
+            </div>
+            <div class=" row modal-body">
+                <div class="card-panel">
+                    <div class="form-group" style="margin: 10px">
+                        <label class="form_label">Chofer</label>
+                        <select id="nuevochofer" class="form-control">
+                            <?php
+                            foreach ($choferes as $v)
+                            {
+                                echo '<option value="'.$v->idchofer.'">'.$v->nombre.'</option>';
+                            }
+                            ?>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <a id="btnAsginar" class="btn btn-info" href="#!" idm="">Siguiente</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="changeEstado" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4>Editar</h4>
+            </div>
+            <div class=" row modal-body">
+                <div class="col-md-12">
+                    <label for="activo" class="form-label">Fecha Inicio</label>
+                    <input type="text" id="fechainicio" name="estado" class="form-control col-md-6 calendar" />
+                </div>
+                <div class="col-md-12">
+                    <label for="activo" class="form-label">Fecha Fin</label>
+                    <input type="text" id="fechafin" name="estado" class="form-control col-md-6 calendar" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a id="btn-confirmar-editar" class="btn btn-info" href="#!" idc="">Confirmar</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div id="addAsignarnModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4>Nueva asignación</h4>
+            </div>
+            <div class=" row modal-body">
+                <div class="col-md-12">
+                    <label for="activo" class="form-label">Seleccione Tipo:  </label><br>
+                    <input class="" id="checkpala" name="tipounidad" value="1" checked="" type="radio">
+                    <label for="checkpala" class="">Pala</label>
+                    <input class="" id="checkvol" name="tipounidad" value="2" type="radio">
+                    <label for="checkvol" class="">Volquete</label>
+                </div>
+                <div class="col-md-12">
+                    <label for="activo" class="form-label">Seleccione Placa:  </label>
+                    <select title="Unidad" id="selectUnidad">
+                    </select>
+                </div>
+                <div class="col-md-12">
+                    <label for="fechainicioN" class="form-label">Fecha Inicio</label>
+                    <input type="text" id="fechainicioN" name="estado" class="form-control col-md-6 calendar" />
+                </div>
+                <div class="col-md-12">
+                    <label for="fechafinN" class="form-label">Fecha Fin</label>
+                    <input type="text" id="fechafinN" name="estado" class="form-control col-md-6 calendar" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a id="btn-confirmar-asignar" class="btn btn-info" href="#!" idc="">Confirmar</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div id="modalAddOperador" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4>Nuevo Operador</h4>
+            </div>
+            <div class=" row modal-body">
+                <div class="col-md-12">
+                    <label for="activo" class="form-label">Nombres</label>
+                    <input type="text" placeholder="Ingrese nombres" id="nombres" name="estado" class="form-control col-md-6 inputtext" e="1"/>
+                </div>
+                <div class="col-md-12">
+                    <label for="ap" class="form-label">Apellido Paterno</label>
+                    <input type="text" id="ap" placeholder="Ingrese apellido paterno" name="estado" class="form-control col-md-6 inputtext" e="2" />
+                </div>
+                <div class="col-md-12">
+                    <label for="am" class="form-label">Apellido Materno</label>
+                    <input type="text" id="am" placeholder="Ingrese apellido materno" name="estado" class="form-control col-md-6 inputtext" e="3"/>
+                </div>
+                <div class="col-md-12">
+                    <label for="dni" class="form-label">Dni</label>
+                    <input type="text" id="dni" placeholder="Ingrese dni" name="dni" class="form-control col-md-6 inputtext" e="4" />
+                </div>
+                <div class="col-md-12">
+                    <label for="telefono" class="form-label">Telefono</label>
+                    <input type="text" id="telefono" placeholder="Ingrese telefono" name="estado" class="form-control col-md-6 inputtext" e="5" />
+                </div>
+                <div class="col-md-12">
+                    <label for="direccion" class="form-label">Dirección</label>
+                    <input type="text" placeholder="Ingrese dirección" id="direccion" name="estado" class="form-control col-md-6 inputtext" e="6" />
+                </div>
+                <div class="col-md-12">
+                    <label for="usuario" class="form-label">Usuario</label>
+                    <input type="text" placeholder="Ingrese usuario" id="usuario" name="estado" class="form-control col-md-6" disabled />
+                </div>
+                <div class="col-md-12">
+                    <label for="contrasena" class="form-label">Contraseña</label>
+                    <input type="password" id="contrasena" placeholder="Ingrese contraseña" name="estado" class="form-control col-md-6 inputtext" e="7" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a id="btn-confirmar-guardar" class="btn btn-info inputtext" href="#!" e="8" idc="">Guardar</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div id="modalEditOperador" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4>Editar Operador</h4>
+            </div>
+            <div class=" row modal-body">
+                <div class="col-md-12">
+                    <label for="activo" class="form-label">Nombres</label>
+                    <input type="text" placeholder="Ingrese nombres" id="nombresE" name="estado" class="form-control col-md-6 inputtext" e="1"/>
+                </div>
+                <div class="col-md-12">
+                    <label for="apE" class="form-label">Apellido Paterno</label>
+                    <input type="text" id="apE" placeholder="Ingrese apellido paterno" name="estado" class="form-control col-md-6 inputtext" e="2" />
+                </div>
+                <div class="col-md-12">
+                    <label for="amE" class="form-label">Apellido Materno</label>
+                    <input type="text" id="amE" placeholder="Ingrese apellido materno" name="estado" class="form-control col-md-6 inputtext" e="3"/>
+                </div>
+                <div class="col-md-12">
+                    <label for="dniE" class="form-label">Dni</label>
+                    <input type="text" id="dniE" placeholder="Ingrese dni" name="dni" class="form-control col-md-6 inputtext" e="4" />
+                </div>
+                <div class="col-md-12">
+                    <label for="telefonoE" class="form-label">Telefono</label>
+                    <input type="text" id="telefonoE" placeholder="Ingrese telefono" name="estado" class="form-control col-md-6 inputtext" e="5" />
+                </div>
+                <div class="col-md-12">
+                    <label for="direccionE" class="form-label">Dirección</label>
+                    <input type="text" placeholder="Ingrese dirección" id="direccionE" name="estado" class="form-control col-md-6 inputtext" e="6" />
+                </div>
+                <div class="col-md-12">
+                    <label for="usuarioE" class="form-label">Usuario</label>
+                    <input type="text" placeholder="Ingrese usuario" id="usuarioE" name="estado" class="form-control col-md-6" disabled />
+                </div>
+                <div class="col-md-12">
+                    <label for="contrasenaE" class="form-label">Contraseña</label>
+                    <input type="password" id="contrasenaE" placeholder="Ingrese contraseña" name="estado" class="form-control col-md-6 inputtext" e="7" />
+                </div>
+
+                <div class="col-md-12">
+                    <label for="" class="form-label">Estado:  </label><br>
+                    <input class="" id="checkedac" name="estadooperador" value="1" type="radio">
+                    <label for="checkedac" class="">Activo</label>
+                    <input class="" id="checkeddes" name="estadooperador" value="2" type="radio">
+                    <label for="checkeddes" class="">No Activo</label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a id="btnUCol" class="btn btn-info inputtext" href="#!" e="8" idc="">Actualizar</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div id="modalLoading" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content col-md-6 col-md-offset-3">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4>Espere un momento</h4>
+            </div>
+            <div class=" row modal-body">
+                <div class="col-md-12">
+                    <div class="col-md-4 col-md-offset-4">
+                        <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<div id="modalAddPhoto" class="modal fade modal-addfoto" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4>Agregar foto</h4>
+            </div>
+            <div class=" row modal-body">
+                <div class="col-md-12">
+                    <form id="fileupload" action="<?=$this->basePath().'/public/files/server/php'?>" method="POST" enctype="multipart/form-data">
+                        <!-- Redirect browsers with JavaScript disabled to the origin page -->
+                        <noscript><input type="hidden" name="redirect" value="https://blueimp.github.io/jQuery-File-Upload/"></noscript>
+                        <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+                        <div class="row fileupload-buttonbar">
+                            <div class="col-lg-7">
+                                <!-- The fileinput-button span is used to style the file input field as button -->
+                                <span class="btn btn-success fileinput-button btnsubir">
+                                    <i class="glyphicon glyphicon-plus btnsubir"></i>
+                                    <span class="btnsubir">Foto</span>
+                                    <input type="file" name="files[]"  class="btnsubir" accept="image/*">
+                                </span>
+
+                                <!--
+                                <button type="submit" class="btn btn-primary start">
+                                    <i class="glyphicon glyphicon-upload"></i>
+                                    <span>Start upload</span>
+                                </button>
+                                -->
+                                <button type="reset" class="btn btn-warning cancel">
+                                    <i class="glyphicon glyphicon-ban-circle"></i>
+                                    <span>Cancelar Subida</span>
+                                </button>
+                                <!--
+                                <button type="button" class="btn btn-danger delete">
+                                    <i class="glyphicon glyphicon-trash"></i>
+                                    <span>Delete</span>
+                                </button>
+                                <input type="checkbox" class="toggle">
+                                -->
+                                <!-- The global file processing state -->
+                                <span class="fileupload-process"></span>
+                            </div>
+                            <!-- The global progress state -->
+                            <div class="col-lg-5 fileupload-progress fade">
+                                <!-- The global progress bar -->
+                                <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+                                </div>
+                                <!-- The extended global progress state -->
+                                <div class="progress-extended">&nbsp;</div>
+                            </div>
+                        </div>
+                        <table role="presentation" class=" imgShowModal table table-striped">
+                            <tbody class="files">
+                                <tr class="template-download fade in">
+                                    <td>
+                                        <span class="preview">
+                                                <a target="_blank" id="imgOtherW" href="" title="" data-gallery=""><img  id="imgPreview" src=""></a>
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <p class="name">
+                                            <a id="imgDownload" href="" title=""  download=""  data-gallery=""><i class="fa fa-download"></i> Descargar</a>
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <span class="size" id="size"></span>
+                                    </td>
+                                    <td>
+                                        <a id="btnEliminar" class="btn btn-danger" url="">
+                                            <i class="glyphicon glyphicon-trash"></i>
+                                            <span>Eliminar</span>
+                                        </a>
+                                        <!--<input name="delete" value="1" class="toggle" type="checkbox">-->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- The table listing the files available for upload/download -->
+                        <table role="presentation" class="table table-striped"><tbody class="files"></tbody></table>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<script id="template-upload" type="text/x-tmpl">
+{% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-upload fade">
+        <td>
+            <span class="preview"></span>
+        </td>
+        <td>
+            <p class="name">{%=file.name%}</p>
+            <strong class="error text-danger"></strong>
+        </td>
+        <td>
+            <p class="size">Subiendo...</p>
+            <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="progress-bar progress-bar-success" style="width:0%;"></div></div>
+        </td>
+        <td>
+            {% if (!i && !o.options.autoUpload) { %}
+                <button class="btn btn-primary start" disabled>
+                    <i class="glyphicon glyphicon-upload"></i>
+                    <span>Iniciar</span>
+                </button>
+            {% } %}
+            {% if (!i) { %}
+                <button class="btn btn-warning cancel">
+                    <i class="glyphicon glyphicon-ban-circle"></i>
+                    <span>Cancelar</span>
+                </button>
+            {% } %}
+        </td>
+    </tr>
+{% } %}
+</script>
+<script id="template-download" type="text/x-tmpl">
+{% for (var i=0, file; file=o.files[i]; i++) { %}
+    <tr class="template-download fade imgShowModal">
+        <td>
+            <span class="preview">
+                {% if (file.thumbnailUrl) { %}
+                    <a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" data-gallery><img src="{%=file.thumbnailUrl%}"></a>
+                {% } %}
+            </span>
+        </td>
+        <td>
+            <p class="name">
+                {% if (file.url) { %}
+                    <a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" {%=file.thumbnailUrl?'data-gallery':''%}>{%=file.name%}</a>
+                {% } else { %}
+                    <span>{%=file.name%}</span>
+                {% } %}
+            </p>
+            {% if (file.error) { %}
+                <div><span class="label label-danger">Error</span> {%=file.error%}</div>
+            {% } %}
+
+</td>
+<td>
+    <span class="size">{%=o.formatFileSize(file.size)%}</span>
+</td>
+<td>
+    {% if (file.deleteUrl) { %}
+    <a id="btnEliminar" class="btn btn-danger" ni="{%=file.name%}" url="{%=file.deleteUrl%}"{% if (file.deleteWithCredentials) { %} data-xhr-fields='{"withCredentials":true}'{% } %}>
+        <i class="glyphicon glyphicon-trash"></i>
+        <span>Eliminar</span>
+    </a>
+    {% } else { %}
+    <button class="btn btn-warning cancel">
+        <i class="glyphicon glyphicon-ban-circle"></i>
+        <span>Cancel</span>
+    </button>
+    {% } %}
+</td>
+</tr>
+{% } %}
+</script>
+
+</body>

@@ -1,0 +1,136 @@
+<?php
+/* @var $container Zend\Navigation\Navigation */
+$container = $this->container;
+$flag = $this->identity() == null ? "logout": "login" ;
+?>
+<ul class="<?php echo $this->navigation($container)->menu()->getUlClass(); ?>" >
+	<?php foreach ($container as $page): ?>
+		<?php if (!$this->navigation()->accept($page)) continue; ?>
+		<?php /* @var $page Zend\Navigation\Page\Mvc */ ?>
+		<?php $hasChildren = $page->hasPages() ?>
+
+		<?php if (!$hasChildren): ?>
+			<?php  $f = $page->get('id'); ?>
+			<?php if (strcmp($f, $flag) == 0)   continue; ?>
+			<li<?php if ($page->isActive())?>>
+				<a
+					href="<?php echo $page->getHref() ?>"
+					<?php if ($page->getTarget() != ""): ?>
+						target="<?php echo $page->getTarget(); ?>"
+					<?php endif; ?>
+					>
+					<?php if ($page->get("icon") !== ""): ?>
+						<span class="icon <?php echo $page->get("icon"); ?>"></span>
+					<?php endif; ?>
+					<span class="title"><?php echo $this->escapeHtml($this->translate($page->getLabel(), $this->navigation($container)->getTranslatorTextDomain())); ?></span>
+				</a>
+			</li>
+		<?php else: ?>
+
+			<?php
+			//check if access is allowed at least one item
+			$access = false;
+			foreach ($page->getPages() as $child) {
+				if($child->hasPages()){
+					foreach ($child->getPages() as $third) {
+						if ($this->navigation()->accept($third) && $third->get("separator") !== true) {
+							$access = true;
+						}
+					}
+				}
+				else{
+					if ($this->navigation()->accept($child) && $child->get("separator") !== true) {
+						$access = true;
+					}
+				}
+
+			}
+			if ($access): ?>
+				<?php  $f = $page->get('id'); ?>
+					<li class="panel panel-default dropdown">
+					<a data-toggle="collapse" href="#dropdown-table<?php echo $f;?>">
+						<?php if ($page->get("icon") !== ""): ?>
+							<i class=""></i>
+							<span class="icon <?php echo $page->get("icon"); ?>"></span>
+						<?php endif; ?>
+						<span class="title"><?php echo $this->escapeHtml($this->translate($page->getLabel(),$this->navigation($container)->getTranslatorTextDomain())); ?></span>
+<!--						<span class="fa arrow"></span>-->
+					</a>
+	<div id="dropdown-table<?php echo $f;?>" class="panel-collapse collapse">
+		<div class="panel-body">
+					<ul class="nav navbar-nav">
+						<?php foreach ($page->getPages() as $child): ?>
+							<?php $hasChildren = $child->hasPages() ?>
+							<?php if (!$hasChildren): ?>
+								<li>
+									<a
+										href="<?php echo $child->getHref() ?>"
+										<?php if ($child->getTarget() != ""): ?>
+											target="<?php echo $child->getTarget(); ?>"
+										<?php endif; ?> >
+										<?php if ($child->get("icon") !== ""): ?>
+											<span class="icon <?php echo $child->get("icon"); ?>"></span>
+											<span class="title"><?php echo $this->escapeHtml($this->translate($child->getLabel(),$this->navigation($container)->getTranslatorTextDomain())); ?></span>
+										<?php endif; ?>
+									</a>
+								</li>
+
+							<?php else: ?>
+                                <?php  $j = $child->get('id'); ?>
+                                <?php
+								//check if access is allowed at least one item 3rd level
+								$access = false;
+								foreach ($child->getPages() as $third) {
+									if ($this->navigation()->accept($third) && $third->get("separator") !== true) {
+										$access = true;
+									}
+								}
+								if ($access): ?>
+                                    <li class="panel panel-default dropdown">
+                                        <a data-toggle="collapse" href="#dropdown-table<?php echo $j;?>">
+
+                                        <?php if ($child->get("icon") !== ""): ?>
+                                            <span class="icon <?php echo $child->get("icon"); ?>"></span>
+											<?php endif; ?>
+                                            <span class="title"><?php echo $this->escapeHtml($this->translate($child->getLabel(),$this->navigation($container)->getTranslatorTextDomain())); ?></span>
+<!--											<span class="fa arrow"></span>-->
+                                        </a>
+                                        <div id="dropdown-table<?php echo $j;?>" class="panel-collapseb collapseb">
+                                            <div class="panel-body">
+										<ul class="nav navbar-nav">
+											<?php foreach ($child->getPages() as $thirdChild): ?>
+												<?php if (!$this->navigation()->accept($thirdChild)) continue; ?>
+												<?php if ($thirdChild->get("separator") === true): ?>
+													<li class="divider"></li>
+													<?php
+													continue;
+												endif;
+												?>
+												<li>
+													<a
+														href="<?php echo $thirdChild->getHref() ?>"
+														<?php if ($thirdChild->getTarget() != ""): ?>
+															target="<?php echo $thirdChild->getTarget(); ?>"
+														<?php endif; ?> >
+														<?php if ($thirdChild->get("icon") !== ""): ?>
+                                                            <span class="icon <?php echo $thirdChild->get("icon"); ?>"></span>
+														<?php endif; ?>
+                                                        <span class="title"><?php echo $this->escapeHtml($this->translate($thirdChild->getLabel(),$this->navigation($container)->getTranslatorTextDomain())); ?></span>
+													</a>
+												</li>
+											<?php endforeach; ?>
+										</ul>
+                                                </div>
+                                                </div>
+									</li>
+								<?php endif; ?>
+							<?php endif; ?>
+						<?php endforeach ?>
+					</ul>
+		</div>
+	</div>
+				</li>
+			<?php endif; ?>
+		<?php endif ?>
+	<?php endforeach ?>
+</ul>
