@@ -30,7 +30,7 @@ class CargaTable
         }
         return $row;
     }
-    public function saveOpera(Carga $carga)
+    public function saveCarga(Carga $carga)
     {
         $data = array(
             'idcargavolquete'=> $carga->idcargavolquete,
@@ -56,16 +56,90 @@ class CargaTable
 
         return $id;
     }
-    private function resultToArray($result)
+    public function getCantidadCargasFechas($fechadesde, $fechahasta, $idmaterial)
     {
-        $data = array();
-        foreach ($result as $value) {
-            $data[] = $value;
-        }
-
-        return $data;
+        if($idmaterial>0)
+            $where="carga.fechainicio>= '$fechadesde' and carga.fechainicio<='$fechahasta' and carga.estado=2 and servicio_carga.idmaterial=$idmaterial";
+        else
+            $where="carga.fechainicio>= '$fechadesde' and carga.fechainicio<='$fechahasta' and carga.estado=2";
+        $sqlSelect = $this->tableGateway->getSql()->select();
+        $sqlSelect->columns(
+            array(
+                'anio' => new Expression('year(carga.fechainicio)'),
+                'mes' => new Expression('month(carga.fechainicio)'),
+                'dia' => new Expression('day(carga.fechainicio)'),
+                'cantidad'=>new Expression('Count (year(carga.fechainicio))')
+            )
+        );
+        $sqlSelect
+            ->join(
+                'carga_volquete',
+                'carga_volquete.idcargavolquete = carga.idcargavolquete',
+                array(
+                )
+            )->join(
+                'servicio_carga',
+                'servicio_carga.idservicio = carga_volquete.idservicio',
+                array(
+                )
+            );
+        $sqlSelect->where($where);
+        $sqlSelect->group(
+            new Expression('year(carga.fechainicio)')
+        );
+        $sqlSelect->group(
+            new Expression('month(carga.fechainicio)')
+        );
+        $sqlSelect->group(
+            new Expression('day(carga.fechainicio)')
+        );
+        $statement = $this->tableGateway->getSql()
+            ->prepareStatementForSqlObject($sqlSelect);
+        $resultSet = $statement->execute();
+        return $this->resultToArray($resultSet);
     }
-
+    public function getCantidadCargasMateriales($fechadesde, $fechahasta)
+    {
+        $sqlSelect = $this->tableGateway->getSql()->select();
+        $sqlSelect->columns(
+            array(
+                'cantidad' => new Expression('count (servicio_carga.idmaterial)'),
+            )
+        );
+        $sqlSelect
+            ->join(
+                'carga_volquete',
+                'carga_volquete.idcargavolquete = carga.idcargavolquete',
+                array(
+                )
+            )->join(
+                'servicio_carga',
+                'servicio_carga.idservicio = carga_volquete.idservicio',
+                array(
+                )
+            )->join(
+                'material',
+                'servicio_carga.idmaterial = material.idmaterial',
+                array(
+                    'idmaterial' =>'idmaterial',
+                    'nombre' =>'nombre'
+                )
+            );
+        $sqlSelect->where("carga.fechainicio>= '$fechadesde' and carga.fechainicio<='$fechahasta' and carga.estado=2");
+        $sqlSelect->group(
+            new Expression('servicio_carga.idmaterial')
+        );
+        $sqlSelect->group(
+            new Expression('material.nombre')
+        );
+        $sqlSelect->group(
+            new Expression('material.idmaterial')
+        );
+        $statement = $this->tableGateway->getSql()
+            ->prepareStatementForSqlObject($sqlSelect);
+        $resultSet = $statement->execute();
+        return $this->resultToArray($resultSet);
+    }
     //For reports
     public function getCantidadCargas()
     {
@@ -81,6 +155,16 @@ class CargaTable
 
         return $this->resultToArray($resultSet)[0]['count'];
     }
+    private function resultToArray($result)
+    {
+        $data = array();
+        foreach ($result as $value) {
+            $data[] = $value;
+        }
+
+        return $data;
+    }
+
 }
 
 ?>

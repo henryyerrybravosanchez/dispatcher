@@ -31,41 +31,11 @@ class IndexController extends AbstractActionController
     public $cargatable;
     public $desplazamientotable;
     public $palatable;
+    public $materialtable;
 
     public function indexAction()
     {
-        if ($this->request->isXmlHttpRequest()) {
-            $o = (int)$this->request->getPost('o');
-            switch ($o) {
 
-                case 1:
-                    $rutas=$this->getRutaTable()->fetchAll();
-                    $lugares=$this->getLugarTable()->fetchAll();
-                    $rutasArray=array();
-                    foreach ($rutas as $r)
-                    {
-                        $rutasArray[$r->idruta]=$this->getRutaTable()->fetchAllPoints($r->idruta);
-                    }
-                    if($rutasArray)
-                    {
-                        return new JsonModel(array('data'=>$rutasArray,'lugares'=>$lugares));
-                    }
-                    else
-                        return new JsonModel(array('data'=>-1));
-
-                    break;
-                case 2:
-                    $volquetes=$this->getUnidadTable()->getVolquetesUbicacion();
-                    $palas=$this->getUnidadTable()->getPalasUbicacion();
-                    if($volquetes||$palas)
-                    {
-                        return new JsonModel(array('data'=>$volquetes,'datapalas'=>$palas));
-                    }
-                    else
-                        return new JsonModel(array('data'=>-1));
-                    break;
-            }
-        }
         $cargaCount=$this->getCargaTable()->getCantidadCargas();
         $cantidadPalas=$this->getUnidadTable()->getPalasCantidad();
         $cantidadVolquetes=$this->getUnidadTable()->getVolquetesCantidad();
@@ -141,7 +111,48 @@ class IndexController extends AbstractActionController
     }
 
     public function cargasAction(){
+        if ($this->request->isXmlHttpRequest()) {
+            $o = (int)$this->request->getPost('o');
+            switch ($o) {
 
+                case 1:
+                    try {
+                        $fechainicial= $this->request->getPost('fi');
+                        $fechafinal= $this->request->getPost('ff');
+                        $idmaterial= (int)$this->request->getPost('idm');
+                        $fIex=explode('-', $fechainicial);
+                        $fFex=explode('-', $fechafinal);
+                        $fechainicial=$fIex[2]."-".$fIex[1]."-".$fIex[0];
+                        $fechafinal=$fFex[2]."-".$fFex[1]."-".$fFex[0];
+                        $cargas=$this->getCargaTable()->getCantidadCargasFechas($fechainicial, $fechafinal, $idmaterial);
+                        return new JsonModel(array('data'=>$cargas));
+                    }
+                    catch (\Exception $e) {
+                        return new JsonModel(array('data' => -1, 'm'=>$e));
+                    }
+                    case 2:
+                    try {
+                        $fechainicial= $this->request->getPost('fi');
+                        $fechafinal= $this->request->getPost('ff');
+                        $fIex=explode('-', $fechainicial);
+                        $fFex=explode('-', $fechafinal);
+                        $fechainicial=$fIex[2]."-".$fIex[1]."-".$fIex[0];
+                        $fechafinal=$fFex[2]."-".$fFex[1]."-".$fFex[0];
+                        $cargas=$this->getCargaTable()->getCantidadCargasMateriales($fechainicial, $fechafinal);
+                        return new JsonModel(array('data'=>$cargas));
+                    }
+                    catch (\Exception $e) {
+                        return new JsonModel(array('data' => -1, 'm'=>$e));
+                    }
+                    break;
+            }
+        }
+        $materiales=$this->getMaterialTable()->fetchAll();
+        return new ViewModel(
+            array(
+                'materiales'=>$materiales,
+            )
+        );
     }
     private function getCargaTable()
     {
@@ -227,5 +238,15 @@ class IndexController extends AbstractActionController
             );
         }
         return $this->volquetetable;
+    }
+    private function getMaterialTable()
+    {
+        if (!$this->materialtable) {
+            $sm = $this->getServiceLocator();
+            $this->materialtable = $sm->get(
+                'Lugar\Model\MaterialTable'
+            );
+        }
+        return $this->materialtable;
     }
 }

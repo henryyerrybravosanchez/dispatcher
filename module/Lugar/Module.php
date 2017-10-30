@@ -11,6 +11,8 @@ namespace Lugar;
 
 use Lugar\Model\Lugar;
 use Lugar\Model\LugarTable;
+use Lugar\Model\Material;
+use Lugar\Model\MaterialTable;
 use Lugar\Model\Punto;
 use Lugar\Model\PuntoTable;
 use Lugar\Model\Ruta;
@@ -69,7 +71,18 @@ class Module
                     $resultSetPrototype = new ResultSet();
                     $resultSetPrototype->setArrayObjectPrototype(new Ruta());
                     return new TableGateway('ruta', $dbAdapter, null, $resultSetPrototype);
-                }
+                },
+                'Lugar\Model\MaterialTable' => function ($sm) {
+                    $tableGateway = $sm->get('MaterialTableGateway');
+                    $table = new MaterialTable($tableGateway);
+                    return $table;
+                },
+                'MaterialTableGateway' => function ($sm) {
+                    $dbAdapter = $sm->get('Zend\Db\Adapter\Adapter');
+                    $resultSetPrototype = new ResultSet();
+                    $resultSetPrototype->setArrayObjectPrototype(new Material());
+                    return new TableGateway('material', $dbAdapter, null, $resultSetPrototype);
+                },
             ),
         );
     }
