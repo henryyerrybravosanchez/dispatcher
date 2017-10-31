@@ -3,6 +3,10 @@
  */
 var base='';
 var materiales=[];
+var palas=[];
+var camiones=[];
+var idpalas=-1;
+var idcamiones=-1;
 $(document).ready(function() {
 
     base=$("#baseUrl").val();
@@ -17,7 +21,15 @@ $(document).ready(function() {
     var fhastaDatepickerL=$("#fechahastaL");
     var fdesdeDatepickerL=$("#fechadesdeL");
 
-    var idmaterial=$("#material");//<option class='material'>
+    $.each($('.palas'), function () {
+        palas.push($(this).text());
+    });
+    $.each($('.camiones'), function () {
+        camiones.push($(this).text());
+    });
+
+    idpalas=$("#palas");//<option class='material'>
+    idcamiones=$("#camiones");//<option class='material'>
 
     $.each($('.material'), function () {
        materiales[$(this).val()]=$(this).text();
@@ -100,7 +112,7 @@ $(document).ready(function() {
                 o:1,
                 fi:fdesdeDatepicker.val(),
                 ff:fhastaDatepicker.val(),
-                idm:idmaterial.val()
+                idp:idpalas.val()
             })
         }
         else {
@@ -114,7 +126,8 @@ $(document).ready(function() {
                 o:1,
                 fi:fdesdeDatepicker.val(),
                 ff:fhastaDatepicker.val(),
-                idm:idmaterial.val()
+                idp:idpalas.val()
+
             })
         }
         else {
@@ -124,11 +137,12 @@ $(document).ready(function() {
 
     });
     fdesdeDatepickerR.on('dp.change', function(e){
-        if(validarFechas(fdesdeDatepicker.val(),fhastaDatepicker.val())){
+        if(validarFechas(fdesdeDatepickerR.val(),fhastaDatepickerR.val())){
             makePost({
                 o:2,
                 fi:fdesdeDatepickerR.val(),
-                ff:fhastaDatepickerR.val()
+                ff:fhastaDatepickerR.val(),
+                idp:idcamiones.val()
             })
         }
         else {
@@ -137,11 +151,12 @@ $(document).ready(function() {
         }
     });
     fhastaDatepickerR.on('dp.change', function(e){
-        if(validarFechas(fdesdeDatepicker.val(),fhastaDatepicker.val())){
+        if(validarFechas(fdesdeDatepickerR.val(),fhastaDatepickerR.val())){
             makePost({
                 o:2,
                 fi:fdesdeDatepickerR.val(),
-                ff:fhastaDatepickerR.val()
+                ff:fhastaDatepickerR.val(),
+                idp:idcamiones.val()
 
             })
         }
@@ -152,7 +167,7 @@ $(document).ready(function() {
 
     });
     fhastaDatepickerL.on('dp.change', function(e){
-        if(validarFechas(fdesdeDatepicker.val(),fhastaDatepicker.val())){
+        if(validarFechas(fdesdeDatepickerL.val(),fhastaDatepickerL.val())){
             makePost({
                 o:3,
                 fi:fdesdeDatepickerL.val(),
@@ -165,7 +180,7 @@ $(document).ready(function() {
         }
     });
     fdesdeDatepickerL.on('dp.change', function(e){
-        if(validarFechas(fdesdeDatepicker.val(),fhastaDatepicker.val())){
+        if(validarFechas(fdesdeDatepickerL.val(),fhastaDatepickerL.val())){
             makePost({
                 o:3,
                 fi:fdesdeDatepickerL.val(),
@@ -180,12 +195,20 @@ $(document).ready(function() {
 
     });
 
-    idmaterial.change(function () {
+    idpalas.change(function () {
         makePost({
             o:1,
             fi:fdesdeDatepicker.val(),
             ff:fhastaDatepicker.val(),
-            idm:idmaterial.val()
+            idp:idpalas.val()
+        })
+    });
+    idcamiones.change(function () {
+        makePost({
+            o:1,
+            fi:fdesdeDatepicker.val(),
+            ff:fhastaDatepicker.val(),
+            idp:idcamiones.val()
         })
     });
 
@@ -193,12 +216,13 @@ $(document).ready(function() {
         o:1,
         fi:fdesdeDatepicker.val(),
         ff:fhastaDatepicker.val(),
-        idm:idmaterial.val()
+        idp:idpalas.val()
     });
     makePost({
         o:2,
-        fi:fdesdeDatepickerR.val(),
-        ff:fhastaDatepickerR.val()
+        fi:fdesdeDatepicker.val(),
+        ff:fhastaDatepicker.val(),
+        idp:idcamiones.val()
     });
     makePost({
         o:3,
@@ -249,67 +273,158 @@ function validarFechas(fechaI, fechaF) {
     }
     return parseInt(splitIniDsd[0])<parseInt(splitIniHst[0]);
 }
+var colores=[
+    "#ec5333",
+    "#dfbd32",
+    "#b0df32",
+    "#44df32",
+    "#32df66",
+    "#8c307d",
+    "#32cfdf",
+    "#328edf",
+    "#326edf",
+    "#323cdf",
+    "#6632df",
+    "#b532df",
+    "#df32da",
+    "#8c307d",
+    "#8c307d",
+    "#98548d",
+    "#559854",
+    "#6b9854",
+    "#7f9854"
+]
 
-function actualizarCargasCanvas(labels, data) {
+function actualizarCargasCanvas(data) {
     $('#myChart').remove(); // this is my <canvas> element
     $('#conteinerCanvas').append(' <canvas id="myChart" width="100" height="100"></canvas>');
     var ctx = document.getElementById("myChart").getContext('2d');
-    var idmaterial=$("#material");
-    var text= '# de cargas';
-    if(idmaterial.val()>0)
-        text= '# de cargas de '+$("#material option:selected").text();
+
+    var dddd=[];
+    var fechas=[];
+
+    var dataUnidades=[];
+    if(parseInt(idpalas.val())>0)
+    {
+        dataUnidades.push($("#palas option:selected").text())
+    }
+    else{
+        dataUnidades=palas;
+    }
+    for (var j=0;j<dataUnidades.length; j++)
+    {
+
+        var placas=[];
+        var cantidades=[];
+        $.each(data, function (k1, v1) {
+            if(j===0)
+                fechas.push(k1)
+            var bandera=true;
+            $.each(v1, function (k, v) {
+                if(v.placa===dataUnidades[j]){
+                    placas.push(v.placa);
+                    cantidades.push(v.cantidad);
+                    bandera=false;
+                }
+            })
+            if(bandera)
+            {
+                cantidades.push(0);
+            }
+
+        });
+
+        dddd.push({
+            label:"Pala "+ dataUnidades[j],
+            data: cantidades,
+            backgroundColor: [
+                "rgba(220,220,220,0)"
+            ],
+            borderColor: [
+                colores[j]
+            ],
+            borderWidth: 1
+        });
+    }
     var myChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: labels,
-            datasets: [{
-                label: text,
-                data: data,
-                backgroundColor: [
-                    '#19B5FE'
-                ],
-                borderColor: [
-                    '#b0f0ff'
-                ],
-                borderWidth: 1
-            }]
+            labels: fechas,
+            datasets: dddd
         },
         options: {
             scales: {
                 yAxes: [{
-                    ticks: {
-                        beginAtZero:true
-                    }
+                    stacked: false
                 }]
             }
         }
     });
-}
 
-function actualizarCargasRadar(labels, data) {
-    $('#myChartRadar').remove(); // this is my <canvas> element
-    $('#conteinerCanvasRadar').append(' <canvas id="myChartRadar" width="100" height="100"></canvas>');
-    var ctx = document.getElementById("myChartRadar").getContext('2d');
+}
+function actualizarCargasCanvasVolquetes( data) {
+    $('#myChartVolquetes').remove(); // this is my <canvas> element
+    $('#conteinerCanvasVolquetes').append(' <canvas id="myChartVolquetes" width="100" height="100"></canvas>');
+    var ctx = document.getElementById("myChartVolquetes").getContext('2d');
+
+    var dddd=[];
+    var fechas=[];
+
+    var dataUnidades=[];
+    if(parseInt(idcamiones.val())>0)
+    {
+        dataUnidades.push($("#camiones option:selected").text())
+    }
+    else{
+        dataUnidades=camiones;
+    }
+    for (var j=0;j<dataUnidades.length; j++)
+    {
+
+        var placas=[];
+        var cantidades=[];
+        $.each(data, function (k1, v1) {
+            if(j===0)
+                fechas.push(k1)
+            var bandera=true;
+            $.each(v1, function (k, v) {
+                if(v.placa===dataUnidades[j]){
+                    placas.push(v.placa);
+                    cantidades.push(v.cantidad);
+                    bandera=false;
+                }
+            })
+            if(bandera)
+            {
+                cantidades.push(0);
+            }
+
+        });
+
+        dddd.push({
+            label:"Pala "+ dataUnidades[j],
+            data: cantidades,
+            backgroundColor: [
+                "rgba(220,220,220,0)"
+            ],
+            borderColor: [
+                colores[j]
+            ],
+            borderWidth: 1
+        });
+    }
     var myChart = new Chart(ctx, {
-        type: 'polarArea',
+        type: 'line',
         data: {
-            labels: labels,
-            datasets: [{
-                label: "",
-                data: data,
-                backgroundColor: [
-                    '#19B5FE',
-                    'rgba(240, 100, 0, 0.4)',
-                    'rgba(255, 0, 255, 0.2)',
-                ],
-                borderColor: [
-                    '#b0f0ff'
-                ],
-                borderWidth: 1
-            }]
+            labels: fechas,
+            datasets: dddd
         },
         options: {
-            animateRotate: true
+            scales: {
+                yAxes: [{
+                    stacked: false
+                }]
+            }
         }
     });
 }
@@ -341,7 +456,6 @@ function actualizarCargasLugar(labels, data) {
         }
     });
 }
-
 function makePost(data) {
     var modalLoading=$("#modalLoading");
     modalLoading.modal("show");
@@ -350,7 +464,7 @@ function makePost(data) {
         type: "POST",
         dataType: "json",
         data: data,
-        url: base+"/reporte/cargas",
+        url: base+"/reporte/unidades",
         success: function (datar) {
             if(datar.data===-1)
             {
@@ -367,18 +481,26 @@ function makePost(data) {
                         var fechafin=data.ff;
                         var arrayDataCantidades=[];
                         var arrayLabelsFechas=[];
+                        var arrayPlacas={   };
                         while (fechadesde!==fechafin)
                         {
                             arrayLabelsFechas.push(fechadesde);
                             var fDarr=fechadesde.split('-');
                             var bandera=false;
+                            var arrau=[];
                             $.each(cargas, function (k,v) {
                                 if(parseInt(v.anio)===parseInt(fDarr[0])&&parseInt(v.mes)===parseInt(fDarr[1])&&parseInt(v.dia)===parseInt(fDarr[2]))
                                 {
                                     arrayDataCantidades.push(v.cantidad);
+                                    var dat={
+                                        placa:v.placa,
+                                        cantidad:v.cantidad
+                                    };
+                                    arrau.push(dat);
                                     bandera=true;
                                 }
                             });
+                            arrayPlacas[fechadesde]=arrau;
                             if(!bandera)
                             {
                                 arrayDataCantidades.push(0);
@@ -419,26 +541,102 @@ function makePost(data) {
                                 if(parseInt(v.anio)===parseInt(fDarr[0])&&parseInt(v.mes)===parseInt(fDarr[1])&&parseInt(v.dia)===parseInt(fDarr[2]))
                                 {
                                     arrayDataCantidades.push(v.cantidad);
+                                    var dat={
+                                        placa:v.placa,
+                                        cantidad:v.cantidad
+                                    };
+                                    arrau.push(dat);
                                     bande=true;
                                 }
                             });
-                            if(!bande)
-                            {
+                            if(!bande){
                                 arrayDataCantidades.push(0);
                             }
                         }
-                        actualizarCargasCanvas(arrayLabelsFechas,arrayDataCantidades);
+                        arrayPlacas[fechadesde]=arrau;
+                        actualizarCargasCanvas(arrayPlacas);
                         modalLoading.modal('hide');
                         break;
                     case 2:
                         var cargas=datar.data;
-                        var labelesArray=[];
-                        var dataArray=[];
-                        $.each(cargas, function (k, v) {
-                            labelesArray.push(v.nombre);
-                            dataArray.push(v.cantidad)
-                        });
-                        actualizarCargasRadar(labelesArray, dataArray);
+                        var fechadesde=data.fi;
+                        var fechafin=data.ff;
+                        var arrayDataCantidades=[];
+                        var arrayLabelsFechas=[];
+                        var arrayPlacas={   };
+                        while (fechadesde!==fechafin)
+                        {
+                            arrayLabelsFechas.push(fechadesde);
+                            var fDarr=fechadesde.split('-');
+                            var bandera=false;
+                            var arrau=[];
+                            $.each(cargas, function (k,v) {
+                                if(parseInt(v.anio)===parseInt(fDarr[0])&&parseInt(v.mes)===parseInt(fDarr[1])&&parseInt(v.dia)===parseInt(fDarr[2]))
+                                {
+                                    arrayDataCantidades.push(v.cantidad);
+                                    var dat={
+                                        placa:v.placa,
+                                        cantidad:v.cantidad
+                                    };
+                                    arrau.push(dat);
+                                    bandera=true;
+                                }
+                            });
+                            arrayPlacas[fechadesde]=arrau;
+                            if(!bandera)
+                            {
+                                arrayDataCantidades.push(0);
+                            }
+                            var anio=fDarr[0];
+                            var mes=parseInt(fDarr[1]);
+                            var dia=parseInt(fDarr[2])+1;
+                            if(dia<10)
+                                dia='0'+dia;
+                            if(mes<10)
+                                mes='0'+mes;
+                            if(validar(anio+"-"+mes+"-"+dia))
+                            {
+                                fechadesde=anio+"-"+mes+"-"+dia;
+                            }else{
+                                if(fDarr[1]==='12')
+                                {
+                                    mes=1;
+                                    anio=parseInt(fDarr[0])+1;
+                                }else{
+                                    mes=parseInt(fDarr[1])+1;
+                                    anio=fDarr[0];
+                                }
+                                dia=1;
+                                if(mes<10)
+                                    mes='0'+mes;
+                                if(dia<10)
+                                    dia='0'+dia;
+                                fechadesde=anio+"-"+mes+"-"+dia;
+                            }
+                        }
+                        arrayLabelsFechas.push(fechadesde);
+                        fDarr=fechadesde.split('-');
+                        if(fechadesde===fechafin)
+                        {
+                            var bande=false;
+                            $.each(cargas, function (k,v) {
+                                if(parseInt(v.anio)===parseInt(fDarr[0])&&parseInt(v.mes)===parseInt(fDarr[1])&&parseInt(v.dia)===parseInt(fDarr[2]))
+                                {
+                                    arrayDataCantidades.push(v.cantidad);
+                                    var dat={
+                                        placa:v.placa,
+                                        cantidad:v.cantidad
+                                    };
+                                    arrau.push(dat);
+                                    bande=true;
+                                }
+                            });
+                            if(!bande){
+                                arrayDataCantidades.push(0);
+                            }
+                        }
+                        arrayPlacas[fechadesde]=arrau;
+                        actualizarCargasCanvasVolquetes(arrayPlacas);
                         modalLoading.modal('hide');
                         break;
                     case 3:

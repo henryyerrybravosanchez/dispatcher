@@ -19,6 +19,60 @@ class UnidadTable
 
         return $this->resultToArray($resultSet);
     }
+    public function fetchAllVolquetes(){
+        $sqlSelect = $this->tableGateway->getSql()->select();
+        $sqlSelect->columns(
+            array(
+                'idunidad' => 'idunidad',
+                'placa' => 'placa',
+                'estado' => 'estado',
+            )
+        );
+        $sqlSelect
+            ->join(
+                'u_volquete',
+                'u_volquete.idvolquete = unidad.idunidad',
+                array(
+                    'idvolquete' => 'idvolquete',
+                    'estado' => 'estado',
+                )
+            );
+        $sqlSelect->order('unidad.idunidad DESC');
+
+
+        $statement = $this->tableGateway->getSql()
+            ->prepareStatementForSqlObject($sqlSelect);
+        $resultSet = $statement->execute();
+
+        return $this->resultToArray($resultSet);
+    }
+
+    public function fetchAllPalas(){
+        $sqlSelect = $this->tableGateway->getSql()->select();
+        $sqlSelect->columns(
+            array(
+                'idunidad' => 'idunidad',
+                'placa' => 'placa',
+                'estado' => 'estado',
+            )
+        );
+        $sqlSelect
+            ->join(
+                'u_cargador',
+                'u_cargador.idcargador = unidad.idunidad',
+                array(
+                    'idcargador' => 'idcargador',
+                    'estado' => 'estado',
+                )
+            );
+
+        $sqlSelect->order('unidad.idunidad DESC');
+        $statement = $this->tableGateway->getSql()
+            ->prepareStatementForSqlObject($sqlSelect);
+        $resultSet = $statement->execute();
+
+        return $this->resultToArray($resultSet);
+    }
 
     public function getUnidad($id)
     {
@@ -277,59 +331,7 @@ class UnidadTable
         return $this->resultToArray($resultSet)[0]['cantidad'];
     }
 
-    public function fetchAllVolquetes(){
-        $sqlSelect = $this->tableGateway->getSql()->select();
-        $sqlSelect->columns(
-            array(
-                'idunidad' => 'idunidad',
-                'placa' => 'placa',
-                'estado' => 'estado',
-            )
-        );
-        $sqlSelect
-            ->join(
-                'u_volquete',
-                'u_volquete.idvolquete = unidad.idunidad',
-                array(
-                    'idvolquete' => 'idvolquete',
-                    'estado' => 'estado',
-                )
-            );
-        $sqlSelect->order('unidad.idunidad DESC');
 
-
-        $statement = $this->tableGateway->getSql()
-            ->prepareStatementForSqlObject($sqlSelect);
-        $resultSet = $statement->execute();
-
-        return $this->resultToArray($resultSet);
-    }
-    public function fetchAllPalas(){
-        $sqlSelect = $this->tableGateway->getSql()->select();
-        $sqlSelect->columns(
-            array(
-                'idunidad' => 'idunidad',
-                'placa' => 'placa',
-                'estado' => 'estado',
-            )
-        );
-        $sqlSelect
-            ->join(
-                'u_cargador',
-                'u_cargador.idcargador = unidad.idunidad',
-                array(
-                    'idcargador' => 'idcargador',
-                    'estado' => 'estado',
-                )
-            );
-
-        $sqlSelect->order('unidad.idunidad DESC');
-        $statement = $this->tableGateway->getSql()
-            ->prepareStatementForSqlObject($sqlSelect);
-        $resultSet = $statement->execute();
-
-        return $this->resultToArray($resultSet);
-    }
     public function getAllManeja($idoperador, $tipo)
     {
 

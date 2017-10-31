@@ -2,20 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3748b96d-24c7-4552-ab3a-f13f748593dd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/module/Lugar/src/Lugar/Model/Material.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/module/Lugar/src/Lugar/Model/MaterialTable.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/reporte/carga.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dispacher.iml" afterPath="$PROJECT_DIR$/.idea/dispacher.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/module/Reporte/view/reporte/index/unidades.phtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/reporte/unidades.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Application/view/layout/layout.phtml" afterPath="$PROJECT_DIR$/module/Application/view/layout/layout.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Lugar/Module.php" afterPath="$PROJECT_DIR$/module/Lugar/Module.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Lugar/view/lugar/index/index.phtml" afterPath="$PROJECT_DIR$/module/Lugar/view/lugar/index/index.phtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Reporte/src/Reporte/Controller/IndexController.php" afterPath="$PROJECT_DIR$/module/Reporte/src/Reporte/Controller/IndexController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Reporte/view/reporte/index/cargas.phtml" afterPath="$PROJECT_DIR$/module/Reporte/view/reporte/index/cargas.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Reporte/view/reporte/index/index.phtml" afterPath="$PROJECT_DIR$/module/Reporte/view/reporte/index/index.phtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/CargaTable.php" afterPath="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/CargaTable.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/UnidadTable.php" afterPath="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/UnidadTable.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/reporte/carga.js" afterPath="$PROJECT_DIR$/public/js/reporte/carga.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,142 +23,173 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/Reporte/src/Reporte/Controller/IndexController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
-              <caret line="143" column="43" lean-forward="false" selection-start-line="143" selection-start-column="43" selection-end-line="143" selection-end-column="43" />
-              <folding>
-                <element signature="e#943#4655#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Material.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/Lugar/src/Lugar/Model/Material.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="carga.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/reporte/carga.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="154" column="7" lean-forward="true" selection-start-line="154" selection-start-column="7" selection-end-line="154" selection-end-column="7" />
-              <folding>
-                <element signature="e#740#873#0" expanded="false" />
-                <element signature="e#901#1279#0" expanded="false" />
-                <element signature="e#1317#1444#0" expanded="false" />
-                <element signature="e#1498#1625#0" expanded="false" />
-                <element signature="e#1689#1816#0" expanded="false" />
-                <element signature="e#1869#1996#0" expanded="false" />
-                <element signature="e#2072#2496#0" expanded="false" />
-                <element signature="e#2547#2973#0" expanded="false" />
-                <element signature="e#3025#3413#0" expanded="false" />
-                <element signature="e#3465#3855#0" expanded="false" />
-                <element signature="e#3539#3697#0" expanded="false" />
-                <element signature="e#3893#4058#0" expanded="false" />
-                <element signature="e#4075#4194#0" expanded="false" />
-                <element signature="e#4210#4301#0" expanded="false" />
-                <element signature="e#4338#4616#0" expanded="false" />
-                <element signature="n#!!block;n#validar#0" expanded="false" />
-                <element signature="n#!!block;n#validarFechas#0" expanded="false" />
-                <element signature="n#!!block;n#actualizarCargasCanvas#0" expanded="false" />
-                <element signature="e#6056#6634#0" expanded="false" />
-                <element signature="n#!!block;n#actualizarCargasRadar#0" expanded="false" />
-                <element signature="e#6959#7492#0" expanded="false" />
-                <element signature="n#!!block;n#makePost#0" expanded="false" />
-                <element signature="e#8433#10445#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MaterialTable.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/Lugar/src/Lugar/Model/MaterialTable.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="52" column="5" lean-forward="false" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Module.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/Lugar/Module.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1003">
-              <caret line="76" column="62" lean-forward="false" selection-start-line="76" selection-start-column="62" selection-end-line="76" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CargaTable.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/CargaTable.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2261">
-              <caret line="135" column="47" lean-forward="false" selection-start-line="135" selection-start-column="47" selection-end-line="135" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PuntoTable.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/PuntoTable.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="43" column="5" lean-forward="false" selection-start-line="43" selection-start-column="5" selection-end-line="62" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cargas.phtml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/module/Reporte/view/reporte/index/cargas.phtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-637">
-              <caret line="18" column="36" lean-forward="false" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
-              <folding>
-                <element signature="n#div#1;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="operadores.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/rrhh/operadores.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2754">
-              <caret line="162" column="89" lean-forward="false" selection-start-line="162" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!block;n#makePost#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UnidadTable.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/UnidadTable.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1785">
-              <caret line="147" column="14" lean-forward="false" selection-start-line="147" selection-start-column="14" selection-end-line="147" selection-end-column="14" />
-              <folding>
-                <element signature="e#677#1993#0#PHP" expanded="false" />
-                <element signature="e#5435#6755#0#PHP" expanded="false" />
-                <element signature="e#7411#8117#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.81348723">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="UnidadTable.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/UnidadTable.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="103">
+                  <caret line="31" column="19" lean-forward="false" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+                  <folding>
+                    <element signature="e#2329#3645#0#PHP" expanded="false" />
+                    <element signature="e#3651#4290#0#PHP" expanded="false" />
+                    <element signature="e#4296#5336#0#PHP" expanded="false" />
+                    <element signature="e#5342#6375#0#PHP" expanded="false" />
+                    <element signature="e#6381#7081#0#PHP" expanded="false" />
+                    <element signature="e#7087#8407#0#PHP" expanded="false" />
+                    <element signature="e#8412#9057#0#PHP" expanded="false" />
+                    <element signature="e#9063#9769#0#PHP" expanded="false" />
+                    <element signature="e#9776#11545#0#PHP" expanded="false" />
+                    <element signature="e#11550#13114#0#PHP" expanded="false" />
+                    <element signature="e#13120#13776#0#PHP" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="VolqueteTable.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/VolqueteTable.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/module/Reporte/src/Reporte/Controller/IndexController.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="583">
+                  <caret line="208" column="13" lean-forward="true" selection-start-line="208" selection-start-column="13" selection-end-line="208" selection-end-column="13" />
+                  <folding>
+                    <element signature="e#943#4655#0#PHP" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="carga.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/public/js/reporte/carga.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="506">
+                  <caret line="116" column="36" lean-forward="false" selection-start-line="116" selection-start-column="36" selection-end-line="116" selection-end-column="36" />
+                  <folding>
+                    <element signature="e#858#991#0" expanded="false" />
+                    <element signature="e#1019#1397#0" expanded="false" />
+                    <element signature="e#1435#1562#0" expanded="false" />
+                    <element signature="e#1616#1743#0" expanded="false" />
+                    <element signature="e#1807#1934#0" expanded="false" />
+                    <element signature="e#1987#2114#0" expanded="false" />
+                    <marker date="1509408067600" expanded="false" signature="5302:5467" ph="{...}" />
+                    <marker date="1509408067600" expanded="false" signature="5484:5603" ph="{...}" />
+                    <marker date="1509408067600" expanded="false" signature="5619:5710" ph="{...}" />
+                    <marker date="1509408067600" expanded="false" signature="5854:6132" ph="{...}" />
+                    <marker date="1509408067600" expanded="false" signature="6195:6477" ph="{...}" />
+                    <marker date="1509408067600" expanded="false" signature="6517:7107" ph="{...}" />
+                    <marker date="1509408067600" expanded="false" signature="7572:8150" ph="{&quot;type&quot;: 'line'...}" />
+                    <marker date="1509408067600" expanded="false" signature="8201:9013" ph="{...}" />
+                    <marker date="1509408067600" expanded="false" signature="8476:9009" ph="{&quot;type&quot;: 'polarArea'...}" />
+                    <marker date="1509408067600" expanded="false" signature="10815:12827" ph="{...}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CargaTable.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/CargaTable.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="402">
+                  <caret line="169" column="66" lean-forward="true" selection-start-line="169" selection-start-column="66" selection-end-line="169" selection-end-column="66" />
+                  <folding>
+                    <element signature="e#1472#3168#0#PHP" expanded="false" />
+                    <element signature="e#3173#5202#0#PHP" expanded="false" />
+                    <element signature="e#7074#8577#0#PHP" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="unidades.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/js/reporte/unidades.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="279">
+                  <caret line="191" column="84" lean-forward="false" selection-start-line="191" selection-start-column="84" selection-end-line="191" selection-end-column="84" />
+                  <folding>
+                    <marker date="1509407888656" expanded="false" signature="7705:7992" ph="[...]" />
+                    <marker date="1509407888656" expanded="false" signature="8032:9631" ph="{...}" />
+                    <marker date="1509407888656" expanded="false" signature="11369:12188" ph="{...}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.phtml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/module/Reporte/view/reporte/index/index.phtml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="496">
+                  <caret line="470" column="65" lean-forward="true" selection-start-line="470" selection-start-column="65" selection-end-line="470" selection-end-column="65" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="unidades.phtml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/module/Reporte/view/reporte/index/unidades.phtml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="578">
+                  <caret line="51" column="38" lean-forward="true" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
+                  <folding>
+                    <marker date="1509407423503" expanded="true" signature="2873:3012" ph="..." />
+                    <marker date="1509407423503" expanded="true" signature="2909:2972" ph="..." />
+                    <marker date="1509407423503" expanded="false" signature="4579:4777" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="cargas.phtml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/module/Reporte/view/reporte/index/cargas.phtml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1547">
+                  <caret line="91" column="74" lean-forward="false" selection-start-line="91" selection-start-column="54" selection-end-line="91" selection-end-column="74" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="operadores.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/js/rrhh/operadores.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="288">
+                  <caret line="313" column="30" lean-forward="false" selection-start-line="313" selection-start-column="28" selection-end-line="313" selection-end-column="30" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="unidades.phtml" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/module/Reporte/view/reporte/index/unidades.phtml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="436">
+                  <caret line="73" column="64" lean-forward="false" selection-start-line="73" selection-start-column="64" selection-end-line="73" selection-end-column="64" />
+                  <folding>
+                    <marker date="1509407423503" expanded="true" signature="2873:3012" ph="..." />
+                    <marker date="1509407423503" expanded="true" signature="2909:2972" ph="..." />
+                    <marker date="1509407423503" expanded="false" signature="4579:4777" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -187,9 +213,25 @@
       <find>swal</find>
       <find>09486b</find>
       <find>carga</find>
+      <find>idm</find>
+      <find>material</find>
+      <find>idmaterial</find>
+      <find>correo</find>
+      <find>actualizarCargasCanvas</find>
+      <find>idpala</find>
+      <find>car</find>
+      <find>select</find>
+      <find>actualizarCargasRadar</find>
+      <find>actual</find>
+      <find>idpalas</find>
+      <find>palas</find>
+      <find>change</find>
+      <find>coleque</find>
     </findStrings>
     <replaceStrings>
       <replace>Henry Bravo cel 973772738</replace>
+      <replace>correctas</replace>
+      <replace>seleccione</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\wamp\www\dispacher</dir>
@@ -222,17 +264,19 @@
         <option value="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/OperaTable.php" />
         <option value="$PROJECT_DIR$/module/Lugar/src/Lugar/Model/LugarTable.php" />
         <option value="$PROJECT_DIR$/module/Lugar/src/Lugar/Model/RutaTable.php" />
-        <option value="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/UnidadTable.php" />
-        <option value="$PROJECT_DIR$/module/Reporte/view/reporte/index/index.phtml" />
         <option value="$PROJECT_DIR$/module/Rrhh/view/layout/layout.phtml" />
         <option value="$PROJECT_DIR$/module/Lugar/view/lugar/index/index.phtml" />
         <option value="$PROJECT_DIR$/module/Application/view/layout/layout.phtml" />
         <option value="$PROJECT_DIR$/module/Lugar/src/Lugar/Model/Material.php" />
         <option value="$PROJECT_DIR$/module/Lugar/src/Lugar/Model/MaterialTable.php" />
         <option value="$PROJECT_DIR$/module/Lugar/Module.php" />
-        <option value="$PROJECT_DIR$/module/Reporte/src/Reporte/Controller/IndexController.php" />
         <option value="$PROJECT_DIR$/module/Reporte/view/reporte/index/cargas.phtml" />
+        <option value="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/UnidadTable.php" />
+        <option value="$PROJECT_DIR$/module/Reporte/view/reporte/index/index.phtml" />
+        <option value="$PROJECT_DIR$/module/Reporte/src/Reporte/Controller/IndexController.php" />
         <option value="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/CargaTable.php" />
+        <option value="$PROJECT_DIR$/module/Reporte/view/reporte/index/unidades.phtml" />
+        <option value="$PROJECT_DIR$/public/js/reporte/unidades.js" />
         <option value="$PROJECT_DIR$/public/js/reporte/carga.js" />
       </list>
     </option>
@@ -321,14 +365,97 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
               <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Reporte" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Reporte" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Reporte" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="reporte" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Reporte" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="reporte" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Unidad" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Unidad" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Unidad" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Unidad" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Unidad" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Unidad" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="reporte" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -345,9 +472,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp\www\dispacher\module\Lugar\src\Lugar\Model" />
       <recent name="C:\wamp\www\dispacher\public\js\reporte" />
       <recent name="C:\wamp\www\dispacher\module\Reporte\view\reporte\index" />
+      <recent name="C:\wamp\www\dispacher\module\Lugar\src\Lugar\Model" />
       <recent name="C:\wamp\www\dispacher\module\Unidad\src\Unidad\Model" />
       <recent name="C:\wamp\www\dispacher\public\js" />
     </key>
@@ -389,7 +516,8 @@
       <workItem from="1508942371926" duration="12193000" />
       <workItem from="1508963010118" duration="9876000" />
       <workItem from="1509028145689" duration="10294000" />
-      <workItem from="1509372797120" duration="1564000" />
+      <workItem from="1509372797120" duration="13669000" />
+      <workItem from="1509394721625" duration="12991000" />
     </task>
     <task id="LOCAL-00001" summary="delete script">
       <created>1508887397430</created>
@@ -398,21 +526,27 @@
       <option name="project" value="LOCAL" />
       <updated>1508887397430</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="iniciando cargas por lugares">
+      <created>1509374449445</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1509374449445</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82148000" />
+    <option name="totallyTimeSpent" value="107244000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14270833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32661718" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32661718" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31707317" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -439,37 +573,16 @@
     </ignored-roots>
     <MESSAGE value="delete script" />
     <MESSAGE value="iniciando cargas por lugares" />
-    <option name="LAST_COMMIT_MESSAGE" value="iniciando cargas por lugares" />
+    <MESSAGE value="reportes de cargas por unidad --Henry Bravo" />
+    <option name="LAST_COMMIT_MESSAGE" value="reportes de cargas por unidad --Henry Bravo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="15" />
+      <option name="time" value="25" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/module/Reporte/config/module.config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/application.config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="39" lean-forward="true" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Application/view/layout/layout.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2329">
-          <caret line="137" column="76" lean-forward="false" selection-start-line="137" selection-start-column="76" selection-end-line="137" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/reporte/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -633,15 +746,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Reporte/view/reporte/index/index.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11390">
-          <caret line="670" column="62" lean-forward="false" selection-start-line="670" selection-start-column="62" selection-end-line="670" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -663,7 +767,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="75" column="44" lean-forward="false" selection-start-line="75" selection-start-column="44" selection-end-line="75" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -685,7 +788,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="918">
           <caret line="55" column="5" lean-forward="false" selection-start-line="55" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -696,33 +798,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/UnidadTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1785">
-          <caret line="147" column="14" lean-forward="false" selection-start-line="147" selection-start-column="14" selection-end-line="147" selection-end-column="14" />
-          <folding>
-            <element signature="e#677#1993#0#PHP" expanded="false" />
-            <element signature="e#5435#6755#0#PHP" expanded="false" />
-            <element signature="e#7411#8117#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/rrhh/operadores.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2754">
-          <caret line="162" column="89" lean-forward="false" selection-start-line="162" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#makePost#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/module/Lugar/src/Lugar/Model/Material.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -730,7 +809,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="867">
           <caret line="52" column="5" lean-forward="false" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -738,7 +816,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1003">
           <caret line="76" column="62" lean-forward="false" selection-start-line="76" selection-start-column="62" selection-end-line="76" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -746,6 +823,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1071">
           <caret line="64" column="54" lean-forward="false" selection-start-line="64" selection-start-column="54" selection-end-line="64" selection-end-column="54" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -753,6 +831,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="72" column="36" lean-forward="true" selection-start-line="72" selection-start-column="36" selection-end-line="72" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -760,23 +839,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Reporte/src/Reporte/Controller/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="143" column="43" lean-forward="false" selection-start-line="143" selection-start-column="43" selection-end-line="143" selection-end-column="43" />
-          <folding>
-            <element signature="e#943#4655#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/CargaTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2261">
-          <caret line="135" column="47" lean-forward="false" selection-start-line="135" selection-start-column="47" selection-end-line="135" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -789,44 +851,125 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/reporte/carga.js">
+    <entry file="file://$PROJECT_DIR$/module/Reporte/view/reporte/index/cargas.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="154" column="7" lean-forward="true" selection-start-line="154" selection-start-column="7" selection-end-line="154" selection-end-column="7" />
+        <state relative-caret-position="1547">
+          <caret line="91" column="74" lean-forward="false" selection-start-line="91" selection-start-column="54" selection-end-line="91" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/VolqueteTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/UnidadTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="31" column="19" lean-forward="false" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
           <folding>
-            <element signature="e#740#873#0" expanded="false" />
-            <element signature="e#901#1279#0" expanded="false" />
-            <element signature="e#1317#1444#0" expanded="false" />
-            <element signature="e#1498#1625#0" expanded="false" />
-            <element signature="e#1689#1816#0" expanded="false" />
-            <element signature="e#1869#1996#0" expanded="false" />
-            <element signature="e#2072#2496#0" expanded="false" />
-            <element signature="e#2547#2973#0" expanded="false" />
-            <element signature="e#3025#3413#0" expanded="false" />
-            <element signature="e#3465#3855#0" expanded="false" />
-            <element signature="e#3539#3697#0" expanded="false" />
-            <element signature="e#3893#4058#0" expanded="false" />
-            <element signature="e#4075#4194#0" expanded="false" />
-            <element signature="e#4210#4301#0" expanded="false" />
-            <element signature="e#4338#4616#0" expanded="false" />
-            <element signature="n#!!block;n#validar#0" expanded="false" />
-            <element signature="n#!!block;n#validarFechas#0" expanded="false" />
-            <element signature="n#!!block;n#actualizarCargasCanvas#0" expanded="false" />
-            <element signature="e#6056#6634#0" expanded="false" />
-            <element signature="n#!!block;n#actualizarCargasRadar#0" expanded="false" />
-            <element signature="e#6959#7492#0" expanded="false" />
-            <element signature="n#!!block;n#makePost#0" expanded="false" />
-            <element signature="e#8433#10445#0" expanded="false" />
+            <element signature="e#2329#3645#0#PHP" expanded="false" />
+            <element signature="e#3651#4290#0#PHP" expanded="false" />
+            <element signature="e#4296#5336#0#PHP" expanded="false" />
+            <element signature="e#5342#6375#0#PHP" expanded="false" />
+            <element signature="e#6381#7081#0#PHP" expanded="false" />
+            <element signature="e#7087#8407#0#PHP" expanded="false" />
+            <element signature="e#8412#9057#0#PHP" expanded="false" />
+            <element signature="e#9063#9769#0#PHP" expanded="false" />
+            <element signature="e#9776#11545#0#PHP" expanded="false" />
+            <element signature="e#11550#13114#0#PHP" expanded="false" />
+            <element signature="e#13120#13776#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/Reporte/view/reporte/index/cargas.phtml">
+    <entry file="file://$PROJECT_DIR$/public/js/rrhh/operadores.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-637">
-          <caret line="18" column="36" lean-forward="false" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+        <state relative-caret-position="288">
+          <caret line="313" column="30" lean-forward="false" selection-start-line="313" selection-start-column="28" selection-end-line="313" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Reporte/view/reporte/index/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="470" column="65" lean-forward="true" selection-start-line="470" selection-start-column="65" selection-end-line="470" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/CargaTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="169" column="66" lean-forward="true" selection-start-line="169" selection-start-column="66" selection-end-line="169" selection-end-column="66" />
           <folding>
-            <element signature="n#div#1;n#!!top" expanded="false" />
+            <element signature="e#1472#3168#0#PHP" expanded="false" />
+            <element signature="e#3173#5202#0#PHP" expanded="false" />
+            <element signature="e#7074#8577#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Reporte/src/Reporte/Controller/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="208" column="13" lean-forward="true" selection-start-line="208" selection-start-column="13" selection-end-line="208" selection-end-column="13" />
+          <folding>
+            <element signature="e#943#4655#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Reporte/view/reporte/index/unidades.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="51" column="38" lean-forward="true" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
+          <folding>
+            <marker date="1509407423503" expanded="true" signature="2873:3012" ph="..." />
+            <marker date="1509407423503" expanded="true" signature="2909:2972" ph="..." />
+            <marker date="1509407423503" expanded="false" signature="4579:4777" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/reporte/unidades.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="191" column="84" lean-forward="false" selection-start-line="191" selection-start-column="84" selection-end-line="191" selection-end-column="84" />
+          <folding>
+            <marker date="1509407888656" expanded="false" signature="7705:7992" ph="[...]" />
+            <marker date="1509407888656" expanded="false" signature="8032:9631" ph="{...}" />
+            <marker date="1509407888656" expanded="false" signature="11369:12188" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/reporte/carga.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="116" column="36" lean-forward="false" selection-start-line="116" selection-start-column="36" selection-end-line="116" selection-end-column="36" />
+          <folding>
+            <element signature="e#858#991#0" expanded="false" />
+            <element signature="e#1019#1397#0" expanded="false" />
+            <element signature="e#1435#1562#0" expanded="false" />
+            <element signature="e#1616#1743#0" expanded="false" />
+            <element signature="e#1807#1934#0" expanded="false" />
+            <element signature="e#1987#2114#0" expanded="false" />
+            <marker date="1509408067600" expanded="false" signature="5302:5467" ph="{...}" />
+            <marker date="1509408067600" expanded="false" signature="5484:5603" ph="{...}" />
+            <marker date="1509408067600" expanded="false" signature="5619:5710" ph="{...}" />
+            <marker date="1509408067600" expanded="false" signature="5854:6132" ph="{...}" />
+            <marker date="1509408067600" expanded="false" signature="6195:6477" ph="{...}" />
+            <marker date="1509408067600" expanded="false" signature="6517:7107" ph="{...}" />
+            <marker date="1509408067600" expanded="false" signature="7572:8150" ph="{&quot;type&quot;: 'line'...}" />
+            <marker date="1509408067600" expanded="false" signature="8201:9013" ph="{...}" />
+            <marker date="1509408067600" expanded="false" signature="8476:9009" ph="{&quot;type&quot;: 'polarArea'...}" />
+            <marker date="1509408067600" expanded="false" signature="10815:12827" ph="{...}" />
           </folding>
         </state>
       </provider>

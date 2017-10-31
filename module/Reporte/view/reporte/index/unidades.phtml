@@ -2,10 +2,9 @@
 * Created by Henry Bravo cel 973772738.
 -->
 <?php
-$this->inlineScript()->appendFile(
-    $this->basePath() . '/public/js/reporte/carga.js'
-);
-
+    $this->inlineScript()->appendFile(
+        $this->basePath() . '/public/js/reporte/unidades.js'
+    );
 ?>
 <div class="row col-md-12">
     <div class="row center-align">
@@ -13,7 +12,7 @@ $this->inlineScript()->appendFile(
             <div class="row">
                 <!--Titulo Panel-->
                 <div class="col-md-12">
-                    <h1 >Reporte en Cargas</h1>
+                    <h1 >Reporte en rendimiento de unidades</h1>
                 </div>
             </div>
             <!--Lista de reportes-->
@@ -28,9 +27,9 @@ $this->inlineScript()->appendFile(
                 <div class="row card-block" style="padding-top: 20px;">
                     <div class="row col-md-12">
                         <!--Gráfico que muestra el número de cargas -->
-                        <div class=col-md-4>
+                        <div class="col-md-4">
                             <label>
-                                Este gráfico representa el total de cargas entre un intervalo de fechas
+                                Este gráfico representa el total de cargas entre un rango de fechas por pala
                             </label>
                             <div class="col-md-4" style="text-align: left">
                                 <div class="col-md-12">
@@ -42,12 +41,12 @@ $this->inlineScript()->appendFile(
                                     <input class="form-control col-md-6" id="fechahasta">
                                 </div>
                                 <div class="col-md-12">
-                                    <label for="material">Material: </label>
-                                    <select id="material" class="form-control">
-                                        <option value="-1">--Sin Filtro--</option>
+                                    <label for="palas">Pala: </label>
+                                    <select id="palas" class="form-control">
+                                        <option   value="-1">--Todas--</option>
                                         <?php
-                                        foreach ($this->materiales as $value)
-                                            echo "<option class='material' value='".$value->idmaterial."'>".$value->nombre."</option>";
+                                        foreach ($this->palas as $value)
+                                            echo "<option class='palas' value='".$value['idunidad']."'>".$value['placa']."</option>";
                                         ?>
                                     </select>
                                 </div>
@@ -56,10 +55,8 @@ $this->inlineScript()->appendFile(
                                 <canvas id="myChart" width="100" height="100"></canvas>
                             </div>
                         </div>
-                        <div class=col-md-4>
-                            <label>
-                                Este gráfico representa el total de cargas por material
-                            </label>
+                        <div class="col-md-4">
+                            <label>Este gráfico representa el total de cargas por material</label>
                             <div class="col-md-4" style="text-align: left">
                                 <div class="col-md-12">
                                     <label for="fechadesdeR">Desde: </label>
@@ -69,13 +66,22 @@ $this->inlineScript()->appendFile(
                                     <label for="fechahastaR">Hasta: </label>
                                     <input class="form-control col-md-6" id="fechahastaR">
                                 </div>
+                                <div class="col-md-12">
+                                    <label for="camiones">Camión: </label>
+                                    <select id="camiones" class="form-control">
+                                        <option   value="-1">--Todos--</option>
+                                        <?php
+                                        foreach ($this->camiones as $value)
+                                            echo "<option class='camiones' value='".$value['idunidad']."'>".$value['placa']."</option>";
+                                        ?>
+                                    </select>
+                                </div>
                             </div>
-
-                            <div class="col-md-8" id="conteinerCanvasRadar">
-                                <canvas id="myChartRadar" width="100" height="100"></canvas>
+                            <div class="col-md-8" id="conteinerCanvasVolquetes">
+                                <canvas id="myChartVolquetes" width="100" height="100"></canvas>
                             </div>
                         </div>
-                        <div class=col-md-4>
+                        <div class="col-md-4">
                             <label>
                                 Este gráfico representa el total de cargas por lugar
                             </label>
@@ -99,6 +105,7 @@ $this->inlineScript()->appendFile(
         </div>
     </div>
 </div>
+
 <div id="modalLoading" class="modal fade" role="dialog">
     <div class="modal-dialog">
 

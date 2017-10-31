@@ -98,6 +98,111 @@ class CargaTable
         $resultSet = $statement->execute();
         return $this->resultToArray($resultSet);
     }
+    public function getCantidadCargasFechasUnidadesP($fechadesde, $fechahasta, $idunidad)
+    {
+
+        if($idunidad>0)
+            $where="carga.fechainicio>= '$fechadesde' and carga.fechainicio<='$fechahasta' and carga.estado=2 and servicio_carga.idcargador=$idunidad";
+        else
+            $where="carga.fechainicio>= '$fechadesde' and carga.fechainicio<='$fechahasta' and carga.estado=2";
+
+        $sqlSelect = $this->tableGateway->getSql()->select();
+        $sqlSelect->columns(
+            array(
+                'placa' => new Expression('unidad.placa'),
+                'anio' => new Expression('year(carga.fechainicio)'),
+                'mes' => new Expression('month(carga.fechainicio)'),
+                'dia' => new Expression('day(carga.fechainicio)'),
+                'cantidad'=>new Expression('Count (year(carga.fechainicio))')
+            )
+        );
+        $sqlSelect
+            ->join(
+                'carga_volquete',
+                'carga_volquete.idcargavolquete = carga.idcargavolquete',
+                array(
+                )
+            )->join(
+                'servicio_carga',
+                'servicio_carga.idservicio = carga_volquete.idservicio',
+                array(
+                )
+            )->join(
+                'unidad',
+                'unidad.idunidad = servicio_carga.idcargador',
+                array(
+                    'placa'=>'placa'
+                )
+            );
+        $sqlSelect->where($where);
+        $sqlSelect->group(
+            new Expression('year(carga.fechainicio)')
+        );
+        $sqlSelect->group(
+            new Expression('month(carga.fechainicio)')
+        );
+        $sqlSelect->group(
+            new Expression('day(carga.fechainicio)')
+        );
+        $sqlSelect->group(
+            new Expression('unidad.placa')
+        );
+        $statement = $this->tableGateway->getSql()
+            ->prepareStatementForSqlObject($sqlSelect);
+        $resultSet = $statement->execute();
+        return $this->resultToArray($resultSet);
+    }
+
+    public function getCantidadCargasFechasUnidadesV($fechadesde, $fechahasta, $idunidad)
+    {
+
+        if($idunidad>0)
+            $where="carga.fechainicio>= '$fechadesde' and carga.fechainicio<='$fechahasta' and carga.estado=2 and carga_volquete.idvolquete=$idunidad";
+        else
+            $where="carga.fechainicio>= '$fechadesde' and carga.fechainicio<='$fechahasta' and carga.estado=2";
+
+        $sqlSelect = $this->tableGateway->getSql()->select();
+        $sqlSelect->columns(
+            array(
+                'placa' => new Expression('unidad.placa'),
+                'anio' => new Expression('year(carga.fechainicio)'),
+                'mes' => new Expression('month(carga.fechainicio)'),
+                'dia' => new Expression('day(carga.fechainicio)'),
+                'cantidad'=>new Expression('Count (year(carga.fechainicio))')
+            )
+        );
+        $sqlSelect
+            ->join(
+                'carga_volquete',
+                'carga_volquete.idcargavolquete = carga.idcargavolquete',
+                array(
+                )
+            )->join(
+                'unidad',
+                'unidad.idunidad = carga_volquete.idvolquete',
+                array(
+                    'placa'=>'placa'
+                )
+            );
+        $sqlSelect->where($where);
+        $sqlSelect->group(
+            new Expression('year(carga.fechainicio)')
+        );
+        $sqlSelect->group(
+            new Expression('month(carga.fechainicio)')
+        );
+        $sqlSelect->group(
+            new Expression('day(carga.fechainicio)')
+        );
+        $sqlSelect->group(
+            new Expression('unidad.placa')
+        );
+        $statement = $this->tableGateway->getSql()
+            ->prepareStatementForSqlObject($sqlSelect);
+        $resultSet = $statement->execute();
+        return $this->resultToArray($resultSet);
+    }
+
     public function getCantidadCargasMateriales($fechadesde, $fechahasta)
     {
         $sqlSelect = $this->tableGateway->getSql()->select();
@@ -134,6 +239,49 @@ class CargaTable
         );
         $sqlSelect->group(
             new Expression('material.idmaterial')
+        );
+        $statement = $this->tableGateway->getSql()
+            ->prepareStatementForSqlObject($sqlSelect);
+        $resultSet = $statement->execute();
+        return $this->resultToArray($resultSet);
+    }
+
+    public function getCantidadCargasLugares($fechadesde, $fechahasta)
+    {
+        $sqlSelect = $this->tableGateway->getSql()->select();
+        $sqlSelect->columns(
+            array(
+                'cantidad' => new Expression('count (servicio_carga.idlugarorigen)'),
+            )
+        );
+        $sqlSelect
+            ->join(
+                'carga_volquete',
+                'carga_volquete.idcargavolquete = carga.idcargavolquete',
+                array(
+                )
+            )->join(
+                'servicio_carga',
+                'servicio_carga.idservicio = carga_volquete.idservicio',
+                array(
+                )
+            )->join(
+                'lugar',
+                'servicio_carga.idlugarorigen = lugar.idlugar',
+                array(
+                    'idlugar' =>'idlugar',
+                    'nombre' =>'nombre'
+                )
+            );
+        $sqlSelect->where("carga.fechainicio>= '$fechadesde' and carga.fechainicio<='$fechahasta' and carga.estado=2");
+        $sqlSelect->group(
+            new Expression('servicio_carga.idlugarorigen')
+        );
+        $sqlSelect->group(
+            new Expression('lugar.nombre')
+        );
+        $sqlSelect->group(
+            new Expression('lugar.idlugar')
         );
         $statement = $this->tableGateway->getSql()
             ->prepareStatementForSqlObject($sqlSelect);

@@ -387,20 +387,16 @@ $this->inlineScript()->appendFile(
         color: rgba(255,255,255,0.5);
         background-color: rgba(0,0,0,0.2);
     }
-
-
     .morning {
         background: url(https://lh3.googleusercontent.com/-1YbV7nsVnX8/WMugaq-6BEI/AAAAAAAADSg/0wPfQ84vMUcCle_SkgiUDOumUKscMaA8QCL0B/w530-d-h353-p-rw/widget-bg-morning.jpg) center bottom no-repeat;
         background-size: cover;
     }
-
     .time-widget {
         margin-top: 5px;
         overflow: hidden;
         text-align: center;
         font-size: 1.75em;
     }
-
     .time-widget-heading {
         text-transform: uppercase;
         font-size: .5em;
@@ -410,8 +406,7 @@ $this->inlineScript()->appendFile(
     #datetime{color:#fff;}
     .tile-img {
         text-shadow: 2px 2px 3px rgba(0,0,0,0.9);
-    }
-
+    }º
     .tile {
         margin-bottom: 15px;
         padding: 15px;
@@ -453,7 +448,7 @@ $this->inlineScript()->appendFile(
                                     <div class="circle-tile-number text-faded">
                                         <?= $cantidadCargas ?> Cargas
                                     </div>
-                                    <a href="#" class="circle-tile-footer">Detalles <i class="fa fa-chevron-circle-right"></i></a>
+                                    <a href="<?=$this->basePath().'/reporte/cargas' ?>" target="_blank" class="circle-tile-footer">Detalles <i class="fa fa-chevron-circle-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -476,7 +471,7 @@ $this->inlineScript()->appendFile(
                                         <?=$cantidadPalas?> Palas
                                         <span id="sparklineA"></span>
                                     </div>
-                                    <a href="#" class="circle-tile-footer">Detalles <i class="fa fa-chevron-circle-right"></i></a>
+                                    <a href="<?=$this->basePath().'/reporte/unidades' ?>" target="_blank" class="circle-tile-footer">Detalles <i class="fa fa-chevron-circle-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -522,7 +517,6 @@ $this->inlineScript()->appendFile(
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
             <div class="panel panel-default text-center">
@@ -663,7 +657,6 @@ $this->inlineScript()->appendFile(
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
             <div class="panel panel-default text-center">

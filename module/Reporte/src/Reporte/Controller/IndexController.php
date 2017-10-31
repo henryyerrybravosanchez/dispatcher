@@ -145,12 +145,75 @@ class IndexController extends AbstractActionController
                         return new JsonModel(array('data' => -1, 'm'=>$e));
                     }
                     break;
+                case 3:
+                    try {
+                        $fechainicial= $this->request->getPost('fi');
+                        $fechafinal= $this->request->getPost('ff');
+                        $fIex=explode('-', $fechainicial);
+                        $fFex=explode('-', $fechafinal);
+                        $fechainicial=$fIex[2]."-".$fIex[1]."-".$fIex[0];
+                        $fechafinal=$fFex[2]."-".$fFex[1]."-".$fFex[0];
+                        $cargas=$this->getCargaTable()->getCantidadCargasLugares($fechainicial, $fechafinal);
+                        return new JsonModel(array('data'=>$cargas));
+                    }
+                    catch (\Exception $e) {
+                        return new JsonModel(array('data' => -1, 'm'=>$e));
+                    }
+                    break;
             }
         }
         $materiales=$this->getMaterialTable()->fetchAll();
         return new ViewModel(
             array(
                 'materiales'=>$materiales,
+            )
+        );
+    }
+    public function unidadesAction(){
+        if ($this->request->isXmlHttpRequest()) {
+            $o = (int)$this->request->getPost('o');
+            switch ($o)
+            {
+                case 1:
+                    try {
+                        $fechainicial= $this->request->getPost('fi');
+                        $fechafinal= $this->request->getPost('ff');
+                        $idpala= (int)$this->request->getPost('idp');
+                        $fIex=explode('-', $fechainicial);
+                        $fFex=explode('-', $fechafinal);
+                        $fechainicial=$fIex[2]."-".$fIex[1]."-".$fIex[0];
+                        $fechafinal=$fFex[2]."-".$fFex[1]."-".$fFex[0];
+                        $cargas=$this->getCargaTable()->getCantidadCargasFechasUnidadesP($fechainicial, $fechafinal, $idpala);
+                        return new JsonModel(array('data'=>$cargas));
+                    }
+                    catch (\Exception $e) {
+                        return new JsonModel(array('data' => -1, 'm'=>$e));
+                    }
+                    break;
+                case 2:
+                    try {
+                        $fechainicial= $this->request->getPost('fi');
+                        $fechafinal= $this->request->getPost('ff');
+                        $idpala= (int)$this->request->getPost('idp');
+                        $fIex=explode('-', $fechainicial);
+                        $fFex=explode('-', $fechafinal);
+                        $fechainicial=$fIex[2]."-".$fIex[1]."-".$fIex[0];
+                        $fechafinal=$fFex[2]."-".$fFex[1]."-".$fFex[0];
+                        $cargas=$this->getCargaTable()->getCantidadCargasFechasUnidadesV($fechainicial, $fechafinal, $idpala);
+                        return new JsonModel(array('data'=>$cargas));
+                    }
+                    catch (\Exception $e) {
+                        return new JsonModel(array('data' => -1, 'm'=>$e));
+                    }
+                    break;
+            }
+        }
+        $palas=$this->getUnidadTable()->fetchAllPalas();
+        $camiones=$this->getUnidadTable()->fetchAllVolquetes();
+        return new ViewModel(
+            array(
+                'palas'=>$palas,
+                'camiones'=>$camiones
             )
         );
     }
