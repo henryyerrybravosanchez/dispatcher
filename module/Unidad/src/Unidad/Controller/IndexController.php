@@ -191,7 +191,7 @@ class IndexController extends AbstractActionController
         if (!$this->volquetetable) {
             $sm = $this->getServiceLocator();
             $this->volquetetable = $sm->get(
-                'Volquete\Model\VolqueteTable'
+                'Unidad\Model\VolqueteTable'
             );
         }
         return $this->volquetetable;

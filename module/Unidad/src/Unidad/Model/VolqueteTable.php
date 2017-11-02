@@ -37,8 +37,7 @@ class VolqueteTable
         );
         $id = (int)$volquete->idvolquete;
         if ($id == 0) {
-            throw new \Exception('Unidad  no existe');
-
+            throw new \Exception('Volquete  no existe');
         } else {
             $this->tableGateway->insert($data);
             $id = $this->tableGateway->lastInsertValue;

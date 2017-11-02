@@ -7,6 +7,7 @@ use Zend\InputFilter\InputFilterInterface;
 class Volquete implements InputFilterAwareInterface
 {
 	public $idvolquete;
+	public $galonesXkm;
     public $estado;
     public $inputFilter;
 
@@ -14,6 +15,8 @@ class Volquete implements InputFilterAwareInterface
     {
 	    $this->idvolquete = (!empty($data['idvolquete']))
 		    ? $data['idvolquete'] : null;
+	    $this->galonesXkm = (!empty($data['galonesXkm']))
+		    ? $data['galonesXkm'] : null;
 	    $this->estado = (!empty($data['estado']))
 		    ? $data['estado'] : null;
     }

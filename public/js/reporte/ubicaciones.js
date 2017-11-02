@@ -6,13 +6,18 @@ var palas=[];
 var placaseleccionada=0;
 var idcamion;
 var idpala;
+var tipo;
+var fdesdeDatepicker=0;
+var fhastaDatepicker=0;
+var tipovalor=1;
 $(document).ready(function() {
     base=$("#baseUrl").val();
-    var tipo=$('input[type=radio][name=tUnidad]');
+    tipo=$('input[type=radio][name=tUnidad]');
     tipo.change(function() {
         if (this.value == '1') {
             $("#divPalas").show();
             $("#divCamiones").hide();
+            tipovalor=1;
             makePost({
                 o:1,
                 t:tipo.val(),
@@ -25,7 +30,7 @@ $(document).ready(function() {
 
             $("#divPalas").hide();
             $("#divCamiones").show();
-
+            tipovalor=2;
             makePost({
                 o:1,
                 t:tipo.val(),
@@ -34,9 +39,11 @@ $(document).ready(function() {
                 ff:fhastaDatepicker.val()
             })
         }
+        preparaLinkDesplazamiento();
+
     });
-    var fdesdeDatepicker=$("#fDesde");
-    var fhastaDatepicker=$("#fHasta");
+    fdesdeDatepicker=$("#fDesde");
+    fhastaDatepicker=$("#fHasta");
     idpala=$("#palas");
     idcamion=$("#camiones");
     placaseleccionada=idpala.val();
@@ -100,6 +107,8 @@ $(document).ready(function() {
             fi:fdesdeDatepicker.val(),
             ff:fhastaDatepicker.val()
         })
+        preparaLinkDesplazamiento();
+
     });
     idpala.change(function () {
         makePost({
@@ -109,9 +118,24 @@ $(document).ready(function() {
             fi:fdesdeDatepicker.val(),
             ff:fhastaDatepicker.val()
         })
+        preparaLinkDesplazamiento();
+
     });
+    preparaLinkDesplazamiento();
 
 });
+function preparaLinkDesplazamiento() {
+    var btnDesplazamiento=$("#bDesplzamiento");
+    var idunidad=0;
+    if(tipovalor===1)
+    {
+        idunidad=idpala.val();
+    }else {
+        idunidad=idcamion.val();
+    }
+
+    btnDesplazamiento.attr('href', base+"/reporte/desplazamiento/"+idunidad+"/"+fdesdeDatepicker.val().replace('-','a').replace('-','a')+"a"+fhastaDatepicker.val().replace('-','a').replace('-','a'));
+}
 function makePost(data) {
     var modalLoading=$("#modalLoading");
     modalLoading.modal("show");

@@ -57,28 +57,24 @@
                                 <label class="col-md-1" for="fHasta">Hasta: </label>
                                 <div class="col-md-1">
                                     <input id="fHasta" class="form-control">
-
                                 </div>
-                                <div class="btn btn-info col-md-2" style="margin: 0;">
+                                <a href="<?=$this->basePath().'/reporte/desplazamiento/' ?>" target="_blank" class="btn btn-info col-md-2" id="bDesplzamiento" style="margin: 0;">
                                     <i class="fa fa-code-fork" aria-hidden="true"></i>
                                     Desplazamiento
-                                </div>
-
+                                </a>
                             </div>
                             <div class="col-md-12"  style="background: #5f91fe1a;padding: 10px;margin-left: 1em;" id="divTable">
                                 <table id="tablaUbicaciones" class="table table-striped table-bordered table-hover dataTable no-footer dtr-inline">
                                     <thead>
-                                    <tr role="row">
-                                        <td>Nº</td>
-                                        <td>Latitud</td>
-                                        <td>Longitud</td>
-                                        <td>Fec. Registro</td>
-                                        <td>opción</td>
-                                    </tr>
+                                        <tr role="row">
+                                            <td>Nº</td>
+                                            <td>Latitud</td>
+                                            <td>Longitud</td>
+                                            <td>Fec. Registro</td>
+                                            <td>opción</td>
+                                        </tr>
                                     </thead>
-                                    <tbody id="tableBodyAdd">
-
-                                    </tbody>
+                                    <tbody id="tableBodyAdd"></tbody>
                                 </table>
                             </div>
                             <div class="col-md-6">

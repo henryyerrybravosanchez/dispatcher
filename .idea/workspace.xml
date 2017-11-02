@@ -2,32 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3748b96d-24c7-4552-ab3a-f13f748593dd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/module/Reporte/view/reporte/index/desplazamiento.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/module/Reporte/view/reporte/index/ubicaciones.phtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/ServicioCarga.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/ServicioCargaTable.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/reporte/ubicaciones.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/module/Reporte/src/Reporte/Model/Opera.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/module/Reporte/src/Reporte/Model/OperaTable.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/module/Reporte/src/Reporte/Model/Pala.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/module/Reporte/src/Reporte/Model/PalaTable.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/module/Reporte/src/Reporte/Model/Punto.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/module/Reporte/src/Reporte/Model/PuntoTable.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/module/Reporte/src/Reporte/Model/Unidad.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/module/Reporte/src/Reporte/Model/UnidadTable.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/module/Reporte/src/Reporte/Model/Volquete.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/module/Reporte/src/Reporte/Model/VolqueteTable.php" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/reporte/desplazamiento.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Application/src/Application/Controller/IndexController.php" afterPath="$PROJECT_DIR$/module/Application/src/Application/Controller/IndexController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Reporte/src/Reporte/Controller/IndexController.php" afterPath="$PROJECT_DIR$/module/Reporte/src/Reporte/Controller/IndexController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Reporte/view/reporte/index/desplazamiento.phtml" afterPath="$PROJECT_DIR$/module/Reporte/view/reporte/index/desplazamiento.phtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Reporte/view/reporte/index/index.phtml" afterPath="$PROJECT_DIR$/module/Reporte/view/reporte/index/index.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Reporte/view/reporte/index/unidades.phtml" afterPath="$PROJECT_DIR$/module/Reporte/view/reporte/index/unidades.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Unidad/Module.php" afterPath="$PROJECT_DIR$/module/Unidad/Module.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Reporte/view/reporte/index/ubicaciones.phtml" afterPath="$PROJECT_DIR$/module/Reporte/view/reporte/index/ubicaciones.phtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Unidad/src/Unidad/Controller/IndexController.php" afterPath="$PROJECT_DIR$/module/Unidad/src/Unidad/Controller/IndexController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/CargaTable.php" afterPath="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/CargaTable.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/DesplazamientoTable.php" afterPath="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/DesplazamientoTable.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/OperaTable.php" afterPath="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/OperaTable.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/reporte/carga.js" afterPath="$PROJECT_DIR$/public/js/reporte/carga.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/reporte/unidades.js" afterPath="$PROJECT_DIR$/public/js/reporte/unidades.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/Volquete.php" afterPath="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/Volquete.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/VolqueteTable.php" afterPath="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/VolqueteTable.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/reporte/ubicaciones.js" afterPath="$PROJECT_DIR$/public/js/reporte/ubicaciones.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,166 +25,18 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.60757214">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/module/Reporte/src/Reporte/Controller/IndexController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="367">
-                  <caret line="53" column="12" lean-forward="false" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
-                  <folding>
-                    <element signature="e#4865#7760#0#PHP" expanded="false" />
-                    <element signature="e#7765#11133#0#PHP" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="OperaTable.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/OperaTable.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="521">
-                  <caret line="81" column="50" lean-forward="true" selection-start-line="81" selection-start-column="50" selection-end-line="81" selection-end-column="50" />
-                  <folding>
-                    <element signature="e#31#69#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ubicaciones.phtml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/module/Reporte/view/reporte/index/ubicaciones.phtml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="425">
-                  <caret line="63" column="50" lean-forward="false" selection-start-line="63" selection-start-column="50" selection-end-line="63" selection-end-column="50" />
-                  <folding>
-                    <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                    <element signature="n#style#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="desplazamiento.phtml" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/module/Reporte/view/reporte/index/desplazamiento.phtml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="493">
-                  <caret line="29" column="31" lean-forward="true" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="index.phtml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/module/Reporte/view/reporte/index/index.phtml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="317">
-                  <caret line="558" column="72" lean-forward="false" selection-start-line="558" selection-start-column="72" selection-end-line="558" selection-end-column="72" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ServicioCargaTable.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/ServicioCargaTable.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1377">
-                  <caret line="82" column="5" lean-forward="false" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CargaTable.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/CargaTable.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2006">
-                  <caret line="304" column="47" lean-forward="false" selection-start-line="304" selection-start-column="47" selection-end-line="304" selection-end-column="47" />
-                  <folding>
-                    <element signature="e#1472#3168#0#PHP" expanded="false" />
-                    <element signature="e#3174#5203#0#PHP" expanded="false" />
-                    <element signature="e#5209#7070#0#PHP" expanded="false" />
-                    <element signature="e#8798#10301#0#PHP" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="ubicaciones.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/public/js/reporte/ubicaciones.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="456">
-                  <caret line="142" column="109" lean-forward="false" selection-start-line="142" selection-start-column="109" selection-end-line="142" selection-end-column="109" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/public/js/lugar/index.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1615">
-                  <caret line="95" column="23" lean-forward="false" selection-start-line="95" selection-start-column="23" selection-end-line="119" selection-end-column="25" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="DesplazamientoTable.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/DesplazamientoTable.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1496">
-                  <caret line="89" column="18" lean-forward="false" selection-start-line="89" selection-start-column="18" selection-end-line="89" selection-end-column="18" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Module.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/module/Unidad/Module.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2125">
-                  <caret line="151" column="10" lean-forward="false" selection-start-line="151" selection-start-column="10" selection-end-line="151" selection-end-column="10" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="unidades.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/public/js/reporte/unidades.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="7157">
-                  <caret line="487" column="25" lean-forward="false" selection-start-line="487" selection-start-column="25" selection-end-line="487" selection-end-column="25" />
-                  <folding>
-                    <element signature="n#!!block;n#actualizarCargasCanvas#0" expanded="false" />
-                    <element signature="e#21441#23807#0" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>David Paredes on 14/08/2016</find>
-      <find>unida</find>
-      <find>Usuario</find>
       <find>date</find>
       <find>Desac</find>
       <find>&lt;</find>
@@ -227,6 +64,9 @@
       <find>Pala</find>
       <find>getOperaMonthFinish</find>
       <find>mes</find>
+      <find>directionsService</find>
+      <find>contador</find>
+      <find>tUnidad</find>
     </findStrings>
     <replaceStrings>
       <replace>Henry Bravo cel 973772738</replace>
@@ -252,7 +92,6 @@
         <option value="$PROJECT_DIR$/module/Lugar/view/lugar/index/list.phtml" />
         <option value="$PROJECT_DIR$/module/Lugar/view/lugar/index/unidad.phtml" />
         <option value="$PROJECT_DIR$/module/Reporte/Module.php" />
-        <option value="$PROJECT_DIR$/module/Reporte/config/module.config.php" />
         <option value="$PROJECT_DIR$/config/application.config.php" />
         <option value="$PROJECT_DIR$/public/js/reporte/list.js" />
         <option value="$PROJECT_DIR$/public/js/reporte/index.js" />
@@ -274,16 +113,22 @@
         <option value="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/Servicio.php" />
         <option value="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/ServicioCarga.php" />
         <option value="$PROJECT_DIR$/module/Unidad/Module.php" />
-        <option value="$PROJECT_DIR$/module/Unidad/src/Unidad/Controller/IndexController.php" />
         <option value="$PROJECT_DIR$/public/js/reporte/unidades.js" />
         <option value="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/CargaTable.php" />
         <option value="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/ServicioCargaTable.php" />
         <option value="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/DesplazamientoTable.php" />
-        <option value="$PROJECT_DIR$/module/Reporte/view/reporte/index/index.phtml" />
-        <option value="$PROJECT_DIR$/module/Reporte/src/Reporte/Controller/IndexController.php" />
         <option value="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/OperaTable.php" />
+        <option value="$PROJECT_DIR$/module/Reporte/src/Reporte/Controller/IndexController.php" />
+        <option value="$PROJECT_DIR$/module/Reporte/view/reporte/index/desplazamiento.phtml" />
+        <option value="$PROJECT_DIR$/module/Reporte/view/reporte/index/index.phtml" />
+        <option value="$PROJECT_DIR$/public/js/reporte/desplazamiento.js" />
+        <option value="$PROJECT_DIR$/module/Reporte/config/module.config.php" />
         <option value="$PROJECT_DIR$/public/js/reporte/ubicaciones.js" />
+        <option value="$PROJECT_DIR$/module/Application/src/Application/Controller/IndexController.php" />
+        <option value="$PROJECT_DIR$/module/Unidad/src/Unidad/Controller/IndexController.php" />
         <option value="$PROJECT_DIR$/module/Reporte/view/reporte/index/ubicaciones.phtml" />
+        <option value="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/Volquete.php" />
+        <option value="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/VolqueteTable.php" />
       </list>
     </option>
   </component>
@@ -371,8 +216,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -389,7 +232,68 @@
               <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
               <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Reporte" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Reporte" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
@@ -405,6 +309,15 @@
               <item name="Reporte" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Reporte" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Reporte" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Reporte" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
@@ -435,6 +348,39 @@
               <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Unidad" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Unidad" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Unidad" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Unidad" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Unidad" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Unidad" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Unidad" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Unidad" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
@@ -482,6 +428,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -542,7 +490,8 @@
       <workItem from="1509459766260" duration="11590000" />
       <workItem from="1509481407638" duration="8366000" />
       <workItem from="1509490215737" duration="4080000" />
-      <workItem from="1509632280639" duration="4909000" />
+      <workItem from="1509632280639" duration="13164000" />
+      <workItem from="1509654341279" duration="400000" />
     </task>
     <task id="LOCAL-00001" summary="delete script">
       <created>1508887397430</created>
@@ -565,16 +514,23 @@
       <option name="project" value="LOCAL" />
       <updated>1509408172103</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="reportes de desplazamiento --Henry Bravo">
+      <created>1509637277083</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1509637277083</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136387000" />
+    <option name="totallyTimeSpent" value="145042000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13333334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14270833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1611877" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -607,7 +563,8 @@
     <MESSAGE value="iniciando cargas por lugares" />
     <MESSAGE value="reportes de cargas por unidad --Henry Bravo" />
     <MESSAGE value="reportes de desplazamiento --Henry Bravo" />
-    <option name="LAST_COMMIT_MESSAGE" value="reportes de desplazamiento --Henry Bravo" />
+    <MESSAGE value="reportes de desplazamiento II --Henry Bravo" />
+    <option name="LAST_COMMIT_MESSAGE" value="reportes de desplazamiento II --Henry Bravo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -616,28 +573,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/module/Unidad/view/unidad/index/list.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Unidad/view/unidad/index/unidad.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Rrhh/view/rrhh/index/index.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Lugar/view/lugar/index/list.phtml" />
     <entry file="file://$PROJECT_DIR$/module/Lugar/view/lugar/index/unidad.phtml" />
     <entry file="file://$PROJECT_DIR$/public/js/basic.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -646,13 +581,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/Reporte/src/Reporte/Model/Pala.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Reporte/src/Reporte/Model/Pala.php" />
     <entry file="file://$PROJECT_DIR$/config/application.config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -673,13 +602,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Reporte/config/module.config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -797,14 +719,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/VolqueteTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/UnidadTable.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -862,15 +776,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
           <caret line="26" column="9" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Controller/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="55" column="72" lean-forward="true" selection-start-line="55" selection-start-column="72" selection-end-line="55" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -902,14 +807,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/Unidad/Module.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2125">
-          <caret line="151" column="10" lean-forward="false" selection-start-line="151" selection-start-column="10" selection-end-line="151" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/DesplazamientoTable.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1496">
@@ -918,9 +815,108 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/module/Reporte/src/Reporte/Model/OperaTable.php" />
+    <entry file="file://$PROJECT_DIR$/module/Lugar/view/lugar/index/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="180" column="22" lean-forward="true" selection-start-line="180" selection-start-column="22" selection-end-line="180" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Unidad/view/unidad/index/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="26" lean-forward="true" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Reporte/view/reporte/index/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8364">
+          <caret line="492" column="79" lean-forward="false" selection-start-line="492" selection-start-column="79" selection-end-line="492" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Reporte/src/Reporte/Controller/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="284" column="5" lean-forward="false" selection-start-line="284" selection-start-column="5" selection-end-line="284" selection-end-column="5" />
+          <folding>
+            <element signature="e#4865#7760#0#PHP" expanded="false" />
+            <element signature="e#7765#11133#0#PHP" expanded="false" />
+            <element signature="e#11138#12594#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Reporte/view/reporte/index/desplazamiento.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="5" lean-forward="false" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/VolqueteTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="37" column="41" lean-forward="false" selection-start-line="37" selection-start-column="41" selection-end-line="37" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/Volquete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Controller/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="776">
+          <caret line="198" column="1" lean-forward="false" selection-start-line="198" selection-start-column="1" selection-end-line="198" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Unidad/Module.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="95" column="43" lean-forward="false" selection-start-line="95" selection-start-column="30" selection-end-line="95" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Application/src/Application/Controller/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="52" column="5" lean-forward="false" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Application/view/application/index/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/reporte/ubicaciones.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="27" column="9" lean-forward="false" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/lugar/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1615">
+        <state relative-caret-position="861">
           <caret line="95" column="23" lean-forward="false" selection-start-line="95" selection-start-column="23" selection-end-line="119" selection-end-column="25" />
           <folding />
         </state>
@@ -928,7 +924,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/reporte/unidades.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7157">
+        <state relative-caret-position="861">
           <caret line="487" column="25" lean-forward="false" selection-start-line="487" selection-start-column="25" selection-end-line="487" selection-end-column="25" />
           <folding>
             <element signature="n#!!block;n#actualizarCargasCanvas#0" expanded="false" />
@@ -937,89 +933,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/Reporte/src/Reporte/Model/OperaTable.php">
+    <entry file="file://$PROJECT_DIR$/public/js/reporte/desplazamiento.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Lugar/view/lugar/index/index.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="180" column="22" lean-forward="true" selection-start-line="180" selection-start-column="22" selection-end-line="180" selection-end-column="22" />
+        <state relative-caret-position="34">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
-            <marker date="1508887459010" expanded="true" signature="2777:3326" ph="..." />
-            <marker date="1508887459010" expanded="true" signature="2982:3284" ph="..." />
-            <marker date="1508887459010" expanded="true" signature="5400:6674" ph="..." />
-            <marker date="1508887459010" expanded="false" signature="5760:5777" ph="..." />
-            <marker date="1508887459010" expanded="true" signature="6055:6628" ph="..." />
+            <element signature="e#3213#3513#0" expanded="false" />
+            <element signature="e#3569#3833#0" expanded="false" />
+            <element signature="e#3864#4005#0" expanded="false" />
+            <element signature="e#4956#5720#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/Reporte/view/reporte/index/index.phtml">
+    <entry file="file://$PROJECT_DIR$/module/Reporte/view/reporte/index/ubicaciones.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="558" column="72" lean-forward="false" selection-start-line="558" selection-start-column="72" selection-end-line="558" selection-end-column="72" />
+        <state relative-caret-position="28">
+          <caret line="65" column="127" lean-forward="true" selection-start-line="65" selection-start-column="127" selection-end-line="65" selection-end-column="127" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Reporte/src/Reporte/Controller/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="53" column="12" lean-forward="false" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
-          <folding>
-            <element signature="e#4865#7760#0#PHP" expanded="false" />
-            <element signature="e#7765#11133#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/OperaTable.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="521">
-          <caret line="81" column="50" lean-forward="true" selection-start-line="81" selection-start-column="50" selection-end-line="81" selection-end-column="50" />
+          <caret line="81" column="50" lean-forward="false" selection-start-line="81" selection-start-column="50" selection-end-line="81" selection-end-column="50" />
           <folding>
             <element signature="e#31#69#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/reporte/ubicaciones.js">
+    <entry file="file://$PROJECT_DIR$/module/Reporte/config/module.config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="142" column="109" lean-forward="false" selection-start-line="142" selection-start-column="109" selection-end-line="142" selection-end-column="109" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Unidad/view/unidad/index/index.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="26" lean-forward="true" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Reporte/view/reporte/index/ubicaciones.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="63" column="50" lean-forward="false" selection-start-line="63" selection-start-column="50" selection-end-line="63" selection-end-column="50" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Reporte/view/reporte/index/desplazamiento.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="31" lean-forward="true" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+        <state relative-caret-position="170">
+          <caret line="19" column="51" lean-forward="false" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="51" />
           <folding />
         </state>
       </provider>

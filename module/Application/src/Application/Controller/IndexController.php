@@ -46,7 +46,7 @@ class IndexController extends AbstractActionController
     {
         date_default_timezone_set("America/Lima");
         return $this->redirect()->toRoute(
-            'reserva', array(
+            'unidad', array(
                 'action' => 'index'
             )
         );

@@ -281,6 +281,10 @@ class IndexController extends AbstractActionController
             )
         );
     }
+    public function desplazamientoAction()
+    {
+        return new ViewModel();
+    }
     private function getCargaTable()
     {
         if (!$this->cargatable) {
