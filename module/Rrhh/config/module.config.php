@@ -21,7 +21,7 @@ return array(
                     ),
                     'defaults'    => array(
                         'controller' => 'Rrhh\Controller\Index',
-                        'action'     => 'index',
+                        'action'     => 'operador',
                     ),
                 ),
                 'may_terminate' => true,

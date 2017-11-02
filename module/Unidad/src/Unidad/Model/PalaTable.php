@@ -33,6 +33,7 @@ class PalaTable
     {
         $data = array(
             'idcargador'=> $pala->idcargador,
+            'galonesXhora'=> $pala->galonesXhora,
             'estado'=> $pala->estado
         );
         $id = (int)$pala->idcargador;

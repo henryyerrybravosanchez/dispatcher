@@ -33,6 +33,7 @@ class VolqueteTable
     {
         $data = array(
             'idvolquete'=> $volquete->idvolquete,
+            'galonesXkm'=> $volquete->galonesXkm,
             'estado'=> $volquete->estado
         );
         $id = (int)$volquete->idvolquete;

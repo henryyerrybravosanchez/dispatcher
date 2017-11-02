@@ -34,6 +34,7 @@ class UnidadTable
                 'u_volquete.idvolquete = unidad.idunidad',
                 array(
                     'idvolquete' => 'idvolquete',
+                    'galonesXkm' => 'galonesXkm',
                     'estado' => 'estado',
                 )
             );
@@ -62,6 +63,7 @@ class UnidadTable
                 'u_cargador.idcargador = unidad.idunidad',
                 array(
                     'idcargador' => 'idcargador',
+                    'galonesXhora' => 'galonesXhora',
                     'estado' => 'estado',
                 )
             );

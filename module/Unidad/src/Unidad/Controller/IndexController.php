@@ -76,6 +76,7 @@ class IndexController extends AbstractActionController
                 case 1:
                     $placa= $this->request->getPost('p');
                     $tipo= (int)$this->request->getPost('t');
+                    $consumo= $this->request->getPost('c');
 
 
                     $unidad= new Unidad();
@@ -89,12 +90,14 @@ class IndexController extends AbstractActionController
                             case 1:
                                 $pala= new Pala();
                                 $pala->idcargador=$idunidad;
+                                $pala->galonesXhora=$consumo;
                                 $pala->estado="3";
                                 $id=$this->getPalaTable()->savePala($pala);
                                 break;
                             case 2:
                                 $volqeute= new Volquete();
                                 $volqeute->idvolquete=$idunidad;
+                                $volqeute->galonesXkm=$consumo;
                                 $volqeute->estado="3";
                                 $id=$this->getVolqueteTable()->saveVolquete($volqeute);
                                 break;
@@ -121,6 +124,7 @@ class IndexController extends AbstractActionController
 
 
     }
+
     private function getPuntoTable()
     {
         if (!$this->puntotable) {
@@ -197,3 +201,4 @@ class IndexController extends AbstractActionController
         return $this->volquetetable;
     }
 }
+

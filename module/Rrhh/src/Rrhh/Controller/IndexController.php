@@ -29,13 +29,6 @@ class IndexController extends AbstractActionController
     public $operadortable;
     public $colaboradortable;
 
-    public function indexAction()
-    {
-
-        return new ViewModel(array(
-            "buses",
-        ));
-    }
     public function operadorAction(){
 
         if ($this->request->isXmlHttpRequest()) {

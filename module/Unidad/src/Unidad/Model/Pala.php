@@ -8,12 +8,15 @@ class Pala implements InputFilterAwareInterface
 {
 	public $idcargador;
     public $estado;
+    public $galonesXhora;
     public $inputFilter;
 
     public function exchangeArray($data)
     {
 	    $this->idcargador = (!empty($data['idcargador']))
 		    ? $data['idcargador'] : null;
+	    $this->galonesXhora = (!empty($data['galonesXhora']))
+		    ? $data['galonesXhora'] : null;
 	    $this->estado = (!empty($data['estado']))
 		    ? $data['estado'] : null;
     }
@@ -30,5 +33,7 @@ class Pala implements InputFilterAwareInterface
     }
 
     public function getInputFilter()
-    {}
+    {
+
+    }
 }

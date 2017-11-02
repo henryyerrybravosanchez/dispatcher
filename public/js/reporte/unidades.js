@@ -485,7 +485,7 @@ function makePost(data) {
                         var arrayLabelsFechas=[];
                         var arrayPlacas={   };
                         while (fechadesde!==fechafin)
-                        {
+                        {º
                             arrayLabelsFechas.push(fechadesde);
                             var fDarr=fechadesde.split('-');
                             var bandera=false;
