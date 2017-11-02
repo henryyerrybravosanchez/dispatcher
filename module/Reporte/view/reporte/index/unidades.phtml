@@ -83,20 +83,25 @@
                         </div>
                         <div class="col-md-4">
                             <label>
-                                Este gráfico representa el total de cargas por lugar
+                                Este gráfico representa el total de cargas por camion asignados a una pala
                             </label>
                             <div class="col-md-4" style="text-align: left">
                                 <div class="col-md-12">
-                                    <label for="fechadesdeL">Desde: </label>
-                                    <input class="form-control col-md-6"  id="fechadesdeL">
-                                </div>
-                                <div class="col-md-12">
-                                    <label for="fechahastaL">Hasta: </label>
-                                    <input class="form-control col-md-6" id="fechahastaL">
+                                    <label for="palasCamiones">Pala: </label>
+                                    <select id="palasCamiones" class="form-control">
+                                        <?php
+                                        foreach ($this->palas as $value)
+                                            echo "<option class='palasCamiones' value='".$value['idunidad']."'>".$value['placa']."</option>";
+                                        ?>
+                                    </select>
+                                    <label for="servicio" >Servicio</label>
+                                    <select id="servicio" class="col-md-12">
+
+                                    </select>
                                 </div>
                             </div>
-                            <div class="col-md-8" id="conteinerCanvasLugar">
-                                <canvas id="myChartLugar" width="100" height="100"></canvas>
+                            <div class="col-md-8" id="conteinerCanvasPC">
+                                <canvas id="myChartPC" width="100" height="100"></canvas>
                             </div>
                         </div>
                     </div>

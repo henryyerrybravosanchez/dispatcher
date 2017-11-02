@@ -50,7 +50,6 @@ class IndexController extends AbstractActionController
                     }
                     else
                         return new JsonModel(array('data'=>-1));
-
                     break;
                 case 2:
                     $volquetes=$this->getUnidadTable()->getVolquetesUbicacion();
@@ -59,9 +58,9 @@ class IndexController extends AbstractActionController
                     {
                         return new JsonModel(array('data'=>$volquetes,'datapalas'=>$palas));
 
-                    }else
+                    }
+                    else
                         return new JsonModel(array('data'=>-1));
-
                     break;
             }
 

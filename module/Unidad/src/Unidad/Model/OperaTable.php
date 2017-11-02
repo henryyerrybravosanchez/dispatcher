@@ -69,16 +69,16 @@ class OperaTable
 
         return $this->resultToArray($resultSet)[0]['count'];
     }
-    public function getOperaMonthFinish($mes, $anio){
-        $desde="01-".$mes."-".$anio;
-        $hasta="31-".$mes."-".$anio;
+    public function getOperaMonthFinish(){
+        $messiguiente=date("Y-d-m H:i:s", mktime(0, 0, 0, date("m")+1, date("d"),   date("Y")));
+        $actual=date("Y-d-m H:i:s");
         $sqlSelect = $this->tableGateway->getSql()->select();
         $sqlSelect->columns(
             array(
                 'count' => new Expression('Count (*)')
             )
         );
-        $sqlSelect->where("fechafin>= '$desde' and fechafin<='$hasta'");
+        $sqlSelect->where("fechafin>= '$actual' and fechafin<='$messiguiente'");
         $statement = $this->tableGateway->getSql()
             ->prepareStatementForSqlObject($sqlSelect);
         $resultSet = $statement->execute();

@@ -7,6 +7,7 @@ var palas=[];
 var camiones=[];
 var idpalas=-1;
 var idcamiones=-1;
+var idpalaCamion=0;
 $(document).ready(function() {
 
     base=$("#baseUrl").val();
@@ -18,9 +19,7 @@ $(document).ready(function() {
     var fhastaDatepicker=$("#fechahasta");
     var fdesdeDatepickerR=$("#fechadesdeR");
     var fhastaDatepickerR=$("#fechahastaR");
-    var fhastaDatepickerL=$("#fechahastaL");
-    var fdesdeDatepickerL=$("#fechadesdeL");
-
+    idpalaCamion=$("#palasCamiones");
     $.each($('.palas'), function () {
         palas.push($(this).text());
     });
@@ -90,22 +89,6 @@ $(document).ready(function() {
     }).val($.date(new Date()));
 
 
-    fdesdeDatepickerL.datetimepicker({
-        inline: false,
-        sideBySide: true,
-        format:'YYYY-MM-DD',
-        stepping: 5,
-        locale: "es"
-    }).val(dateNow);
-
-    fhastaDatepickerL.datetimepicker({
-        inline: false,
-        sideBySide: true,
-        format:'YYYY-MM-DD',
-        stepping: 5,
-        locale: "es"
-    }).val($.date(new Date()));
-
     fdesdeDatepicker.on('dp.change', function(e){
         if(validarFechas(fdesdeDatepicker.val(),fhastaDatepicker.val())){
             makePost({
@@ -120,6 +103,7 @@ $(document).ready(function() {
 
         }
     });
+
     fhastaDatepicker.on('dp.change', function(e){
         if(validarFechas(fdesdeDatepicker.val(),fhastaDatepicker.val())){
             makePost({
@@ -127,14 +111,11 @@ $(document).ready(function() {
                 fi:fdesdeDatepicker.val(),
                 ff:fhastaDatepicker.val(),
                 idp:idpalas.val()
-
             })
         }
         else {
             swal("Lo sentimos!", "El intervalo de fechas no es correctas, seleccione una fecha superior que la primera", "error");
-
         }
-
     });
     fdesdeDatepickerR.on('dp.change', function(e){
         if(validarFechas(fdesdeDatepickerR.val(),fhastaDatepickerR.val())){
@@ -166,34 +147,6 @@ $(document).ready(function() {
         }
 
     });
-    fhastaDatepickerL.on('dp.change', function(e){
-        if(validarFechas(fdesdeDatepickerL.val(),fhastaDatepickerL.val())){
-            makePost({
-                o:3,
-                fi:fdesdeDatepickerL.val(),
-                ff:fhastaDatepickerL.val()
-            })
-        }
-        else {
-            swal("Lo sentimos!", "El intervalo de fechas no es correctas, seleccione una fecha superior que la primera", "error");
-
-        }
-    });
-    fdesdeDatepickerL.on('dp.change', function(e){
-        if(validarFechas(fdesdeDatepickerL.val(),fhastaDatepickerL.val())){
-            makePost({
-                o:3,
-                fi:fdesdeDatepickerL.val(),
-                ff:fhastaDatepickerL.val()
-
-            })
-        }
-        else {
-            swal("Lo sentimos!", "El intervalo de fechas no es correctas, seleccione una fecha superior que la primera", "error");
-
-        }
-
-    });
 
     idpalas.change(function () {
         makePost({
@@ -203,9 +156,10 @@ $(document).ready(function() {
             idp:idpalas.val()
         })
     });
+
     idcamiones.change(function () {
         makePost({
-            o:1,
+            o:2,
             fi:fdesdeDatepicker.val(),
             ff:fhastaDatepicker.val(),
             idp:idcamiones.val()
@@ -218,18 +172,26 @@ $(document).ready(function() {
         ff:fhastaDatepicker.val(),
         idp:idpalas.val()
     });
+
     makePost({
         o:2,
         fi:fdesdeDatepicker.val(),
         ff:fhastaDatepicker.val(),
         idp:idcamiones.val()
     });
+
     makePost({
         o:3,
-        fi:fdesdeDatepickerL.val(),
-        ff:fhastaDatepickerL.val()
+        idp:idpalaCamion.val(),
     });
+    idpalaCamion.change(function () {
+        makePost({
+            o:3,
+            idp:idpalaCamion.val()
+        });
+    })
 });
+
 $.date = function(dateObject) {
     var d = new Date(dateObject);
     var day = d.getDate();
@@ -242,8 +204,9 @@ $.date = function(dateObject) {
         month = "0" + month;
     }
     return year+"-" +month + "-" + day;
-};//Convierte Date en String yyyy-mm-dd
+};
 
+//Convierte Date en String yyyy-mm-dd
 function validar(text) {
     text=text+"";
     var comp = text.split('-');
@@ -253,6 +216,7 @@ function validar(text) {
     var date = new Date(y,m-1,d);
     return date.getFullYear() === y && date.getMonth() + 1 === m && date.getDate() === d;
 }
+
 function validarFechas(fechaI, fechaF) {
 
     var splitIniDsd=fechaI.split('-');
@@ -273,7 +237,8 @@ function validarFechas(fechaI, fechaF) {
     }
     return parseInt(splitIniDsd[0])<parseInt(splitIniHst[0]);
 }
-var colores=[
+
+var colores = [
     "#ec5333",
     "#dfbd32",
     "#b0df32",
@@ -293,7 +258,7 @@ var colores=[
     "#559854",
     "#6b9854",
     "#7f9854"
-]
+];
 
 function actualizarCargasCanvas(data) {
     $('#myChart').remove(); // this is my <canvas> element
@@ -362,6 +327,7 @@ function actualizarCargasCanvas(data) {
     });
 
 }
+
 function actualizarCargasCanvasVolquetes( data) {
     $('#myChartVolquetes').remove(); // this is my <canvas> element
     $('#conteinerCanvasVolquetes').append(' <canvas id="myChartVolquetes" width="100" height="100"></canvas>');
@@ -375,7 +341,7 @@ function actualizarCargasCanvasVolquetes( data) {
     {
         dataUnidades.push($("#camiones option:selected").text())
     }
-    else{
+    else {
         dataUnidades=camiones;
     }
     for (var j=0;j<dataUnidades.length; j++)
@@ -402,7 +368,7 @@ function actualizarCargasCanvasVolquetes( data) {
         });
 
         dddd.push({
-            label:"Pala "+ dataUnidades[j],
+            label:"Camión: "+ dataUnidades[j],
             data: cantidades,
             backgroundColor: [
                 "rgba(220,220,220,0)"
@@ -428,34 +394,70 @@ function actualizarCargasCanvasVolquetes( data) {
         }
     });
 }
-function actualizarCargasLugar(labels, data) {
-    $('#myChartLugar').remove(); // this is my <canvas> element
-    $('#conteinerCanvasLugar').append(' <canvas id="myChartLugar" width="100" height="100"></canvas>');
-    var ctx = document.getElementById("myChartLugar").getContext('2d');
-    var myChartLugares = new Chart(ctx, {
-        type: 'polarArea',
-        data: {
-            labels: labels,
-            datasets: [{
-                label: "",
-                data: data,
-                backgroundColor: [
-                    '#19B5FE',
-                    'rgba(90, 91, 94, 0.6)',
-                    'rgba(149, 78, 19, 0.53)'
 
-                ],
-                borderColor: [
-                    '#b0f0ff'
-                ],
-                borderWidth: 1
-            }]
+function actualizarCargasPala(data, camionesEnServicio) {
+    $('#myChartPC').remove(); // this is my <canvas> element
+    $('#conteinerCanvasPC').append(' <canvas id="myChartPC" width="100" height="100"></canvas>');
+    var ctx = document.getElementById("myChartPC").getContext('2d');
+
+    var dddd=[];
+    var fechas=[];
+
+    console.log(camionesEnServicio);
+
+    var dataUnidades=camionesEnServicio;
+    for (var j=0;j<dataUnidades.length; j++)
+    {
+
+        var placas=[];
+        var cantidades=[];
+        $.each(data, function (k1, v1) {
+            if(j===0)
+                fechas.push(k1)
+            var bandera=true;
+            $.each(v1, function (k, v) {
+                if(v.placa===dataUnidades[j]){
+                    placas.push(v.placa);
+                    cantidades.push(v.cantidad);
+                    bandera=false;
+                }
+            });
+            if(bandera)
+            {
+                cantidades.push(0);
+            }
+
+        });
+
+        dddd.push({
+            label:"Pala "+ camionesEnServicio[j],
+            data: cantidades,
+            backgroundColor: [
+                "rgba(220,220,220,0)"
+            ],
+            borderColor: [
+                colores[j]
+            ],
+            borderWidth: 1
+        });
+    }
+
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: fechas,
+            datasets: dddd
         },
         options: {
-            animateRotate: true
+            scales: {
+                yAxes: [{
+                    stacked: false
+                }]
+            }
         }
     });
 }
+
 function makePost(data) {
     var modalLoading=$("#modalLoading");
     modalLoading.modal("show");
@@ -557,6 +559,7 @@ function makePost(data) {
                         actualizarCargasCanvas(arrayPlacas);
                         modalLoading.modal('hide');
                         break;
+
                     case 2:
                         var cargas=datar.data;
                         var fechadesde=data.fi;
@@ -640,19 +643,115 @@ function makePost(data) {
                         modalLoading.modal('hide');
                         break;
                     case 3:
+                        var servicios=datar.data;
+                        var html='<option value="-1">--Seleccionar--</option>';
+                        $.each(servicios, function (k,v) {
+                            html+='<option class="camionServicio" value="'+v.idservicio+'">Desde: '+v.fechainicio+' Hasta: '+v.fechafin+'</option>'
+                        })
+                        $('#servicio').empty().append(html);
+                        //actualizarCargasLugar(labelesArray, dataArray);
+                        modalLoading.modal('hide');
+                        break;
+                    case 4:
                         var cargas=datar.data;
-                        var labelesArray=[];
-                        var dataArray=[];
-                        $.each(cargas, function (k, v) {
-                            labelesArray.push(v.nombre);
-                            dataArray.push(v.cantidad)
-                        });
-                        actualizarCargasLugar(labelesArray, dataArray);
+                        var fechadesde=datar.servicio.fechainicio.split(' ')[0];
+                        var fechafin=datar.servicio.fechafin.split(' ')[0];
+                        var arrayDataCantidades=[];
+                        var arrayLabelsFechas=[];
+                        var arrayPlacas={   };
+
+                        while (fechadesde!==fechafin)
+                        {
+                            arrayLabelsFechas.push(fechadesde);
+                            var fDarr=fechadesde.split('-');
+                            var bandera=false;
+                            var arrau=[];
+                            $.each(cargas, function (k,v) {
+                                if(parseInt(v.anio)===parseInt(fDarr[0])&&parseInt(v.mes)===parseInt(fDarr[1])&&parseInt(v.dia)===parseInt(fDarr[2]))
+                                {
+                                    arrayDataCantidades.push(v.cantidad);
+                                    var dat={
+                                        placa:v.placa,
+                                        cantidad:v.cantidad
+                                    };
+                                    arrau.push(dat);
+                                    bandera=true;
+                                }
+                            });
+                            arrayPlacas[fechadesde]=arrau;
+                            if(!bandera)
+                            {
+                                arrayDataCantidades.push(0);
+                            }
+                            var anio=fDarr[0];
+                            var mes=parseInt(fDarr[1]);
+                            var dia=parseInt(fDarr[2])+1;
+                            if(dia<10)
+                                dia='0'+dia;
+                            if(mes<10)
+                                mes='0'+mes;
+                            if(validar(anio+"-"+mes+"-"+dia))
+                            {
+                                fechadesde=anio+"-"+mes+"-"+dia;
+                            }else{
+                                if(fDarr[1]==='12')
+                                {
+                                    mes=1;
+                                    anio=parseInt(fDarr[0])+1;
+                                }else{
+                                    mes=parseInt(fDarr[1])+1;
+                                    anio=fDarr[0];
+                                }
+                                dia=1;
+                                if(mes<10)
+                                    mes='0'+mes;
+                                if(dia<10)
+                                    dia='0'+dia;
+                                fechadesde=anio+"-"+mes+"-"+dia;
+                            }
+                        }
+                        arrayLabelsFechas.push(fechadesde);
+                        fDarr=fechadesde.split('-');
+                        var camionesEnServicio=[];
+                        if(fechadesde===fechafin)
+                        {
+                            var bande=false;
+                            $.each(cargas, function (k,v) {
+                                camionesEnServicio[v.placa]=v.placa;
+                                if(parseInt(v.anio)===parseInt(fDarr[0])&&parseInt(v.mes)===parseInt(fDarr[1])&&parseInt(v.dia)===parseInt(fDarr[2]))
+                                {
+                                    arrayDataCantidades.push(v.cantidad);
+                                    var dat={
+                                        placa:v.placa,
+                                        cantidad:v.cantidad
+                                    };
+                                    arrau.push(dat);
+                                    bande=true;
+                                }
+                            });
+                            if(!bande){
+                                arrayDataCantidades.push(0);
+                            }
+                        }
+                        var arrayCamiones=[]
+                        $.each(camionesEnServicio, function (k, v) {
+                            if(typeof  v!=='undefined')
+                            arrayCamiones.push(v);
+                        })
+                        arrayPlacas[fechadesde]=arrau;
+                        console.log(camionesEnServicio)
+                        actualizarCargasPala(arrayPlacas, arrayCamiones);
                         modalLoading.modal('hide');
                         break;
 
                 }
         }
-
     });
 }
+
+$(document).on('change', '#servicio', function () {
+    makePost({
+        o:4,
+        ids:$(this).val()
+    })
+})

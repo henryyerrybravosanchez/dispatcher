@@ -31,6 +31,7 @@ class IndexController extends AbstractActionController
     public $cargatable;
     public $desplazamientotable;
     public $palatable;
+    public $serviciotable;
     public $materialtable;
 
     public function indexAction()
@@ -43,8 +44,14 @@ class IndexController extends AbstractActionController
         $cantidadPalasdesactivados=$this->getUnidadTable()->getPalasCantidadDesactivado();
         $desplazamientoCount=$this->getDesplazamientoTable()->getCantidadRegistros();
         $operadoresCount=$this->getOperaTable()->getOperadoresAll();
-        $date=explode('-', date("Y-m-d"));
-        $cantidadTerminanEsteMes=$this->getOperaTable()->getOperaMonthFinish($date[1],$date[0]);
+        $cantidadTerminanEsteMes=$this->getOperaTable()->getOperaMonthFinish();
+        /*
+        return new JsonModel(
+            array(
+                'siguiente'=>date("Y-m-d H:i:s", mktime(0, 0, 0, date("m")+1, date("d"),   date("Y"))),
+                'actual'=>date("Y-m-d H:i:s")
+            )
+        );*/
         $cantidadLugares=$this->getLugarTable()->getLugaresAll();
         $cantidadMateriales=$this->getLugarTable()->getMaterialesAll();
         $cantidadRutas=$this->getRutaTable()->getRutasAll();
@@ -206,6 +213,63 @@ class IndexController extends AbstractActionController
                         return new JsonModel(array('data' => -1, 'm'=>$e));
                     }
                     break;
+                case 3:
+                    try{
+                        $idpala = (int)$this->request->getPost('idp');
+                        $carga=$this->getServicioCargaTable()->getServiciosPala($idpala);
+                        return new JsonModel(array('data'=>$carga));
+                    }catch (\Exception $e)
+                    {
+                        return new JsonModel(array('data' => -1, 'm'=>$e));
+                    }
+                    break;
+                case 4:
+                    try{
+                        $idservicio = (int)$this->request->getPost('ids');
+                        $carga=$this->getCargaTable()->getCantidadCargasFechasUnidadesVServicio($idservicio);
+                        $servicio=$this->getServicioCargaTable()->getServicioCarga($idservicio);
+                        return new JsonModel(array('data'=>$carga, 'servicio'=>$servicio));
+                    }catch (\Exception $e)
+                    {
+                        return new JsonModel(array('data' => -1, 'm'=>$e));
+                    }
+                    break;
+
+            }
+        }
+        $palas=$this->getUnidadTable()->fetchAllPalas();
+        $camiones=$this->getUnidadTable()->fetchAllVolquetes();
+        return new ViewModel(
+            array(
+                'palas'=>$palas,
+                'camiones'=>$camiones
+            )
+        );
+    }
+    public function ubicacionesAction()
+    {
+        if ($this->request->isXmlHttpRequest()) {
+            $o = (int)$this->request->getPost('o');
+            switch ($o)
+            {
+                case 1:
+                    try {
+                        $fechainicial= $this->request->getPost('fi');
+                        $fechafinal= $this->request->getPost('ff');
+                        $idunidad= (int)$this->request->getPost('p');
+                        $tipo= (int)$this->request->getPost('t');
+                        $fIex=explode('-', $fechainicial);
+                        $fFex=explode('-', $fechafinal);
+                        $fechainicial=$fIex[2]."-".$fIex[1]."-".$fIex[0];
+                        $fechafinal=$fFex[2]."-".$fFex[1]."-".$fFex[0];
+                        $cargas=$this->getDesplazamientoTable()->getUbicacionesPala($fechainicial, $fechafinal, $idunidad, $tipo);
+                        return new JsonModel(array('data'=>$cargas));
+                    }
+                    catch (\Exception $e) {
+                        return new JsonModel(array('data' => -1, 'm'=>$e));
+                    }
+                    break;
+
             }
         }
         $palas=$this->getUnidadTable()->fetchAllPalas();
@@ -281,6 +345,7 @@ class IndexController extends AbstractActionController
 
         return $this->unidadtable;
     }
+
     private function getPalaTable()
     {
         if (!$this->palatable) {
@@ -292,6 +357,7 @@ class IndexController extends AbstractActionController
 
         return $this->palatable;
     }
+
     private function getVolqueteTable()
     {
         if (!$this->volquetetable) {
@@ -301,6 +367,18 @@ class IndexController extends AbstractActionController
             );
         }
         return $this->volquetetable;
+    }
+    private function getServicioCargaTable()
+    {
+        if (!$this->serviciotable) {
+            $sm = $this->getServiceLocator();
+            $this->serviciotable = $sm->get(
+                'Unidad\Model\ServicioCargaTable'
+            );
+        }
+
+        return $this->serviciotable;
+
     }
     private function getMaterialTable()
     {

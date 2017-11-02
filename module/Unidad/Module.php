@@ -17,16 +17,20 @@ use Unidad\Model\Opera;
 use Unidad\Model\OperaTable;
 use Unidad\Model\Pala;
 use Unidad\Model\PalaTable;
+use Unidad\Model\ServicioCarga;
+use Unidad\Model\ServicioCargaTable;
 use Unidad\Model\Unidad;
 use Unidad\Model\UnidadTable;
 use Unidad\Model\Punto;
 use Unidad\Model\PuntoTable;
 use Unidad\Model\Volquete;
 use Unidad\Model\VolqueteTable;
+
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
 use Zend\Db\ResultSet\ResultSet;
 use Zend\Db\TableGateway\TableGateway;
+
 class Module
 {
     public function onBootstrap(MvcEvent $e)
@@ -132,6 +136,17 @@ class Module
                     $resultSetPrototype = new ResultSet();
                     $resultSetPrototype->setArrayObjectPrototype(new Desplazamiento());
                     return new TableGateway('desplazamiento', $dbAdapter, null, $resultSetPrototype);
+                },
+                'Unidad\Model\ServicioCargaTable' => function ($sm) {
+                    $tableGateway = $sm->get('ServicioCargaTableGateway');
+                    $table = new ServicioCargaTable($tableGateway);
+                    return $table;
+                },
+                'ServicioCargaTableGateway' => function ($sm) {
+                    $dbAdapter = $sm->get('Zend\Db\Adapter\Adapter');
+                    $resultSetPrototype = new ResultSet();
+                    $resultSetPrototype->setArrayObjectPrototype(new ServicioCarga());
+                    return new TableGateway('servicio_carga', $dbAdapter, null, $resultSetPrototype);
                 },
             ),
         );

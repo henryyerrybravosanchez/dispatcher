@@ -71,6 +71,38 @@ class DesplazamientoTable
 
         return $this->resultToArray($resultSet)[0]['count'];
     }
+    public function getUbicacionesPala($fechadesde, $fechahasta, $idundiad, $tipo)
+    {
+
+
+        $sqlSelect = $this->tableGateway->getSql()->select();
+        $sqlSelect->columns(
+            array(
+                'idunidad'=>  'idunidad',
+                'latitud'=> 'latitud',
+                'longitud'=> 'longitud',
+                'altitud'=> 'altitud',
+                'velocidad'=>'velocidad',
+                'fecha'=> 'fecha',
+                'estado'=> 'estado'
+            )
+        );
+        $sqlSelect
+            ->join(
+                'unidad',
+                'unidad.idunidad = desplazamiento.idunidad',
+                array(
+                    'placa'=>'placa'
+                )
+            )
+        ;
+        $sqlSelect->where("desplazamiento.fecha>= '$fechadesde' and desplazamiento.fecha<='$fechahasta' and desplazamiento.idunidad='$idundiad'");
+
+        $statement = $this->tableGateway->getSql()
+            ->prepareStatementForSqlObject($sqlSelect);
+        $resultSet = $statement->execute();
+        return $this->resultToArray($resultSet);
+    }
 
     private function resultToArray($result)
     {

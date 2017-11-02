@@ -136,6 +136,7 @@ $(document).ready(function() {
 
         }
     });
+
     fhastaDatepickerR.on('dp.change', function(e){
         if(validarFechas(fdesdeDatepicker.val(),fhastaDatepicker.val())){
             makePost({
@@ -147,9 +148,7 @@ $(document).ready(function() {
         }
         else {
             swal("Lo sentimos!", "El intervalo de fechas no es correctas, seleccione una fecha superior que la primera", "error");
-
         }
-
     });
     fhastaDatepickerL.on('dp.change', function(e){
         if(validarFechas(fdesdeDatepicker.val(),fhastaDatepicker.val())){

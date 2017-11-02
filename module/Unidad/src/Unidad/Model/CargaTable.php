@@ -98,6 +98,7 @@ class CargaTable
         $resultSet = $statement->execute();
         return $this->resultToArray($resultSet);
     }
+
     public function getCantidadCargasFechasUnidadesP($fechadesde, $fechahasta, $idunidad)
     {
 
@@ -155,7 +156,6 @@ class CargaTable
 
     public function getCantidadCargasFechasUnidadesV($fechadesde, $fechahasta, $idunidad)
     {
-
         if($idunidad>0)
             $where="carga.fechainicio>= '$fechadesde' and carga.fechainicio<='$fechahasta' and carga.estado=2 and carga_volquete.idvolquete=$idunidad";
         else
@@ -191,9 +191,63 @@ class CargaTable
         $sqlSelect->group(
             new Expression('month(carga.fechainicio)')
         );
+
         $sqlSelect->group(
             new Expression('day(carga.fechainicio)')
         );
+
+        $sqlSelect->group(
+            new Expression('unidad.placa')
+        );
+        $statement = $this->tableGateway->getSql()
+            ->prepareStatementForSqlObject($sqlSelect);
+        $resultSet = $statement->execute();
+        return $this->resultToArray($resultSet);
+    }
+    public function getCantidadCargasFechasUnidadesVServicio($idservicio)
+    {
+
+        $sqlSelect = $this->tableGateway->getSql()->select();
+        $sqlSelect->columns(
+            array(
+                'anio' => new Expression('year(carga.fechainicio)'),
+                'mes' => new Expression('month(carga.fechainicio)'),
+                'dia' => new Expression('day(carga.fechainicio)'),
+                'cantidad'=>new Expression('Count (year(carga.fechainicio))')
+            )
+        );
+        $sqlSelect
+            ->join(
+                'carga_volquete',
+                'carga_volquete.idcargavolquete = carga.idcargavolquete',
+                array(
+                )
+            )->join(
+                'unidad',
+                'unidad.idunidad = carga_volquete.idvolquete',
+                array(
+                    'placa'=>'placa'
+                )
+            )->join(
+                'servicio_carga',
+                'servicio_carga.idservicio = carga_volquete.idservicio',
+                array(
+                )
+            );
+        $sqlSelect->where(
+            array('servicio_carga.idservicio'=>$idservicio)
+        );
+        $sqlSelect->group(
+            new Expression('year(carga.fechainicio)')
+        );
+        $sqlSelect->group(
+            new Expression('month(carga.fechainicio)')
+        );
+
+        $sqlSelect->group(
+            new Expression('day(carga.fechainicio)')
+        );
+
         $sqlSelect->group(
             new Expression('unidad.placa')
         );
