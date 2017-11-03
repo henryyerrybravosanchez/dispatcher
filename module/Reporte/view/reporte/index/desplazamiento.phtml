@@ -16,6 +16,7 @@ $this->inlineScript()->appendFile(
     .gmnoprint div {
         background:none !important;
     }
+
 </style>
 <body >
 
@@ -26,9 +27,25 @@ $this->inlineScript()->appendFile(
         </div>
     </div>
 </div>
-
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPt2sc_jYBhNXu48FikO9-bc0eNfbB2-A&libraries=places&sensor=false&callback=initMap">
+</script>
 <script type="text/javascript">
+    var aLat=[];
+    var aLgt=[];
+    var aDate=[];
+    <?php
+        foreach ($this->ubicaciones as $value)
+        {
+            echo 'aLat.push("' . $value['latitud'] . '");';
+            echo 'aLgt.push("' . $value['longitud'] . '");';
+            echo 'aDate.push("' . $value['fecha'] . '");';
+        }
+    ?>
+
+
     var directionsDisplay;
+    var map;
     //var lgo, lgd, lto, ltd;
     function initMap() {
         var myLatLng = {lat: -6.981017, lng: -78.514566};
@@ -39,15 +56,11 @@ $this->inlineScript()->appendFile(
         };
         directionsDisplay = new google.maps.DirectionsRenderer();
         map = new google.maps.Map(document.getElementById('map'), myOptions);
-
         directionsDisplay.setMap(map);
-
     }
 
 </script>
 
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPt2sc_jYBhNXu48FikO9-bc0eNfbB2-A&libraries=places&sensor=false&callback=initMap">
-</script>
+
 
 </body>

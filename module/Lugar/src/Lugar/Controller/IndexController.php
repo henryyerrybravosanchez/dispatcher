@@ -109,7 +109,6 @@ class IndexController extends AbstractActionController
             'rutas'=>$rutas
         ));
     }
-
     private function getRutaTable()
     {
         if (!$this->rutatable) {

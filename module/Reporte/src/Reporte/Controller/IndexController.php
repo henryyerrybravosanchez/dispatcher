@@ -262,12 +262,15 @@ class IndexController extends AbstractActionController
                         $fFex=explode('-', $fechafinal);
                         $fechainicial=$fIex[2]."-".$fIex[1]."-".$fIex[0];
                         $fechafinal=$fFex[2]."-".$fFex[1]."-".$fFex[0];
-                        $cargas=$this->getDesplazamientoTable()->getUbicacionesPala($fechainicial, $fechafinal, $idunidad, $tipo);
-                        return new JsonModel(array('data'=>$cargas));
+                        $ubicaciones=$this->getDesplazamientoTable()->getUbicacionesPala($fechainicial, $fechafinal, $idunidad);
+                        return new JsonModel(array('data'=>$ubicaciones));
                     }
                     catch (\Exception $e) {
                         return new JsonModel(array('data' => -1, 'm'=>$e));
                     }
+                    break;
+                case 2:
+
                     break;
 
             }
@@ -283,7 +286,39 @@ class IndexController extends AbstractActionController
     }
     public function desplazamientoAction()
     {
-        return new ViewModel();
+        $idunidad=$this->params()->fromRoute("id",0);
+        $param=$this->params()->fromRoute("param",0);
+        if($idunidad&&$param)
+        {
+            try{
+                $fechasArray= explode("a", $param);
+
+                $fechaDesde=$fechasArray[2]."-".$fechasArray[1]."-".$fechasArray[0]." ".$fechasArray[3].":".$fechasArray[4].":".$fechasArray[5];
+                $fechaHasta=$fechasArray[8]."-".$fechasArray[7]."-".$fechasArray[6]." ".$fechasArray[9].":".$fechasArray[10].":".$fechasArray[11];
+                $ubicaciones=$this->getDesplazamientoTable()->getUbicacionesPala($fechaDesde, $fechaHasta, $idunidad);
+                return new ViewModel(
+                    array(
+                        'ubicaciones'=>$ubicaciones
+                    )
+                );
+            }
+           catch(\Exception $exception)
+            {
+                return $this->redirect()->toRoute(
+                    'reporte', array(
+                        'action' => 'ubicaciones'
+                    )
+                );
+            }
+        }
+        else
+        {
+            return $this->redirect()->toRoute(
+                'reporte', array(
+                    'action' => 'ubicaciones'
+                )
+            );
+        }
     }
     private function getCargaTable()
     {
@@ -313,7 +348,6 @@ class IndexController extends AbstractActionController
                 'Lugar\Model\LugarTable'
             );
         }
-
         return $this->lugartable;
     }
     private function getDesplazamientoTable()

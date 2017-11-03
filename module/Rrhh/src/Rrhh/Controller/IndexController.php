@@ -240,6 +240,7 @@ class IndexController extends AbstractActionController
                 'operadores'=>$colaboradores
             ));
     }
+
     private function getUnidadTable()
     {
         if (!$this->unidadtable) {

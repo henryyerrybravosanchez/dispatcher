@@ -71,7 +71,7 @@ class DesplazamientoTable
 
         return $this->resultToArray($resultSet)[0]['count'];
     }
-    public function getUbicacionesPala($fechadesde, $fechahasta, $idundiad, $tipo)
+    public function getUbicacionesPala($fechadesde, $fechahasta, $idundiad)
     {
 
 

@@ -80,18 +80,59 @@ $(document).ready(function() {
     fdesdeDatepicker.datetimepicker({
         inline: false,
         sideBySide: true,
-        format:'YYYY-MM-DD',
+        format:'YYYY-MM-DD HH:mm:ss',
         stepping: 5,
         locale: "es"
-    }).val(dateNow);
+    }).val(dateNow+" 12:00:00");
 
     fhastaDatepicker.datetimepicker({
         inline: false,
         sideBySide: true,
-        format:'YYYY-MM-DD',
+        format:'YYYY-MM-DD HH:mm:ss',
         stepping: 5,
         locale: "es"
-    }).val($.date(new Date()));
+    }).val($.date(new Date())+" 12:00:00");
+    fdesdeDatepicker.on('dp.change', function(e){
+        console.log(e)
+        preparaLinkDesplazamiento();
+        if(tipovalor=="1")
+            makePost({
+                o:1,
+                t:tipo.val(),
+                p:idpala.val(),
+                fi:fdesdeDatepicker.val(),
+                ff:fhastaDatepicker.val()
+            });
+        else {
+            makePost({
+                o:1,
+                t:tipo.val(),
+                p:idcamion.val(),
+                fi:fdesdeDatepicker.val(),
+                ff:fhastaDatepicker.val()
+            })
+        }
+    });
+    fhastaDatepicker.on('dp.change', function(e){
+        preparaLinkDesplazamiento();
+        if(tipovalor=="1")
+            makePost({
+                o:1,
+                t:tipo.val(),
+                p:idpala.val(),
+                fi:fdesdeDatepicker.val(),
+                ff:fhastaDatepicker.val()
+            });
+        else {
+            makePost({
+                o:1,
+                t:tipo.val(),
+                p:idcamion.val(),
+                fi:fdesdeDatepicker.val(),
+                ff:fhastaDatepicker.val()
+            })
+        }
+    });
     makePost({
         o:1,
         t:tipo.val(),
@@ -134,7 +175,10 @@ function preparaLinkDesplazamiento() {
         idunidad=idcamion.val();
     }
 
-    btnDesplazamiento.attr('href', base+"/reporte/desplazamiento/"+idunidad+"/"+fdesdeDatepicker.val().replace('-','a').replace('-','a')+"a"+fhastaDatepicker.val().replace('-','a').replace('-','a'));
+    btnDesplazamiento.attr('href',
+        base+"/reporte/desplazamiento/"+idunidad+"/"+fdesdeDatepicker.val()
+        .replace('-','a').replace('-','a').replace(' ','a').replace(':','a').replace(':','a')+"a"
+        +fhastaDatepicker.val().replace('-','a').replace('-','a').replace(' ','a').replace(':','a').replace(':','a'));
 }
 function makePost(data) {
     var modalLoading=$("#modalLoading");
@@ -153,6 +197,7 @@ function makePost(data) {
                 alert(datar.m.xdebug_message)
             }
             else
+            {
                 switch (data.o)
                 {
                     case 1:
@@ -164,24 +209,24 @@ function makePost(data) {
                                 "<td>"+v.longitud+"</td>" +
                                 "<td>"+v.fecha+"</td>" +
                                 "<td>" +
-                                "<a href='#' class='btn btn-xs btn-info estado'><span class='fa fa-map-marker'></span></a>" +
+                                "<a href='#' class='btn btn-xs btn-info mapa' lt='"+v.latitud+"' lg='"+v.longitud+"'><span class='fa fa-map-marker'></span></a>" +
                                 "</td></tr>";
                         });
                         $("#tablaUbicaciones").remove();
                         $("#tablaUbicaciones_wrapper").remove();
                         $("#divTable").append(
                             '<table id="tablaUbicaciones" class="table table-striped table-bordered table-hover dataTable no-footer dtr-inline">' +
-                                '<thead>' +
-                                    '<tr role="row">' +
-                                        '<td>Nº</td>' +
-                                        '<td>Latitud</td>' +
-                                        '<td>Longitud</td>' +
-                                        '<td>Fec. Registro</td>' +
-                                        '<td>opción</td>' +
-                                    '</tr>' +
-                                '</thead>' +
-                                '<tbody id="tableBodyAdd">' +
-                                '</tbody>' +
+                            '<thead>' +
+                            '<tr role="row">' +
+                            '<td>Nº</td>' +
+                            '<td>Latitud</td>' +
+                            '<td>Longitud</td>' +
+                            '<td>Fec. Registro</td>' +
+                            '<td>opción</td>' +
+                            '</tr>' +
+                            '</thead>' +
+                            '<tbody id="tableBodyAdd">' +
+                            '</tbody>' +
                             '</table>'
                         );
                         $("#tableBodyAdd").append(html);
@@ -211,8 +256,8 @@ function makePost(data) {
                         }
                         modalLoading.modal('hide');
                     break;
-
                 }
+            }
         }
     });
 }
@@ -240,3 +285,22 @@ function validar(text) {
     var date = new Date(y,m-1,d);
     return date.getFullYear() === y && date.getMonth() + 1 === m && date.getDate() === d;
 }
+var marker =null;
+$(document).on('click', '.mapa', function () {
+    if(marker!==null)
+        marker.setMap(null);
+
+    map.setZoom(22);
+    $("#MapaPunto").modal('show');
+    var latitud=$(this).attr('lt');
+    var longitud=$(this).attr('lg');
+    marker = new google.maps.Marker({
+        position:  {
+            lat:parseFloat(latitud),
+            lng:parseFloat(longitud)
+        },
+        map: map,
+        title:"Punto"
+    });
+    map.setCenter(new google.maps.LatLng(latitud, longitud));
+});
