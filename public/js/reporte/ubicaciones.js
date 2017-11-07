@@ -165,6 +165,7 @@ $(document).ready(function() {
     preparaLinkDesplazamiento();
 
 });
+
 function preparaLinkDesplazamiento() {
     var btnDesplazamiento=$("#bDesplzamiento");
     var idunidad=0;
@@ -285,15 +286,21 @@ function validar(text) {
     var date = new Date(y,m-1,d);
     return date.getFullYear() === y && date.getMonth() + 1 === m && date.getDate() === d;
 }
+
 var marker =null;
 $(document).on('click', '.mapa', function () {
+
+    var latitud=$(this).attr('lt');
+    var longitud=$(this).attr('lg');
     if(marker!==null)
         marker.setMap(null);
 
+    map.setCenter(new google.maps.LatLng(latitud, longitud));
+    //map.setMapTypeId(google.maps.MapTypeId.ROADMAP);
+    map.setCenter(new google.maps.LatLng(latitud, longitud));
     map.setZoom(22);
+
     $("#MapaPunto").modal('show');
-    var latitud=$(this).attr('lt');
-    var longitud=$(this).attr('lg');
     marker = new google.maps.Marker({
         position:  {
             lat:parseFloat(latitud),
@@ -302,5 +309,4 @@ $(document).on('click', '.mapa', function () {
         map: map,
         title:"Punto"
     });
-    map.setCenter(new google.maps.LatLng(latitud, longitud));
 });

@@ -140,7 +140,7 @@
             </div>
             <div class=" row modal-body">
                 <div class="col-md-12">
-                    <div id="map" style="width: 100%; height: 200px" ></div>
+                    <div id="map" style="width: 600px; height: 200px" ></div>
 
                 </div>
             </div>
@@ -152,7 +152,8 @@
 </script>
 <script type="text/javascript">
     $("#MapaPunto").on("shown.bs.modal", function () {
-       // google.maps.event.trigger(map, "resize");
+        google.maps.event.trigger(map, "resize");
+
     });
 
     var directionsDisplay;
@@ -163,11 +164,10 @@
         var myOptions = {
             zoom: 14,
             center: myLatLng,
-            mapTypeId: 'roadmap'
+            mapTypeId: 'satellite'
         };
         directionsDisplay = new google.maps.DirectionsRenderer();
         map = new google.maps.Map(document.getElementById('map'), myOptions);
         directionsDisplay.setMap(map);
     }
-
 </script>

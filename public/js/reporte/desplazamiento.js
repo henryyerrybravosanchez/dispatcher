@@ -56,6 +56,5 @@ $(function(){
         });
 
         flightPath.setMap(map);
-        console.log(Ubicaciones)
     });
 });

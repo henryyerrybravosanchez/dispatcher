@@ -430,7 +430,7 @@ function actualizarCargasPala(data, camionesEnServicio) {
         });
 
         dddd.push({
-            label:"Pala "+ camionesEnServicio[j],
+            label:"Camión "+ camionesEnServicio[j],
             data: cantidades,
             backgroundColor: [
                 "rgba(220,220,220,0)"
@@ -485,7 +485,7 @@ function makePost(data) {
                         var arrayLabelsFechas=[];
                         var arrayPlacas={   };
                         while (fechadesde!==fechafin)
-                        {º
+                        {
                             arrayLabelsFechas.push(fechadesde);
                             var fDarr=fechadesde.split('-');
                             var bandera=false;
