@@ -15,7 +15,7 @@ return array(
         'username'       => 'sa',
         'password'       => 'henry120',
         'driver'         => 'Pdo',
-        'dsn'            => 'sqlsrv:Server=DESKTOP-V4461LJ\SQLEXPRESS;Database=despachador',
+        'dsn'            => 'sqlsrv:Server=DESKTOP-MB3241Q\ALVICOM;Database=despachador',
         'driver_options' => array(
             //PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES\'UTF8\''
         ),

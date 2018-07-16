@@ -9,6 +9,8 @@
 
 namespace Lugar;
 
+use Lugar\Model\Contiene;
+use Lugar\Model\ContieneTable;
 use Lugar\Model\Lugar;
 use Lugar\Model\LugarTable;
 use Lugar\Model\Material;
@@ -82,6 +84,17 @@ class Module
                     $resultSetPrototype = new ResultSet();
                     $resultSetPrototype->setArrayObjectPrototype(new Material());
                     return new TableGateway('material', $dbAdapter, null, $resultSetPrototype);
+                },
+                'Lugar\Model\ContieneTable' => function ($sm) {
+                    $tableGateway = $sm->get('ContieneTableGateway');
+                    $table = new ContieneTable($tableGateway);
+                    return $table;
+                },
+                'ContieneTableGateway' => function ($sm) {
+                    $dbAdapter = $sm->get('Zend\Db\Adapter\Adapter');
+                    $resultSetPrototype = new ResultSet();
+                    $resultSetPrototype->setArrayObjectPrototype(new Contiene());
+                    return new TableGateway('contiene', $dbAdapter, null, $resultSetPrototype);
                 },
             ),
         );

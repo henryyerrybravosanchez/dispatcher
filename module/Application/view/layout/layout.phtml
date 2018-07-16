@@ -27,7 +27,7 @@
         )
         ->prependStylesheet(
             $this->basePath()
-            . '/public/bower_components/sweetalert/dist/sweetalert2.css'
+            . '/public/bower_components/sweetalert2/dist/sweetalert2.css'
         )
         ->prependStylesheet(
             $this->basePath()
@@ -96,7 +96,7 @@
         . '/public/bower_components/datatables/media/js/dataTables.bootstrap.min.js'
     )->prependFile(
         $this->basePath()
-        . '/public/bower_components/sweetalert/dist/sweetalert2.js'
+        . '/public/bower_components/sweetalert2/dist/sweetalert2.js'
     )->prependFile(
         $this->basePath()
         . '/public/bower_components/datatables/media/js/jquery.dataTables.min.js'
@@ -109,24 +109,14 @@
     )->prependFile(
         $this->basePath()
         . '/public/bower_components/bootstrap/dist/js/bootstrap.min.js'
-    )
-        ->prependFile(
-            $this->basePath()
-            . '/public/bower_components/jquery/dist/jquery.min.js'
-        );
+    )->prependFile(
+        $this->basePath()
+        . '/public/bower_components/jquery/dist/jquery.min.js'
+    );
     ?>
 
 <meta name="description" content="Sistema Control de Flotas">
 <meta name="author" content="Henry Bravo">
-
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]
-<script
-    src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<script
-    src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
 
 </head>
 <body class="flat-blue">
@@ -249,6 +239,12 @@
                             </a>
                         </li>
                         <li>
+                            <a href="<?=$this->basePath()?>/mantenimiento">
+                                <span class="icon  fa fa-wrench"></span>
+                                <span class="title">Mantenimiento</span>
+                            </a>
+                        </li>
+                        <li>
                             <a href="<?=$this->basePath()?>/rrhh/operador">
                                 <span class="icon  fa fa-user fa-fw"></span>
                                 <span class="title">Colaboradores</span>
@@ -279,6 +275,16 @@
                     2017 Copyright.
                 </div>
             </footer>
+        </div>
+        <div class="modal hide" id="modalLoading" data-backdrop="static" data-keyboard="false">
+            <div class="modal-header">
+                <h1>Processing...</h1>
+            </div>
+            <div class="modal-body">
+                <div class="progress progress-striped active">
+                    <div class="bar" style="width: 100%;"></div>
+                </div>
+            </div>
         </div>
     </div>
     <div>

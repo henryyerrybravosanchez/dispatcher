@@ -3,16 +3,14 @@
 -->
 <?php
 $this->inlineScript()->appendFile(
-    $this->basePath() . '/public/js/unidad/unidad.js'
+    $this->basePath() . '/public/js/mantenimiento/index.js'
 )
 ?>
-<body>
+<body onLoad="setInterval('contador()',1000);">
     <!--panel para lista de reportes-->
     <div class="row">
         <div class="panel-heading">
-            <h3>LISTA DE UNIDADES</h3>
-            <!--<a class="btn btn-info btn-xs" id="addChofer"><i class="fa fa-plus" aria-hidden="true"></i>Chofer</a>-->
-            <a class="btn btn-success btn-xs" id="addUnidad"><i class="fa fa-plus" aria-hidden="true"></i>Unidad</a>
+            <h3>MÓDULO DE MANTENIMIENTO</h3>
         </div>
         <div class="panel-body">
             <!--Tabla de unidades-->
@@ -28,64 +26,12 @@ $this->inlineScript()->appendFile(
                                 <tr role="row">
                                     <td>Nº Placa</td>
                                     <td>Tipo</td>
-                                    <td>Consumo</td>
+                                    <td>Fecha Programación</td>
                                     <td>Estado</td>
+                                    <td>Opción</td>
                                 </tr>
                                 </thead>
-                                <tbody>
-                                <?php
-                                foreach ($this->volquetes as $value)
-                                {
-                                    $estado="";
-                                    switch ($value['estado'])
-                                    {
-                                        case 1:
-                                            $estado="Unidad en Solicitud";
-                                            break;
-                                        case 2:
-                                            $estado="Unidad en Servicio";
-                                            break;
-                                        case 3:
-                                            $estado="Unidad sin Servicio";
-                                            break;
-                                    }
-                                    echo "
-                                    <tr>
-                                        <td>".$value['placa']."</td>
-                                        <td>Volquete</td>
-                                        <td>".$value['galonesXkm']."</td>
-                                        <td>".$estado."</td>
-                                    </tr>
-                                    ";
-
-
-                                }
-                                foreach ($this->palas as $value)
-                                {
-                                    $estado="";
-                                    switch ($value['estado'])
-                                    {
-                                        case 1:
-                                            $estado="Unidad en Solicitud";
-                                            break;
-                                        case 2:
-                                            $estado="Unidad en Servicio";
-                                            break;
-                                        case 3:
-                                            $estado="Unidad sin Servicio";
-                                            break;
-                                    }
-                                    echo "
-                                    <tr>
-                                        <td>".$value['placa']."</td>
-                                        <td>Pala</td>                                    
-                                        <td>".$value['galonesXhora']."</td>
-                                        <td>".$estado."</td>
-                                    </tr>
-                                    ";
-                                }
-
-                                ?>
+                                <tbody id="tablemante">
                                 </tbody>
                             </table>
 
@@ -167,8 +113,11 @@ $this->inlineScript()->appendFile(
                             <input type="radio" id="activo" name="estado" value="2"  />
                             <label for="activo">Desactivar</label>
                         </div>
+
+
                     </div>
                 </div>
+
                 <div class="modal-footer">
                     <a id="btn-confirmar" class="btn btn-info" href="#!" idc="">Confirmar</a>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -193,7 +142,9 @@ $this->inlineScript()->appendFile(
                         </div>
                     </div>
                 </div>
+
             </div>
+
         </div>
     </div>
 </body>

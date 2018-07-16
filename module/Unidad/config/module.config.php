@@ -42,6 +42,38 @@ return array(
                 ),
             ),
 
+            'mantenimiento' => array(
+                'type'          => 'segment',
+                'options'       => array(
+                    'route'       => '/mantenimiento[/:action][/:id][/:param]',
+                    'constraints' => array(
+                        'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                        'id'     => '[a-zA-Z0-9_-]+',
+                        'param'  => '[a-zA-Z0-9_-]+',
+                    ),
+                    'defaults'    => array(
+                        'controller' => 'Unidad\Controller\Mantenimiento',
+                        'action'     => 'index',
+                    ),
+                ),
+                'may_terminate' => true,
+                'child_routes'  => array(
+                    'default' => array(
+                        'type'    => 'Segment',
+                        'options' => array(
+                            'route'       => '/[:controller][/:action][/:id][/:param]',
+                            'constraints' => array(
+                                'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                                'action'     => '[a-zA-Z][a-zA-Z0-9_-]*',
+                                'id'         => '[a-zA-Z0-9_-]+',
+                                'param'      => '[a-zA-Z0-9_-]+',
+                            ),
+                            'defaults'    => array(),
+                        ),
+                    ),
+                ),
+            ),
+
 
         ),
     ),
@@ -67,6 +99,7 @@ return array(
     'controllers'     => array(
         'invokables' => array(
             'Unidad\Controller\Index'    => 'Unidad\Controller\IndexController',
+            'Unidad\Controller\Mantenimiento'    => 'Unidad\Controller\MantenimientoController',
         ),
     ),
     'view_manager'    => array(

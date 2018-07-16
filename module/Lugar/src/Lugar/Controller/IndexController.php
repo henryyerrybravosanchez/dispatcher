@@ -10,7 +10,9 @@
 namespace Lugar\Controller;
 
 use Bus\Form\BusForm;
+use Lugar\Model\Contiene;
 use Lugar\Model\Lugar;
+use Lugar\Model\Ruta;
 use Unidad\Model\Punto;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\JsonModel;
@@ -25,6 +27,9 @@ class IndexController extends AbstractActionController
     public $volquetetable;
     public $rutatable;
     public $palatable;
+    public $unidadtable;
+    public $contienetable;
+    public $desplazamiento;
 
     public function indexAction()
     {
@@ -100,14 +105,113 @@ class IndexController extends AbstractActionController
                         return new JsonModel(array('o'=>5, 'data'=>-1));
                     }
                     break;
+                case 6:
+                    $idcamion = (int)$this->request->getPost('c');
+                    $desde = $this->request->getPost('d');
+                    $hasta = $this->request->getPost('h');
+                    $puntos=$this->getDesplazamientoTable()->getUbicacionesUnidad($desde,$hasta, $idcamion);
+                    try{
+                        return new JsonModel(array('o'=>$o, 'data'=>$puntos));
+                    }catch (\Exception $exception){
+                        return new JsonModel(array('o'=>$o, 'data'=>-1));
+                    }
+                    break;
+                case 7:
+                    $lugares =$this->getLugarTable()->fetchAllLugares();
+                    return new JsonModel(array('o'=>$o, 'data'=>$lugares));
+                    break;
+                case 8:
+                    $idinicio = $this->request->getPost('idi');
+                    $iddestino = $this->request->getPost('idd');
+                    $data = $this->request->getPost('d');
+                    if(count($data)>0){
+                        $ruta=new Ruta();
+                        $ruta->idLugarFinal=$iddestino;
+                        $ruta->idLugarInicio=$idinicio;
+                        $ruta->estado=1;
+                        $idr=$this->getRutaTable()->saveRuta($ruta);
+                        $orden=0;
+                        foreach ($data as $d){
+                            $latitud=$d['lat'];
+                            $longitud=$d['lng'];
+                            if($latitud!=0&&$longitud!=0){
+                                $orden++;
+                                $p= new Punto();
+                                $p->estado=1;
+                                $p->idruta=$idr;
+                                $p->latitud=$latitud;
+                                $p->longitud=$longitud;
+                                $p->orden=$orden;
+                                $idp=$this->getPuntoTable()->savePunto($p);
+                            }
+
+                        }
+                        return new JsonModel(array('o'=>$o, 'data'=>$idr));
+                    }
+                    else {
+                        return new JsonModel(array('o'=>$o, 'data'=>-1));
+                    }
+                    break;
             }
         }
-        $lugares=$this->getLugarTable()->fetchAll();
+        $lugares=$this->getLugarTable()->fetchAllLugares();
+        $volquete=$this->getUnidadTable()->fetchAllVolquetes();
         $rutas=$this->getRutaTable()->fetchAllWithPlace();
         return new ViewModel(array(
             'lugares'=>$lugares,
-            'rutas'=>$rutas
+            'rutas'=>$rutas,
+            'camiones'=>$volquete
         ));
+    }
+    public function poligonoAction(){
+        if ($this->request->isXmlHttpRequest()) {
+            $o = (int)$this->request->getPost('o');
+            switch ($o) {
+                case 1:
+                    $dato= $this->request->getPost('d');
+                    $color= $this->request->getPost('co');
+                    $nombre= $this->request->getPost('np');
+                    $lugar=new Lugar();
+                    $lugar->nombre=$nombre;
+                    $lugar->color=$color;
+                    $lugar->estado=1;
+                    $lugar->tipo=2;
+                    $idlugar=$this->getLugarTable()->saveLugar($lugar);
+                    $or=0;
+                    foreach ($dato as $d){
+                        $or++;
+                        $punto=new Punto();
+                        $punto->latitud=$d['lat'];
+                        $punto->longitud=$d['lng'];
+                        $punto->estado=1;
+                        $punto->orden=$or;
+                        $idp=$this->getPuntoTable()->savePunto($punto);
+
+                        $contiene=new Contiene();
+                        $contiene->idlugar=$idlugar;
+                        $contiene->idpunto=$idp;
+                        $contiene->estado=1;
+                        $contiene->version=1;
+                        $this->getContieneTable()->saveContiene($contiene);
+                    }
+                    if($idlugar)
+                        return new JsonModel(array('o'=>$o, 'data'=>$idlugar));
+                    else
+                        return new JsonModel(array('o'=>$o, 'data'=>-1));
+                    break;
+                case 2:
+                    $idlugar=(int)$this->request->getPost('idl');
+                    $puntos=$this->getContieneTable()->fetchAllWithPlace($idlugar);
+                    return new JsonModel(array('o'=>$o, 'data'=>$puntos));
+                    break;
+            }
+        }
+        $lugares=$this->getLugarTable()->fetchAllPoligonos();
+        return new ViewModel(
+            array(
+                'poligonoes'=>$lugares
+            )
+        );
     }
     private function getRutaTable()
     {
@@ -131,26 +235,46 @@ class IndexController extends AbstractActionController
 
         return $this->Lugartable;
     }
-    private function getPalaTable()
+    private function getUnidadTable()
     {
-        if (!$this->palatable) {
+        if (!$this->unidadtable) {
             $sm = $this->getServiceLocator();
-            $this->palatable = $sm->get(
-                'Pala\Model\PalaTable'
+            $this->unidadtable = $sm->get(
+                'Unidad\Model\UnidadTable'
             );
         }
 
-        return $this->palatable;
+        return $this->unidadtable;
+    }
+    private function getContieneTable()
+    {
+        if (!$this->contienetable) {
+            $sm = $this->getServiceLocator();
+            $this->contienetable = $sm->get(
+                'Lugar\Model\ContieneTable'
+            );
+        }
+        return $this->contienetable;
     }
     private function getVolqueteTable()
     {
         if (!$this->volquetetable) {
             $sm = $this->getServiceLocator();
             $this->volquetetable = $sm->get(
-                'Volquete\Model\VolqueteTable'
+                'Unidad\Model\VolqueteTable'
             );
         }
         return $this->volquetetable;
+    }
+    private function getDesplazamientoTable()
+    {
+        if (!$this->desplazamiento) {
+            $sm = $this->getServiceLocator();
+            $this->desplazamiento= $sm->get(
+                'Unidad\Model\DesplazamientoTable'
+            );
+        }
+        return $this->desplazamiento;
     }
 
 

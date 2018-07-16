@@ -262,7 +262,7 @@ class IndexController extends AbstractActionController
                         $fFex=explode('-', $fechafinal);
                         $fechainicial=$fIex[2]."-".$fIex[1]."-".$fIex[0];
                         $fechafinal=$fFex[2]."-".$fFex[1]."-".$fFex[0];
-                        $ubicaciones=$this->getDesplazamientoTable()->getUbicacionesPala($fechainicial, $fechafinal, $idunidad);
+                        $ubicaciones=$this->getDesplazamientoTable()->getUbicacionesUnidad($fechainicial, $fechafinal, $idunidad);
                         return new JsonModel(array('data'=>$ubicaciones));
                     }
                     catch (\Exception $e) {
@@ -295,7 +295,7 @@ class IndexController extends AbstractActionController
 
                 $fechaDesde=$fechasArray[2]."-".$fechasArray[1]."-".$fechasArray[0]." ".$fechasArray[3].":".$fechasArray[4].":".$fechasArray[5];
                 $fechaHasta=$fechasArray[8]."-".$fechasArray[7]."-".$fechasArray[6]." ".$fechasArray[9].":".$fechasArray[10].":".$fechasArray[11];
-                $ubicaciones=$this->getDesplazamientoTable()->getUbicacionesPala($fechaDesde, $fechaHasta, $idunidad);
+                $ubicaciones=$this->getDesplazamientoTable()->getUbicacionesUnidad($fechaDesde, $fechaHasta, $idunidad);
                 return new ViewModel(
                     array(
                         'ubicaciones'=>$ubicaciones
@@ -473,9 +473,9 @@ class IndexController extends AbstractActionController
                 'Lugar\Model\RutaTable'
             );
         }
-
         return $this->rutatable;
     }
+
     private function getUnidadTable()
     {
         if (!$this->unidadtable) {
@@ -488,28 +488,6 @@ class IndexController extends AbstractActionController
         return $this->unidadtable;
     }
 
-    private function getPalaTable()
-    {
-        if (!$this->palatable) {
-            $sm = $this->getServiceLocator();
-            $this->palatable = $sm->get(
-                'Unidad\Model\PalaTable'
-            );
-        }
-
-        return $this->palatable;
-    }
-
-    private function getVolqueteTable()
-    {
-        if (!$this->volquetetable) {
-            $sm = $this->getServiceLocator();
-            $this->volquetetable = $sm->get(
-                'Volquete\Model\VolqueteTable'
-            );
-        }
-        return $this->volquetetable;
-    }
     private function getServicioCargaTable()
     {
         if (!$this->serviciotable) {
@@ -518,10 +496,9 @@ class IndexController extends AbstractActionController
                 'Unidad\Model\ServicioCargaTable'
             );
         }
-
         return $this->serviciotable;
-
     }
+
     private function getMaterialTable()
     {
         if (!$this->materialtable) {

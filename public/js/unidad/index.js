@@ -4,7 +4,7 @@
 var base='';
 
 function contador(){
-    traerDisponibles({o:2});
+   traerDisponibles({o:2});
 }
 $(document).ready(function() {
 

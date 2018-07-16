@@ -1,0 +1,24 @@
+Mantenimiento:Estado
+1:Programado
+2:Desactivado
+3:En proceso
+4:Finalizado
+
+Solicitud:Estado
+1:En solicitud
+2:Confirmado
+3:No confirmado
+
+volquete/pala:Estado
+1:En solicitud
+2:En servicio
+3:Desocupado
+4:Inactivo
+
+servicio_carga:estado
+1:En curso
+2:Terminado
+
+lugar:estado
+1:Activo
+2:No disponible

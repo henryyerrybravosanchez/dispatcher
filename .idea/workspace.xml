@@ -2,159 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3748b96d-24c7-4552-ab3a-f13f748593dd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hola.xlsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Chart/Axis.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Chart/GridLines.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Chart/Properties.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Helper/HTML.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Worksheet/Column.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Worksheet/ColumnCellIterator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Worksheet/ColumnIterator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Worksheet/RowCellIterator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Writer/OpenDocument.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Writer/OpenDocument/Cell/Comment.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Writer/OpenDocument/Content.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Writer/OpenDocument/Meta.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Writer/OpenDocument/MetaInf.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Writer/OpenDocument/Mimetype.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Writer/OpenDocument/Settings.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Writer/OpenDocument/Styles.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Writer/OpenDocument/Thumbnails.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Writer/OpenDocument/WriterPart.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/01simple-download-ods.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/39dropdown.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/41password.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/42richText.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/data/continents/Africa.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/data/continents/Asia.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/data/continents/Europe.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/data/continents/North America.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/data/continents/Oceania.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/data/continents/South America.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/Classes/PHPExcel/Cell/DefaultValueBinderTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/Classes/PHPExcel/Reader/XEEValidatorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/Classes/PHPExcel/Worksheet/ColumnCellIteratorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/Classes/PHPExcel/Worksheet/ColumnIteratorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/Classes/PHPExcel/Worksheet/RowCellIteratorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/Classes/PHPExcel/Worksheet/RowIteratorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/Classes/PHPExcel/Worksheet/WorksheetColumnTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/Classes/PHPExcel/Worksheet/WorksheetRowTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/rawTestData/Calculation/TextData/VALUE.data" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/rawTestData/Cell/DefaultValueBinder.data" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/rawTestData/Reader/XEETestInvalidUTF-16.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/rawTestData/Reader/XEETestInvalidUTF-16BE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/rawTestData/Reader/XEETestInvalidUTF-16LE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/rawTestData/Reader/XEETestInvalidUTF-8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/rawTestData/Reader/XEETestValidUTF-16.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/rawTestData/Reader/XEETestValidUTF-16BE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/rawTestData/Reader/XEETestValidUTF-16LE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/rawTestData/Reader/XEETestValidUTF-8.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Reporte/src/Reporte/Controller/IndexController.php" afterPath="$PROJECT_DIR$/module/Reporte/src/Reporte/Controller/IndexController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/Reporte/view/reporte/index/ubicaciones.phtml" afterPath="$PROJECT_DIR$/module/Reporte/view/reporte/index/ubicaciones.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/reporte/desplazamiento.js" afterPath="$PROJECT_DIR$/public/js/reporte/desplazamiento.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/reporte/ubicaciones.js" afterPath="$PROJECT_DIR$/public/js/reporte/ubicaciones.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/reporte/unidades.js" afterPath="$PROJECT_DIR$/public/js/reporte/unidades.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/.travis.yml" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/.travis.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Autoloader.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Autoloader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/CachedObjectStorage/APC.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/CachedObjectStorage/APC.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/CachedObjectStorage/CacheBase.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/CachedObjectStorage/CacheBase.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/CachedObjectStorage/DiscISAM.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/CachedObjectStorage/DiscISAM.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/CachedObjectStorage/ICache.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/CachedObjectStorage/ICache.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/CachedObjectStorage/Igbinary.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/CachedObjectStorage/Igbinary.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/CachedObjectStorage/Memcache.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/CachedObjectStorage/Memcache.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/CachedObjectStorage/MemoryGZip.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/CachedObjectStorage/MemoryGZip.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/CachedObjectStorage/MemorySerialized.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/CachedObjectStorage/MemorySerialized.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/CachedObjectStorage/PHPTemp.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/CachedObjectStorage/PHPTemp.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/CachedObjectStorage/SQLite.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/CachedObjectStorage/SQLite.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/CachedObjectStorage/SQLite3.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/CachedObjectStorage/SQLite3.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/CachedObjectStorage/Wincache.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/CachedObjectStorage/Wincache.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/CalcEngine/CyclicReferenceStack.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/CalcEngine/CyclicReferenceStack.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Calculation.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Calculation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Calculation/DateTime.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Calculation/DateTime.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Calculation/Functions.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Calculation/Functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Calculation/LookupRef.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Calculation/LookupRef.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Calculation/MathTrig.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Calculation/MathTrig.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Calculation/Statistical.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Calculation/Statistical.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Calculation/TextData.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Calculation/TextData.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Cell.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Cell.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Cell/DefaultValueBinder.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Cell/DefaultValueBinder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Chart.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Chart.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Chart/DataSeries.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Chart/DataSeries.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Chart/Renderer/jpgraph.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Chart/Renderer/jpgraph.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Reader/Abstract.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Reader/Abstract.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Reader/CSV.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Reader/CSV.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Reader/Excel2003XML.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Reader/Excel2003XML.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Reader/Excel2007.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Reader/Excel2007.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Reader/Excel5.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Reader/Excel5.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Reader/Gnumeric.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Reader/Gnumeric.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Reader/HTML.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Reader/HTML.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Reader/IReader.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Reader/IReader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Reader/OOCalc.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Reader/OOCalc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Settings.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Settings.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Shared/CodePage.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Shared/CodePage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Shared/Date.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Shared/Date.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Shared/Font.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Shared/Font.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Shared/JAMA/Matrix.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Shared/JAMA/Matrix.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Shared/OLE/ChainedBlockStream.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Shared/OLE/ChainedBlockStream.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Shared/PCLZip/pclzip.lib.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Shared/PCLZip/pclzip.lib.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Shared/String.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Shared/String.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Shared/ZipArchive.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Shared/ZipArchive.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Style/Alignment.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Style/Alignment.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Style/NumberFormat.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Style/NumberFormat.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Worksheet.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Worksheet.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Worksheet/AutoFilter.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Worksheet/AutoFilter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Worksheet/AutoFilter/Column/Rule.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Worksheet/AutoFilter/Column/Rule.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Worksheet/BaseDrawing.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Worksheet/BaseDrawing.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Worksheet/CellIterator.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Worksheet/CellIterator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Worksheet/Row.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Worksheet/Row.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Worksheet/RowDimension.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Worksheet/RowDimension.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Worksheet/RowIterator.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Worksheet/RowIterator.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Writer/Excel2007/Chart.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Writer/Excel2007/Chart.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Writer/Excel2007/Style.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Writer/Excel2007/Style.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Writer/Excel2007/Worksheet.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Writer/Excel2007/Worksheet.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Writer/Excel5/Parser.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Writer/Excel5/Parser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Writer/Excel5/Worksheet.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Writer/Excel5/Worksheet.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Writer/HTML.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Writer/HTML.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Writer/PDF.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Writer/PDF.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Writer/PDF/DomPDF.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Writer/PDF/DomPDF.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/05featuredemo.inc.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/05featuredemo.inc.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/13calculation.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/13calculation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/33chartcreate-area.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/33chartcreate-area.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/33chartcreate-bar-stacked.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/33chartcreate-bar-stacked.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/33chartcreate-bar.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/33chartcreate-bar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/33chartcreate-column-2.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/33chartcreate-column-2.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/33chartcreate-column.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/33chartcreate-column.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/33chartcreate-composite.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/33chartcreate-composite.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/33chartcreate-line.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/33chartcreate-line.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/33chartcreate-multiple-charts.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/33chartcreate-multiple-charts.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/33chartcreate-pie.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/33chartcreate-pie.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/33chartcreate-radar.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/33chartcreate-radar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/33chartcreate-scatter.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/33chartcreate-scatter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/33chartcreate-stock.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/33chartcreate-stock.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/34chartupdate.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/34chartupdate.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/35chartrender.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/35chartrender.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/runall.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/runall.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/changelog.txt" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/changelog.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/Classes/PHPExcel/Calculation/DateTimeTest.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/Classes/PHPExcel/Calculation/DateTimeTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/Classes/PHPExcel/Calculation/EngineeringTest.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/Classes/PHPExcel/Calculation/EngineeringTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/Classes/PHPExcel/Calculation/FinancialTest.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/Classes/PHPExcel/Calculation/FinancialTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/Classes/PHPExcel/Calculation/FunctionsTest.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/Classes/PHPExcel/Calculation/FunctionsTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/Classes/PHPExcel/Calculation/LogicalTest.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/Classes/PHPExcel/Calculation/LogicalTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/Classes/PHPExcel/Calculation/LookupRefTest.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/Classes/PHPExcel/Calculation/LookupRefTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/Classes/PHPExcel/Calculation/MathTrigTest.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/Classes/PHPExcel/Calculation/MathTrigTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/Classes/PHPExcel/Calculation/TextDataTest.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/Classes/PHPExcel/Calculation/TextDataTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/Classes/PHPExcel/CalculationTest.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/Classes/PHPExcel/CalculationTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/Classes/PHPExcel/Worksheet/AutoFilter/ColumnTest.php" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/Classes/PHPExcel/Worksheet/AutoFilter/ColumnTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/phpunit.xml" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/phpunit.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/rawTestData/Calculation/MathTrig/MINVERSE.data" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/rawTestData/Calculation/MathTrig/MINVERSE.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/rawTestData/Calculation/MathTrig/MMULT.data" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/rawTestData/Calculation/MathTrig/MMULT.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/rawTestData/Calculation/TextData/TRIM.data" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/rawTestData/Calculation/TextData/TRIM.data" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/rawTestData/Style/NumberFormat.data" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpexcel/unitTests/rawTestData/Style/NumberFormat.data" />
+      <change afterPath="$PROJECT_DIR$/EstadosYtipos.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/Lugar/src/Lugar/Model/Contiene.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/Lugar/src/Lugar/Model/ContieneTable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/Lugar/view/lugar/index/poligono.phtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/Unidad/src/Unidad/Controller/MantenimientoController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/Mantenimiento.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/MantenimientoTable.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/Unidad/view/unidad/mantenimiento/index.phtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/lugar/poligono.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/mantenimiento/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dispacher.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dispacher.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/autoload/global.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/autoload/global.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/autoload/local.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/autoload/local.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hola.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Application/view/layout/layout.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/module/Application/view/layout/layout.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Lugar/Module.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Lugar/Module.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Lugar/src/Lugar/Controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Lugar/src/Lugar/Controller/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Lugar/src/Lugar/Model/Lugar.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Lugar/src/Lugar/Model/Lugar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Lugar/src/Lugar/Model/LugarTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Lugar/src/Lugar/Model/LugarTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Lugar/src/Lugar/Model/RutaTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Lugar/src/Lugar/Model/RutaTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Lugar/view/lugar/index/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/module/Lugar/view/lugar/index/index.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Reporte/src/Reporte/Controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Reporte/src/Reporte/Controller/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Unidad/Module.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Unidad/Module.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Unidad/config/module.config.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Unidad/config/module.config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/DesplazamientoTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/DesplazamientoTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Unidad/view/unidad/index/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/module/Unidad/view/unidad/index/index.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/Unidad/view/unidad/index/unidad.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/module/Unidad/view/unidad/index/unidad.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bower_components/sweetalert/dist/sweetalert2.common.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bower_components/sweetalert/dist/sweetalert2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bower_components/sweetalert/dist/sweetalert2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bower_components/sweetalert/dist/sweetalert2.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/bower_components/sweetalert/dist/sweetalert2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/pala.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/pala.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/volquete.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/volquete.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/lugar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/lugar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/unidad/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/unidad/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -163,112 +47,70 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="desplazamiento.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/reporte/desplazamiento.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ubicaciones.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/reporte/ubicaciones.js">
+      <file leaf-file-name="MantenimientoController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Controller/MantenimientoController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="202" column="17" lean-forward="false" selection-start-line="202" selection-start-column="17" selection-end-line="202" selection-end-column="17" />
-              <folding>
-                <element signature="e#221#4360#0" expanded="false" />
-              </folding>
+              <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="composer.lock" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/composer.lock">
+      <file leaf-file-name="MantenimientoTable.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/MantenimientoTable.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="398" column="14" lean-forward="false" selection-start-line="398" selection-start-column="14" selection-end-line="398" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ubicaciones.phtml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/Reporte/view/reporte/index/ubicaciones.phtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2788">
-              <caret line="164" column="21" lean-forward="false" selection-start-line="164" selection-start-column="21" selection-end-line="164" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.phtml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/Unidad/view/unidad/index/index.phtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="33" column="26" lean-forward="false" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
-              <folding />
+            <state relative-caret-position="286">
+              <caret line="88" column="34" selection-start-line="88" selection-start-column="34" selection-end-line="88" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/Reporte/src/Reporte/Controller/IndexController.php">
+        <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Controller/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="377" column="71" lean-forward="true" selection-start-line="377" selection-start-column="71" selection-end-line="377" selection-end-column="71" />
-              <folding>
-                <element signature="e#4865#7760#0#PHP" expanded="false" />
-                <element signature="e#7765#11133#0#PHP" expanded="false" />
-              </folding>
+            <state relative-caret-position="3162">
+              <caret line="199" column="9" selection-start-line="199" selection-start-column="9" selection-end-line="199" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="33chartcreate-line.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/33chartcreate-line.php">
+      <file leaf-file-name="layout.phtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/Application/view/layout/layout.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="81" column="19" lean-forward="true" selection-start-line="81" selection-start-column="19" selection-end-line="81" selection-end-column="19" />
-              <folding />
+            <state relative-caret-position="-1836">
+              <caret line="101" column="44" selection-start-line="101" selection-start-column="44" selection-end-line="101" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="unidades.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/reporte/unidades.js">
+      <file leaf-file-name="index.phtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/Unidad/view/unidad/mantenimiento/index.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="431" column="19" lean-forward="true" selection-start-line="431" selection-start-column="19" selection-end-line="431" selection-end-column="19" />
-              <folding />
+            <state relative-caret-position="-425">
+              <caret line="5" column="59" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="composer.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/composer.json">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/mantenimiento/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="35" lean-forward="false" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-              <folding />
+            <state relative-caret-position="275">
+              <caret line="68" column="25" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DesplazamientoTable.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/DesplazamientoTable.php">
+      <file leaf-file-name="EstadosYtipos.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/EstadosYtipos.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1326">
-              <caret line="79" column="18" lean-forward="false" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
-              <folding />
+            <state relative-caret-position="102">
+              <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -285,43 +127,47 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>change</find>
-      <find>getOperaMonthFinish</find>
-      <find>mes</find>
-      <find>directionsService</find>
+      <find>See</find>
+      <find>Seleccionar</find>
+      <find>arc</find>
+      <find>file-</find>
+      <find>Agregar</find>
+      <find>btnVerDi</find>
+      <find>btnVerD</find>
+      <find>map_canvas2</find>
+      <find>Cargar .TXT</find>
+      <find>addPl</find>
+      <find>btnGuardarU</find>
+      <find>console</find>
+      <find>Ar</find>
+      <find>editmapatable</find>
+      <find>1000</find>
+      <find>zIndex</find>
+      <find>clear</find>
+      <find>120</find>
+      <find>nColor</find>
+      <find>Archivo</find>
+      <find>jscolor</find>
+      <find>flightPlanCoordinates</find>
+      <find>modalTxt</find>
+      <find>file-input</find>
+      <find>modalEditRuta</find>
+      <find>file</find>
+      <find>tableBodyAdd</find>
+      <find>public</find>
       <find>contador</find>
-      <find>tUnidad</find>
-      <find>swal</find>
-      <find>bootstrap-social</find>
-      <find>bootstrap-timepicker</find>
-      <find>data</find>
-      <find>flot</find>
-      <find>font-aw</find>
-      <find>font-awesome</find>
-      <find>fontawesome</find>
-      <find>holder</find>
-      <find>jquery</find>
-      <find>metis</find>
-      <find>raph</find>
-      <find>twitter</find>
-      <find>asset</find>
-      <find>css</find>
-      <find>jquery-</find>
-      <find>template</find>
-      <find>tw</find>
-      <find>getUbicacionesPala</find>
-      <find>re</find>
-      <find>excel</find>
-      <find>pala</find>
-      <find>Pala</find>
-      <find>Pala</find>
+      <find>getMantenimientoActivos</find>
     </findStrings>
     <replaceStrings>
       <replace>Henry Bravo cel 973772738</replace>
       <replace>correctas</replace>
       <replace>seleccione</replace>
+      <replace>,-78.</replace>
+      <replace>,-78</replace>
+      <replace>&quot;&lt;,CAMION,UBI,350,-7.</replace>
     </replaceStrings>
     <dirStrings>
+      <dir>C:\wamp\www\dispacher\public\js</dir>
       <dir>C:\wamp\www\dispacher</dir>
     </dirStrings>
   </component>
@@ -331,32 +177,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/module/Lugar/view/lugar/index/list.phtml" />
-        <option value="$PROJECT_DIR$/module/Lugar/view/lugar/index/unidad.phtml" />
-        <option value="$PROJECT_DIR$/module/Reporte/Module.php" />
-        <option value="$PROJECT_DIR$/config/application.config.php" />
-        <option value="$PROJECT_DIR$/public/js/reporte/list.js" />
-        <option value="$PROJECT_DIR$/public/js/reporte/index.js" />
-        <option value="$PROJECT_DIR$/public/css/reporte/index.css" />
-        <option value="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/Carga.php" />
-        <option value="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/Desplazamiento.php" />
-        <option value="$PROJECT_DIR$/module/Lugar/src/Lugar/Model/LugarTable.php" />
-        <option value="$PROJECT_DIR$/module/Lugar/src/Lugar/Model/RutaTable.php" />
-        <option value="$PROJECT_DIR$/module/Rrhh/view/layout/layout.phtml" />
-        <option value="$PROJECT_DIR$/module/Lugar/view/lugar/index/index.phtml" />
-        <option value="$PROJECT_DIR$/module/Lugar/src/Lugar/Model/Material.php" />
-        <option value="$PROJECT_DIR$/module/Lugar/src/Lugar/Model/MaterialTable.php" />
-        <option value="$PROJECT_DIR$/module/Lugar/Module.php" />
-        <option value="$PROJECT_DIR$/module/Reporte/view/reporte/index/cargas.phtml" />
-        <option value="$PROJECT_DIR$/public/js/reporte/carga.js" />
-        <option value="$PROJECT_DIR$/module/Reporte/view/reporte/index/unidades.phtml" />
-        <option value="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/Servicio.php" />
-        <option value="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/ServicioCarga.php" />
-        <option value="$PROJECT_DIR$/module/Unidad/Module.php" />
-        <option value="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/CargaTable.php" />
-        <option value="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/ServicioCargaTable.php" />
-        <option value="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/OperaTable.php" />
-        <option value="$PROJECT_DIR$/module/Reporte/view/reporte/index/index.phtml" />
         <option value="$PROJECT_DIR$/module/Reporte/config/module.config.php" />
         <option value="$PROJECT_DIR$/module/Application/src/Application/Controller/IndexController.php" />
         <option value="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/Volquete.php" />
@@ -365,14 +185,10 @@
         <option value="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/VolqueteTable.php" />
         <option value="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/UnidadTable.php" />
         <option value="$PROJECT_DIR$/public/js/unidad/unidad.js" />
-        <option value="$PROJECT_DIR$/module/Unidad/view/unidad/index/unidad.phtml" />
         <option value="$PROJECT_DIR$/module/Unidad/view/unidad/index/list.phtml" />
         <option value="$PROJECT_DIR$/module/Unidad/src/Unidad/Controller/IndexController.php" />
         <option value="$PROJECT_DIR$/module/Rrhh/config/module.config.php" />
-        <option value="$PROJECT_DIR$/module/Application/view/layout/layout.phtml" />
-        <option value="$PROJECT_DIR$/module/Lugar/src/Lugar/Controller/IndexController.php" />
         <option value="$PROJECT_DIR$/module/Rrhh/src/Rrhh/Controller/IndexController.php" />
-        <option value="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/DesplazamientoTable.php" />
         <option value="$PROJECT_DIR$/module/Reporte/view/reporte/index/desplazamiento.phtml" />
         <option value="$PROJECT_DIR$/public/js/reporte/desplazamiento.js" />
         <option value="$PROJECT_DIR$/module/Reporte/view/reporte/index/ubicaciones.phtml" />
@@ -382,6 +198,36 @@
         <option value="$PROJECT_DIR$/module/Reporte/view/reporte/index/pdf.phtml" />
         <option value="$PROJECT_DIR$/public/js/reporte/unidades.js" />
         <option value="$PROJECT_DIR$/module/Reporte/src/Reporte/Controller/IndexController.php" />
+        <option value="$PROJECT_DIR$/config/autoload/local.php" />
+        <option value="$PROJECT_DIR$/config/autoload/global.php" />
+        <option value="$PROJECT_DIR$/public/js/rrhh/operadores.js" />
+        <option value="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/DesplazamientoTable.php" />
+        <option value="$PROJECT_DIR$/module/Lugar/src/Lugar/Model/RutaTable.php" />
+        <option value="$PROJECT_DIR$/public/js/unidad/index.js" />
+        <option value="$PROJECT_DIR$/module/Unidad/config/module.config.php" />
+        <option value="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/Mantenimiento.php" />
+        <option value="$PROJECT_DIR$/module/Unidad/Module.php" />
+        <option value="$PROJECT_DIR$/module/Unidad/view/unidad/index/unidad.phtml" />
+        <option value="$PROJECT_DIR$/module/Unidad/src/Unidad/Controller/MantenimientoController.php" />
+        <option value="$PROJECT_DIR$/module/Unidad/view/unidad/mantenimiento/index.phtml" />
+        <option value="$PROJECT_DIR$/module/Application/view/layout/layout.phtml" />
+        <option value="$PROJECT_DIR$/ll" />
+        <option value="$PROJECT_DIR$/module/Lugar/view/lugar/index/index.phtml" />
+        <option value="$PROJECT_DIR$/public/js/lugar/index.js" />
+        <option value="$PROJECT_DIR$/public/js/jscolor.js" />
+        <option value="$PROJECT_DIR$/module/Lugar/src/Lugar/Model/Contiene.php" />
+        <option value="$PROJECT_DIR$/module/Lugar/Module.php" />
+        <option value="$PROJECT_DIR$/module/Lugar/src/Lugar/Model/Lugar.php" />
+        <option value="$PROJECT_DIR$/module/Lugar/src/Lugar/Model/LugarTable.php" />
+        <option value="$PROJECT_DIR$/module/Lugar/src/Lugar/Model/ContieneTable.php" />
+        <option value="$PROJECT_DIR$/module/Lugar/view/lugar/index/poligono.phtml" />
+        <option value="$PROJECT_DIR$/public/js/lugar/poligono.js" />
+        <option value="$PROJECT_DIR$/module/Lugar/src/Lugar/Controller/IndexController.php" />
+        <option value="$PROJECT_DIR$/module/Unidad/view/unidad/index/index.phtml" />
+        <option value="$PROJECT_DIR$/public/bower_components/sweetalert2/dist/sweetalert2.js" />
+        <option value="$PROJECT_DIR$/public/js/mantenimiento/index.js" />
+        <option value="$PROJECT_DIR$/module/Unidad/src/Unidad/Model/MantenimientoTable.php" />
+        <option value="$PROJECT_DIR$/EstadosYtipos.txt" />
       </list>
     </option>
   </component>
@@ -404,10 +250,23 @@
     <handled-path value="$PROJECT_DIR$/public/bower_components/morrisjs/node_modules" />
     <handled-path value="$PROJECT_DIR$/public/node_modules" />
   </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/public/bower_components/ace-builds/package.json" />
+      <path value="$PROJECT_DIR$/public/bower_components/animate.css/package.json" />
+      <path value="$PROJECT_DIR$/public/bower_components/bootstrap/package.json" />
+      <path value="$PROJECT_DIR$/public/bower_components/eonasdan-bootstrap-datetimepicker/package.json" />
+      <path value="$PROJECT_DIR$/public/bower_components/matchHeight/package.json" />
+      <path value="$PROJECT_DIR$/public/bower_components/morrisjs/package.json" />
+      <path value="$PROJECT_DIR$/public/bower_components/select2/package.json" />
+      <path value="$PROJECT_DIR$/public/bower_components/sweetalert2/package.json" />
+      <path value="$PROJECT_DIR$/public/node_modules/sweetalert2/package.json" />
+    </packageJsonPaths>
+  </component>
   <component name="PhpTemplates">
     <option name="NEW_PHP_FILE_LAST_EXTENSION" value="phtml" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true">
+  <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
@@ -428,10 +287,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="535" />
-    <option name="y" value="-17" />
-    <option name="width" value="974" />
-    <option name="height" value="1075" />
+    <option name="x" value="2595" />
+    <option name="y" value="-9" />
+    <option name="width" value="558" />
+    <option name="height" value="416" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -457,119 +316,22 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Reporte" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Reporte" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Reporte" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="reporte" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="module" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Reporte" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="reporte" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="phpoffice" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="phpoffice" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="phpexcel" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="phpoffice" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="phpexcel" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Classes" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="dispacher" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dispacher" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="phpoffice" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="phpexcel" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Examples" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="dispatch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dispatch" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -580,15 +342,15 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\dispatch\public\img" />
+      <recent name="C:\wamp\www\dispatch\module\Lugar\src\Lugar\Model" />
+      <recent name="C:\wamp\www\dispatch\public\js\lugar" />
+      <recent name="C:\wamp\www\dispatch\module\Lugar\view\lugar\index" />
+      <recent name="C:\wamp\www\dispacher\public\js" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp\www\dispacher\public" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp\www\dispacher\module\Reporte\view\reporte\index" />
-      <recent name="C:\wamp\www\dispacher\public\js\reporte" />
-      <recent name="C:\wamp\www\dispacher\module\Unidad\src\Unidad\Model" />
-      <recent name="C:\wamp\www\dispacher\module\Lugar\src\Lugar\Model" />
-      <recent name="C:\wamp\www\dispacher\public\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -602,9 +364,6 @@
         </RuleState>
       </list>
     </option>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -639,7 +398,41 @@
       <workItem from="1509739804661" duration="8895000" />
       <workItem from="1509980966990" duration="7026000" />
       <workItem from="1509990584103" duration="194000" />
-      <workItem from="1509999718555" duration="12816000" />
+      <workItem from="1509999718555" duration="13345000" />
+      <workItem from="1510068728920" duration="235000" />
+      <workItem from="1510174875194" duration="3887000" />
+      <workItem from="1510238391614" duration="360000" />
+      <workItem from="1510329243803" duration="671000" />
+      <workItem from="1516543084521" duration="2740000" />
+      <workItem from="1517951863379" duration="1605000" />
+      <workItem from="1518009913976" duration="9235000" />
+      <workItem from="1518044250459" duration="719000" />
+      <workItem from="1518121712530" duration="5041000" />
+      <workItem from="1518209638222" duration="617000" />
+      <workItem from="1519241169526" duration="1399000" />
+      <workItem from="1519308671139" duration="11000" />
+      <workItem from="1519397805697" duration="97000" />
+      <workItem from="1519490338051" duration="1259000" />
+      <workItem from="1519492808438" duration="1659000" />
+      <workItem from="1519674877379" duration="942000" />
+      <workItem from="1519676288084" duration="3804000" />
+      <workItem from="1519753215789" duration="93000" />
+      <workItem from="1520272786610" duration="787000" />
+      <workItem from="1520373741755" duration="4113000" />
+      <workItem from="1520430706302" duration="13089000" />
+      <workItem from="1520515255016" duration="2575000" />
+      <workItem from="1520616390557" duration="1195000" />
+      <workItem from="1520631055052" duration="28000" />
+      <workItem from="1521846115600" duration="3661000" />
+      <workItem from="1522070416567" duration="8548000" />
+      <workItem from="1522157533058" duration="40000" />
+      <workItem from="1522157927341" duration="25823000" />
+      <workItem from="1522685498494" duration="95000" />
+      <workItem from="1527263515572" duration="878000" />
+      <workItem from="1527266307194" duration="2345000" />
+      <workItem from="1530111339674" duration="1248000" />
+      <workItem from="1530811107585" duration="2970000" />
+      <workItem from="1531761186913" duration="14745000" />
     </task>
     <task id="LOCAL-00001" summary="delete script">
       <created>1508887397430</created>
@@ -690,33 +483,42 @@
       <option name="project" value="LOCAL" />
       <updated>1509746904843</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="phpexcel adding example testing --Henry Bravo">
+      <created>1510012916580</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1510012916580</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="196069000" />
+    <option name="totallyTimeSpent" value="313112000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1912" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21927084" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1611877" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32661718" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31707317" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32976446" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.1611877" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32661718" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.12707183" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26500732" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32976446" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -735,7 +537,9 @@
     <MESSAGE value="reportes de desplazamiento --Henry Bravo" />
     <MESSAGE value="reportes de desplazamiento II --Henry Bravo" />
     <MESSAGE value="eliminando archivos no servibles --Henry Bravo" />
-    <option name="LAST_COMMIT_MESSAGE" value="eliminando archivos no servibles --Henry Bravo" />
+    <MESSAGE value="phpexcel adding example testing --Henry Bravo" />
+    <MESSAGE value="Subiendo txt de estados Dispatch --Henry Bravo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Subiendo txt de estados Dispatch --Henry Bravo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -745,367 +549,334 @@
           <line>111</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/module/Lugar/src/Lugar/Model/Contiene.php</url>
+          <line>14</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="34" />
+      <option name="time" value="37" />
     </breakpoint-manager>
-    <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/PuntoTable.php">
+    <entry file="file://$PROJECT_DIR$/public/js/init.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/template/js/app.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/basic.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="43" column="5" lean-forward="false" selection-start-line="43" selection-start-column="5" selection-end-line="62" selection-end-column="14" />
+        <state relative-caret-position="189">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/module/Reporte/view/reporte/index/cargas.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1547">
-          <caret line="91" column="74" lean-forward="false" selection-start-line="91" selection-start-column="54" selection-end-line="91" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/reporte/carga.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1870">
-          <caret line="149" column="130" lean-forward="false" selection-start-line="149" selection-start-column="130" selection-end-line="149" selection-end-column="130" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/ServicioCarga.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="26" column="9" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Reporte/view/reporte/index/unidades.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="103" column="53" lean-forward="false" selection-start-line="103" selection-start-column="44" selection-end-line="103" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/ServicioCargaTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="82" column="5" lean-forward="false" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Reporte/src/Reporte/Model/OperaTable.php" />
-    <entry file="file://$PROJECT_DIR$/module/Lugar/view/lugar/index/index.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="180" column="22" lean-forward="true" selection-start-line="180" selection-start-column="22" selection-end-line="180" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Reporte/view/reporte/index/index.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8364">
-          <caret line="492" column="79" lean-forward="false" selection-start-line="492" selection-start-column="79" selection-end-line="492" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Unidad/Module.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="95" column="43" lean-forward="false" selection-start-line="95" selection-start-column="30" selection-end-line="95" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Application/view/application/index/index.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/lugar/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="861">
-          <caret line="95" column="23" lean-forward="false" selection-start-line="95" selection-start-column="23" selection-end-line="119" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/OperaTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="81" column="50" lean-forward="false" selection-start-line="81" selection-start-column="50" selection-end-line="81" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Reporte/config/module.config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="19" column="51" lean-forward="false" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/unidad/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-40">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/CargaTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2006">
-          <caret line="304" column="47" lean-forward="false" selection-start-line="304" selection-start-column="47" selection-end-line="304" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/Carga.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/Pala.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="36" column="8" lean-forward="true" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Unidad/view/unidad/index/list.phtml" />
-    <entry file="file://$PROJECT_DIR$/module/Rrhh/config/module.config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="68" column="29" lean-forward="false" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Unidad/view/unidad/index/unidad.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="203" column="7" lean-forward="true" selection-start-line="203" selection-start-column="7" selection-end-line="203" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/rrhh/operadores.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="559" column="20" lean-forward="true" selection-start-line="559" selection-start-column="20" selection-end-line="559" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/unidad/unidad.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
-          <caret line="104" column="34" lean-forward="false" selection-start-line="104" selection-start-column="34" selection-end-line="104" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/UnidadTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/PalaTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="26" column="20" lean-forward="true" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/Volquete.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/VolqueteTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="36" column="40" lean-forward="true" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Application/view/application/partials/navigation.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1502">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Lugar/config/module.config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/files/server/php/files/thumbnail/sinimagen.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/files/server/php/files/sinimagen.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/img/logo.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/img/pala.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Application/view/layout/layout.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="126" column="7" lean-forward="true" selection-start-line="126" selection-start-column="7" selection-end-line="126" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Lugar/src/Lugar/Controller/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="110" column="5" lean-forward="false" selection-start-line="110" selection-start-column="5" selection-end-line="110" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Rrhh/src/Rrhh/Controller/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="242" column="4" lean-forward="false" selection-start-line="242" selection-start-column="4" selection-end-line="242" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Application/src/Application/Controller/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="47" column="7" lean-forward="false" selection-start-line="47" selection-start-column="7" selection-end-line="51" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Controller/IndexController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="127" column="3" lean-forward="false" selection-start-line="127" selection-start-column="3" selection-end-line="127" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/DesplazamientoTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1326">
-          <caret line="79" column="18" lean-forward="false" selection-start-line="79" selection-start-column="18" selection-end-line="79" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Unidad/view/unidad/index/index.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="26" lean-forward="false" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Reporte/view/reporte/index/desplazamiento.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="2" lean-forward="false" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Reporte/view/reporte/index/ubicaciones.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2788">
-          <caret line="164" column="21" lean-forward="false" selection-start-line="164" selection-start-column="21" selection-end-line="164" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/reporte/desplazamiento.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="2163">
+          <caret line="103" selection-start-line="103" selection-end-line="103" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/reporte/ubicaciones.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="202" column="17" lean-forward="false" selection-start-line="202" selection-start-column="17" selection-end-line="202" selection-end-column="17" />
-          <folding>
-            <element signature="e#221#4360#0" expanded="false" />
-          </folding>
+        <state>
+          <caret line="184" column="34" selection-start-line="184" selection-start-column="34" selection-end-line="184" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.lock">
+    <entry file="file://$PROJECT_DIR$/config/autoload/global.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="398" column="14" lean-forward="false" selection-start-line="398" selection-start-column="14" selection-end-line="398" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="35" lean-forward="false" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/Reporte/view/reporte/index/pdf.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/depuracion.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/reporte/unidades.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="431" column="19" lean-forward="true" selection-start-line="431" selection-start-column="19" selection-end-line="431" selection-end-column="19" />
-          <folding />
+        <state relative-caret-position="630">
+          <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/module/Reporte/src/Reporte/Controller/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="377" column="71" lean-forward="true" selection-start-line="377" selection-start-column="71" selection-end-line="377" selection-end-column="71" />
+        <state relative-caret-position="121">
+          <caret line="490" column="44" selection-start-line="490" selection-start-column="44" selection-end-line="490" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/rrhh/operadores.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11067">
+          <caret line="527" column="30" selection-start-line="527" selection-start-column="30" selection-end-line="527" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/autoload/local.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="26" column="10" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Rrhh/src/Rrhh/Controller/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3087">
+          <caret line="158" column="36" selection-start-line="158" selection-start-column="24" selection-end-line="158" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/UnidadTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3906">
+          <caret line="214" column="38" selection-start-line="214" selection-start-column="38" selection-end-line="214" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Unidad/view/mantenimiento/index/index.phtml" />
+    <entry file="file://$PROJECT_DIR$/module/Unidad/Module.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2625">
+          <caret line="153" column="74" selection-start-line="153" selection-start-column="74" selection-end-line="153" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/mantenimiento/list.js" />
+    <entry file="file://$PROJECT_DIR$/public/js/reporte/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/unidad/list.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/unidad/unidad.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1832" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Unidad/view/unidad/index/unidad.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="56" column="60" lean-forward="true" selection-start-line="56" selection-start-column="60" selection-end-line="56" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/Mantenimiento.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Unidad/config/module.config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="685">
+          <caret line="81" column="18" selection-start-line="81" selection-start-column="18" selection-end-line="81" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Application/view/application/index/index.phtml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/jscolor-example.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="13" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/jscolor.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="9" column="11107" selection-start-line="9" selection-start-column="11102" selection-end-line="9" selection-end-column="11107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/jscolor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="1449" column="30" selection-start-line="1449" selection-start-column="30" selection-end-line="1449" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/zendframework/zendframework/library/Zend/View/Model/JsonModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="18" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/lugar/poligono.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2057">
+          <caret line="121" column="11" selection-start-line="121" selection-start-column="11" selection-end-line="121" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/img/pala.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/lugar/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="105" column="31" selection-start-line="105" selection-start-column="31" selection-end-line="105" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/DesplazamientoTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="547">
+          <caret line="106" column="43" selection-start-line="106" selection-start-column="43" selection-end-line="106" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Lugar/view/lugar/index/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="60" column="11" lean-forward="true" selection-start-line="60" selection-start-column="11" selection-end-line="60" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Unidad/view/unidad/index/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-272">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/img/volquete.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Lugar/src/Lugar/Model/Contiene.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="23" column="27" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Lugar/view/lugar/index/poligono.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="324" column="34" selection-start-line="324" selection-start-column="34" selection-end-line="324" selection-end-column="34" />
           <folding>
-            <element signature="e#4865#7760#0#PHP" expanded="false" />
-            <element signature="e#7765#11133#0#PHP" expanded="false" />
+            <marker date="1522193802443" expanded="true" signature="2882:3302" ph="..." />
+            <marker date="1522193802443" expanded="true" signature="3087:3260" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/phpoffice/phpexcel/Examples/33chartcreate-line.php">
+    <entry file="file://$PROJECT_DIR$/public/js/unidad/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="81" column="19" lean-forward="true" selection-start-line="81" selection-start-column="19" selection-end-line="81" selection-end-column="19" />
-          <folding />
+        <state relative-caret-position="225">
+          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Lugar/src/Lugar/Controller/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="141" column="53" selection-start-line="141" selection-start-column="53" selection-end-line="141" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Lugar/src/Lugar/Model/ContieneTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="58" column="36" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Lugar/Module.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="88" column="51" selection-start-line="88" selection-start-column="51" selection-end-line="88" selection-end-column="51" />
+          <folding>
+            <element signature="e#348#373#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Lugar/src/Lugar/Model/Lugar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Lugar/src/Lugar/Model/LugarTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Lugar/src/Lugar/Model/MaterialTable.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Lugar/src/Lugar/Model/RutaTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="547">
+          <caret line="69" column="1" selection-start-line="69" selection-start-column="1" selection-end-line="109" />
+          <folding>
+            <element signature="e#1844#3299#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/bower_components/sweetalert2/dist/sweetalert2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="40741" selection-start-column="40741" selection-end-column="40741" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Application/view/layout/layout.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1836">
+          <caret line="101" column="44" selection-start-line="101" selection-start-column="44" selection-end-line="101" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Controller/IndexController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3162">
+          <caret line="199" column="9" selection-start-line="199" selection-start-column="9" selection-end-line="199" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ll">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1343">
+          <caret line="79" column="50" lean-forward="true" selection-start-line="79" selection-start-column="50" selection-end-line="79" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Model/MantenimientoTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="88" column="34" selection-start-line="88" selection-start-column="34" selection-end-line="88" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Unidad/src/Unidad/Controller/MantenimientoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/Unidad/view/unidad/mantenimiento/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-425">
+          <caret line="5" column="59" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/mantenimiento/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="68" column="25" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EstadosYtipos.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
         </state>
       </provider>
     </entry>

@@ -50,7 +50,6 @@ class RutaTable
                 throw new \Exception('Ruta no existe');
             }
         }
-
         return $id;
     }
 
@@ -100,7 +99,7 @@ class RutaTable
                     'longitudfinal' => 'longitud',
                 )
             );
-
+        $sqlSelect->where('ruta.estado!=2');
         $sqlSelect->order('ruta.idruta DESC');
         $statement = $this->tableGateway->getSql()
             ->prepareStatementForSqlObject($sqlSelect);

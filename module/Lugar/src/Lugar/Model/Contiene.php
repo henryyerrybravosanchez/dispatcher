@@ -4,15 +4,11 @@ namespace Lugar\Model;
 use Zend\InputFilter\InputFilterAwareInterface;
 use Zend\InputFilter\InputFilterInterface;
 
-class Lugar implements InputFilterAwareInterface
+class Contiene implements InputFilterAwareInterface
 {
 	public $idlugar;
-	public $nombre;
-	public $nombrecompleto;
-	public $latitud;
-	public $longitud;
-	public $tipo;
-    public $color;
+	public $idpunto;
+	public $version;
     public $estado;
     public $inputFilter;
 
@@ -20,18 +16,10 @@ class Lugar implements InputFilterAwareInterface
     {
 	    $this->idlugar = (!empty($data['idlugar']))
 		    ? $data['idlugar'] : null;
-	    $this->nombre = (!empty($data['nombre']))
-		    ? $data['nombre'] : null;
-	    $this->nombrecompleto = (!empty($data['nombrecompleto']))
-		    ? $data['nombrecompleto'] : null;
-	    $this->latitud = (!empty($data['latitud']))
-		    ? $data['latitud'] : null;
-	    $this->longitud= (!empty($data['longitud']))
-		    ? $data['longitud'] : null;
-	    $this->color = (!empty($data['color']))
-		    ? $data['color'] : null;
-	    $this->tipo = (!empty($data['tipo']))
-		    ? $data['tipo'] : null;
+	    $this->idpunto = (!empty($data['idpunto']))
+		    ? $data['idpunto'] : null;
+	    $this->version = (!empty($data['version']))
+		    ? $data['version'] : null;
 	    $this->estado = (!empty($data['estado']))
 		    ? $data['estado'] : null;
     }

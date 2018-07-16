@@ -13,9 +13,15 @@ class LugarTable
         $this->tableGateway = $tableGateway;
     }
 
-    public function fetchAll()
+    public function fetchAllLugares()
     {
-        $resultSet = $this->tableGateway->select('estado=1');
+        $resultSet = $this->tableGateway->select('estado=1 and tipo=1');
+
+        return $this->resultToArray($resultSet);
+    }
+    public function fetchAllPoligonos()
+    {
+        $resultSet = $this->tableGateway->select('estado=1 and tipo=2');
 
         return $this->resultToArray($resultSet);
     }
@@ -36,6 +42,8 @@ class LugarTable
             'nombre'=> $pala->nombre,
             'latitud'=> $pala->latitud,
             'longitud'=> $pala->longitud,
+            'color'=> $pala->color,
+            'tipo'=> $pala->tipo,
             'estado'=> $pala->estado,
         );
         $id = (int)$pala->idlugar;
