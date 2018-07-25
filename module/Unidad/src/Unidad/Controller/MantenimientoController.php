@@ -39,6 +39,23 @@ class MantenimientoController extends AbstractActionController
                     $manactivos=$this->getMantenimientoTable()->getMantenimientoActivos();
                     return new JsonModel(array('o'=>$o, 'data'=>$manactivos));
                     break;
+                case 2://Desactivar mantenimeinto
+                    $idestado=(int)$this->request->getPost('ide');
+                    $man=$this->getMantenimientoTable()->getMantenimiento($idestado);
+                    $man->estado=2;
+                    $this->getMantenimientoTable()->saveMantenimiento($man);
+                    return new JsonModel(array('o'=>$o, 'data'=>$man));
+                    break;
+                case 3:
+                    $idestado=(int)$this->request->getPost('ide');
+                    $man=$this->getMantenimientoTable()->getMantenimiento($idestado);
+                    return new JsonModel(array('o'=>$o, 'data'=>$man));
+                    break;
+                case 4:
+                    $idestado=(int)$this->request->getPost('ide');
+                    $fechai=$this->request->getPost('fi');
+                    $fechaf=$this->request->getPost('ff');
+                    break;
             }
         }
         $volquetes=$this->getUnidadTable()->fetchAllVolquetes();
@@ -49,49 +66,6 @@ class MantenimientoController extends AbstractActionController
         ));
     }
 
-    private function getPuntoTable()
-    {
-        if (!$this->puntotable) {
-            $sm = $this->getServiceLocator();
-            $this->puntotable = $sm->get(
-                'Punto\Model\PuntoTable'
-            );
-        }
-        return $this->puntotable;
-    }
-    private function getLugarTable()
-    {
-        if (!$this->lugartable) {
-            $sm = $this->getServiceLocator();
-            $this->lugartable = $sm->get(
-                'Lugar\Model\LugarTable'
-            );
-        }
-
-        return $this->lugartable;
-    }
-    private function getOperaTable()
-    {
-        if (!$this->operatable) {
-            $sm = $this->getServiceLocator();
-            $this->operatable = $sm->get(
-                'Unidad\Model\OperaTable'
-            );
-        }
-
-        return $this->operatable;
-    }
-    private function getRutaTable()
-    {
-        if (!$this->rutatable) {
-            $sm = $this->getServiceLocator();
-            $this->rutatable = $sm->get(
-                'Lugar\Model\RutaTable'
-            );
-        }
-
-        return $this->rutatable;
-    }
     private function getUnidadTable()
     {
         if (!$this->unidadtable) {
@@ -129,7 +103,7 @@ class MantenimientoController extends AbstractActionController
         if (!$this->mantenimientotable) {
             $sm = $this->getServiceLocator();
             $this->mantenimientotable = $sm->get(
-                'Unidad\Model\MantenimientoTable'
+                'Unidad\Model\EstadoMantenimientoTable'
             );
         }
         return $this->mantenimientotable;

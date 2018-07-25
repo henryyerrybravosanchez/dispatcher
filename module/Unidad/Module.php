@@ -13,8 +13,8 @@ use Unidad\Model\Carga;
 use Unidad\Model\CargaTable;
 use Unidad\Model\Desplazamiento;
 use Unidad\Model\DesplazamientoTable;
-use Unidad\Model\Mantenimiento;
-use Unidad\Model\MantenimientoTable;
+use Unidad\Model\EstadoMantenimiento;
+use Unidad\Model\EstadoMantenimientoTable;
 use Unidad\Model\Opera;
 use Unidad\Model\OperaTable;
 use Unidad\Model\Pala;
@@ -150,16 +150,16 @@ class Module
                     $resultSetPrototype->setArrayObjectPrototype(new ServicioCarga());
                     return new TableGateway('servicio_carga', $dbAdapter, null, $resultSetPrototype);
                 },
-                'Unidad\Model\MantenimientoTable' => function ($sm) {
-                    $tableGateway = $sm->get('MantenimientoTableGateway');
-                    $table = new MantenimientoTable($tableGateway);
+                'Unidad\Model\EstadoMantenimientoTable' => function ($sm) {
+                    $tableGateway = $sm->get('EstadoMantenimientoTableGateway');
+                    $table = new EstadoMantenimientoTable($tableGateway);
                     return $table;
                 },
-                'MantenimientoTableGateway' => function ($sm) {
+                'EstadoMantenimientoTableGateway' => function ($sm) {
                     $dbAdapter = $sm->get('Zend\Db\Adapter\Adapter');
                     $resultSetPrototype = new ResultSet();
-                    $resultSetPrototype->setArrayObjectPrototype(new Mantenimiento());
-                    return new TableGateway('mantenimiento', $dbAdapter, null, $resultSetPrototype);
+                    $resultSetPrototype->setArrayObjectPrototype(new EstadoMantenimiento());
+                    return new TableGateway('estado', $dbAdapter, null, $resultSetPrototype);
                 },
             ),
         );
